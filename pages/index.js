@@ -232,14 +232,12 @@ document.querySelector(".pinned_input").addEventListener("input", (evt) => {
 });
 
 var swiper = new Swiper(".mySwiper", {
-    slidesPerView: "auto",
+    slidesPerView: 5,
     spaceBetween: 100,
     loop: true,
     autoplay: {
         delay: 0,
         disableOnInteraction: false,
     },
-    freeMode: true,
-    speed: 5000,
-    loopSlides: 9
+    speed: 3000,
 });
