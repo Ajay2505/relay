@@ -204,35 +204,42 @@ gsap.to(".end_pin", {
 //     })
 // });
 
+document.querySelector(".main_range").addEventListener("input", (evt) => {
+    const value = evt.target.value;
+    const per = (value / evt.target.max) * 100;
+    evt.target.style.background = `linear-gradient(to right, #824FE7 0%, #824FE7 ${per}%, #EBEBE5 ${per}%, #EBEBE5 100%)`;
+});
+
 document.querySelector(".calc_range_1").addEventListener("input", (evt) => {
     const value = evt.target.value;
     const per = (value / evt.target.max) * 100;
     evt.target.style.background = `linear-gradient(to right, #3C9C8C 0%, #3C9C8C ${per}%, #254745 ${per}%, #254745 100%)`;
-    document.getElementById("calc_value_1").innerText = value;
+    // document.getElementById("calc_value_1").innerText = value;
 });
 
 document.querySelector(".calc_range_2").addEventListener("input", (evt) => {
     const value = evt.target.value;
     const per = (value / evt.target.max) * 100;
     evt.target.style.background = `linear-gradient(to right, #3C9C8C 0%, #3C9C8C ${per}%, #254745 ${per}%, #254745 100%)`;
-    document.getElementById("calc_value_2").innerText = value;
+    // document.getElementById("calc_value_2").innerText = value;
 });
 
 document.querySelector(".pinned_input").addEventListener("input", (evt) => {
     const value = evt.target.value;
     const per = (value / evt.target.max) * 100;
     document.querySelector(".pinned_img").style.left = per + "%";
-    document.querySelector(".pinned_value").innerText = value;
+    // document.querySelector(".pinned_value").innerText = value;
 });
 
 var swiper = new Swiper(".mySwiper", {
-    loop: true,
     slidesPerView: "auto",
     spaceBetween: 100,
+    loop: true,
     autoplay: {
         delay: 0,
         disableOnInteraction: false,
     },
     freeMode: true,
-    speed: 5000
+    speed: 5000,
+    loopSlides: 9
 });
