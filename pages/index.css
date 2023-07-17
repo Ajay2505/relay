@@ -357,7 +357,78 @@
 
 .vector_section {
     background-color: #824FE7;
+    color: #FBFAF2;
+    /* clip-path: circle(50% at 50% 0); */
 }
+
+.vector_section .gray {
+    padding: 5px 10px;
+    width: fit-content;
+    margin-inline: auto;
+    background-color: #FBFAF224;
+}
+
+.vector_section .vector .img_wrapper {
+    max-width: 50px;
+    padding: 3px;
+    border-radius: 50%;
+    background-color: #FBFAF2;
+}
+
+.vector_section .vector .img_wrapper img {
+    border-radius: 50%;
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+.vector_section .vector .img_wrapper.img_1 {
+    position: absolute;
+    top: 170px;
+    left: 400px;
+}
+
+.vector_section .vector .img_wrapper.img_2 {
+    position: absolute;
+    top: 170px;
+    right: 400px;
+}
+
+.vector_section .vector .img_wrapper.img_3 {
+    position: absolute;
+    top: 250px;
+    left: 200px;
+}
+
+.vector_section .vector .img_wrapper.img_4 {
+    position: absolute;
+    top: 330px;
+    left: 600px;
+}
+
+.vector_section .vector .img_wrapper.img_5 {
+    position: absolute;
+    top: 250px;
+    right: 200px;
+}
+
+.vector_section .vector .img_wrapper.img_6 {
+    position: absolute;
+    top: 440px;
+    left: 400px;
+}
+
+.vector_section .vector .img_wrapper.img_7 {
+    position: absolute;
+    top: 440px;
+    right: 400px;
+}
+/* 
+.clippy {
+    height: 200px;
+    width: 290%;
+    background-color: #824FE7;
+    clip-path: circle(50% at 50% 0);
+} */
 
 .setup_section {
     background-color: #FBFAF2;
