@@ -16,6 +16,11 @@
     border: 1px solid #C6C6C1;
     display: flex;
     flex-direction: row;
+    transition: border .1s ease-in-out;
+}
+
+.section_1 .left_wrapper .content .input_wrapper:hover {
+    border: 1px solid #585857;
 }
 
 .section_1 .left_wrapper .content .input_wrapper input {
@@ -32,7 +37,7 @@
     width: fit-content;
     height: 100%;
     white-space: nowrap;
-    background-color: #824FE7;
+    background-color: var(--bg_sec);
     padding: 8px 26px;
     border-radius: 1rem;
     color: #fff;
@@ -141,6 +146,11 @@
 .pinned_element .box {
     padding: 15px;
     color: #fff;
+    min-height: 180px;
+}
+
+.pinned_element .box.fade_in_box {
+    min-height: auto;
 }
 
 .pinned_element .box.add {
@@ -369,16 +379,18 @@
 }
 
 .vector_section .vector .img_wrapper {
-    max-width: 50px;
+    width: 50px;
+    height: 50px;
     padding: 3px;
     border-radius: 50%;
     background-color: #FBFAF2;
 }
 
-.vector_section .vector .img_wrapper img {
-    border-radius: 50%;
+.vector_section .vector .img_wrapper img, .vector_section .vector .img_wrapper svg {
+    /* border-radius: 50%; */
     width: 100%;
     aspect-ratio: 1/1;
+    object-fit: cover;
 }
 
 .vector_section .vector .img_wrapper.img_1 {
@@ -1076,6 +1088,15 @@
 
 .accordion-button::after {
     transform: scale(.6);
+}
+
+.accordion-body {
+    opacity: 0;
+    transition: opacity .3s ease-in-out;    
+}
+
+.collapse.show .accordion-body{
+    opacity: 1;
 }
 
 .inv_section .logos .img_wrapper {

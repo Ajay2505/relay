@@ -204,11 +204,11 @@ gsap.to(".end_pin", {
 //     })
 // });
 
-document.querySelector(".main_range").addEventListener("input", (evt) => {
-    const value = evt.target.value;
-    const per = (value / evt.target.max) * 100;
-    evt.target.style.background = `linear-gradient(to right, #824FE7 0%, #824FE7 ${per}%, #EBEBE5 ${per}%, #EBEBE5 100%)`;
-});
+// document.querySelector(".main_range").addEventListener("input", (evt) => {
+//     const value = evt.target.value;
+//     const per = (value / evt.target.max) * 100;
+//     evt.target.style.background = `linear-gradient(to right, #824FE7 0%, #824FE7 ${per}%, #EBEBE5 ${per}%, #EBEBE5 100%)`;
+// });
 
 document.querySelector(".calc_range_1").addEventListener("input", (evt) => {
     const value = evt.target.value;
@@ -224,12 +224,12 @@ document.querySelector(".calc_range_2").addEventListener("input", (evt) => {
     // document.getElementById("calc_value_2").innerText = value;
 });
 
-document.querySelector(".pinned_input").addEventListener("input", (evt) => {
-    const value = evt.target.value;
-    const per = (value / evt.target.max) * 100;
-    document.querySelector(".pinned_img").style.left = per + "%";
-    // document.querySelector(".pinned_value").innerText = value;
-});
+// document.querySelector(".pinned_input").addEventListener("input", (evt) => {
+//     const value = evt.target.value;
+//     const per = (value / evt.target.max) * 100;
+//     document.querySelector(".pinned_img").style.left = per + "%";
+//     // document.querySelector(".pinned_value").innerText = value;
+// });
 
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 5,
@@ -239,5 +239,8 @@ var swiper = new Swiper(".mySwiper", {
         delay: 0,
         disableOnInteraction: false,
     },
-    speed: 3000,
+    speed: 4000,
 });
+
+
+
