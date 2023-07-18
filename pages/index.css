@@ -379,15 +379,15 @@
 }
 
 .vector_section .vector .img_wrapper {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     padding: 3px;
     border-radius: 50%;
     background-color: #FBFAF2;
 }
 
 .vector_section .vector .img_wrapper img, .vector_section .vector .img_wrapper svg {
-    /* border-radius: 50%; */
+    border-radius: 50%;
     width: 100%;
     aspect-ratio: 1/1;
     object-fit: cover;
@@ -413,8 +413,12 @@
 
 .vector_section .vector .img_wrapper.img_4 {
     position: absolute;
-    top: 330px;
+    top: 340px;
     left: 600px;
+}
+
+.vector_section .vector .img_wrapper.img_4 svg{
+    fill: linear-gradient(45deg, #feda75 0%, #fa7e1e 100%) !important;
 }
 
 .vector_section .vector .img_wrapper.img_5 {
