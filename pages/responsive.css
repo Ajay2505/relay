@@ -1,1 +1,31 @@
-/* .vector_section .vector .img_wrapper.img_1 */
+
+@media only screen and (max-width:1400px) {
+    .vector_section .vector .img_wrapper.img_1 {
+        top: 110px;
+        left: 250px;
+    }
+    .vector_section .vector .img_wrapper.img_2 {
+        top: 110px;
+        right: 250px;
+    }
+    .vector_section .vector .img_wrapper.img_3 {
+        top: 150px;
+        left: 100px;
+    }
+    .vector_section .vector .img_wrapper.img_4 {
+        top: 230px;
+        left: 500px;
+    }
+    .vector_section .vector .img_wrapper.img_5 {
+        top: 150px;
+        right: 100px;
+    }
+    .vector_section .vector .img_wrapper.img_6 {
+        top: 290px;
+        left: 170px;
+    }
+    .vector_section .vector .img_wrapper.img_7 {
+        top: 290px;
+        right: 170px;
+    }
+}

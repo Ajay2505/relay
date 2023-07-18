@@ -348,6 +348,11 @@ footer {
     overflow: hidden;
 }
 
+footer .logo_wrapper {
+    max-width: 170px;
+    filter: grayscale(1) brightness(10);
+}
+
 footer a:hover {
     color: #FBFAF2cc;
 }
