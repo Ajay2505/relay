@@ -371,6 +371,7 @@
 }
 
 .vector_section {
+    /* background: linear-gradient(to bottom #824FE7, #8E5FE7); */
     background-color: #824FE7;
     color: #FBFAF2;
     /* clip-path: circle(50% at 50% 0); */

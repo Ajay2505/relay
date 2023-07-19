@@ -1,3 +1,4 @@
+@import url("./global.responsive.css");
 
 * {
     box-sizing: border-box;
@@ -136,6 +137,10 @@ body {
 
 .p_bl_sm {
     padding-block: 100px !important;
+}
+
+.p_bl_md {
+    padding-block: 150px !important;
 }
 
 .p_b_md {
@@ -536,6 +541,7 @@ nav .end_content button:hover {
 .scale_section .right_wrapper .bottom_wrapper {
     border-top: 1px solid;
     border-image-slice: 1;
+    /* max-height: 250px; */
     border-image-source: linear-gradient(to right, #29292924, rgba(0,0,0,0));
 }
 
@@ -556,7 +562,12 @@ nav .end_content button:hover {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    min-height: 350px;
     transition: color .2s ease-out, background-color .3s ease-out;
+}
+
+.scale_section .right_wrapper .bottom_wrapper .box.green {
+    min-height: 250px;
 }
 
 .scale_section .right_wrapper .top_wrapper .box.orange:hover {

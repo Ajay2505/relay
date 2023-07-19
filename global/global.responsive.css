@@ -1,0 +1,14 @@
+
+@media only screen and (max-width: 700px) {
+    
+    .scale_section .right_wrapper .top_wrapper, .scale_section .right_wrapper .bottom_wrapper .box > div {
+        flex-direction: column !important;
+    }
+
+}
+
+@media only screen and (max-width: 1000px) {
+    nav .center_content, nav .end_content {
+        display: none !important;
+    }
+}

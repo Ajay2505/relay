@@ -37,13 +37,6 @@
     }
 }
 
-@media only screen and (max-width: 1000px) {
-    nav .center_content, nav .end_content {
-        display: none !important;
-    }
-}
-
-
 @media only screen and (max-width: 800px) {
     .pinned_element {
         left: 0;

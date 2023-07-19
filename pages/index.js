@@ -146,11 +146,17 @@ gsap.to(".benefits_section .content", {
     }
 });
 
-document.querySelector(".pinned_input").addEventListener("input", (evt) => {
+const pinnedInput = document.querySelector(".pinned_input");
+
+// pinnedInput.value = max / min;
+
+
+pinnedInput.addEventListener("input", (evt) => {
     const value = evt.target.value;
-    const per = (value / evt.target.max) * 100;
-    document.querySelector(".pinned_img").style.left = per + "%";
-    // document.querySelector(".pinned_value").innerText = value;
+    const per = ((value - evt.target.min) / (evt.target.max - evt.target.min)) * 100;
+    if(per > 15) {
+        document.querySelector(".pinned_img").style.left = per + "%";
+    }
 });
 
 var swiper = new Swiper(".mySwiper", {
