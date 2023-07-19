@@ -376,6 +376,10 @@
     /* clip-path: circle(50% at 50% 0); */
 }
 
+.curve {
+    margin-top: -1px;
+}
+/* 
 .vector_section .gray {
     padding: 5px 10px;
     width: fit-content;
@@ -438,7 +442,7 @@
     position: absolute;
     bottom: -2%;
     right: 420px;
-}
+} */
 
 /* Setup Section */
 
