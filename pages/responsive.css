@@ -1,3 +1,4 @@
+@import url("./index.css");
 
 @media only screen and (max-width:1400px) {
     .vector_section .vector .img_wrapper.img_1 {
@@ -27,5 +28,25 @@
     .vector_section .vector .img_wrapper.img_7 {
         top: 290px;
         right: 170px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    nav .center_content, nav .end_content {
+        display: none !important;
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+    .pinned_element {
+        left: 0;
+    }
+    .setup_section .boxes {
+        flex-direction: column;
+        gap: 30px 0;
+    }
+    .end_pin, .skew_fix {
+        background-color: var(--bg_sec);
     }
 }
