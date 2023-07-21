@@ -29,7 +29,7 @@ mm.add("(min-width: 800px)", () => {
             trigger: ".pinned_element",
             pin: true,
             pinSpacer: false,
-            start: "top 10%",
+            start: "top 70px",
             endTrigger: ".end_pin",
             end: "center center",
             zIndex: -1,

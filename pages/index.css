@@ -133,9 +133,10 @@
 .pinned_element {
     background-color: #FBFAF2;
     padding: 0;
-    display: inline-block;
+    display: block;
     width: fit-content;
     max-width: 340px;
+    min-width: 320px;
     border-radius: 15px;
     position: absolute;
     top: 50%;
@@ -152,6 +153,9 @@
     padding: 15px;
     color: #fff;
     min-height: 180px;
+    display: grid;
+    place-items: center;
+    background-blend-mode: overlay;
 }
 
 .pinned_element .box.fade_in_box {
@@ -201,7 +205,7 @@
 }
 
 .pinned_element .box.purple {
-    background-color: #9A71E9;
+    background-color: #9b71e9;
     position: absolute;
     bottom: 50px;
     opacity: 0;
@@ -377,6 +381,13 @@
     /* clip-path: circle(50% at 50% 0); */
 }
 
+.vector_section .gray {
+    width: fit-content;
+    margin-inline: auto;
+    padding: 6px 13px;
+    background-color: #FBFAF224;
+}
+
 .curve {
     margin-top: -1px;
 }
@@ -449,7 +460,8 @@
 
 .setup_section {
     background-color: #FBFAF2;
-    padding-top: 100px;
+    margin-top: -100px; 
+    padding-top: 200px;
 }
 
 .setup_section p.gray {
@@ -480,8 +492,26 @@
     transition: width .3s ease-in-out;
 }
 
+.setup_section .boxes .box:hover .content button{
+    opacity: 1;
+}
+
 .setup_section .boxes .box .content {
     max-width: 300px;
+}
+
+.setup_section .boxes .box .content button {
+    background-color: transparent;
+    padding: 20px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #FBFAF266;
+    opacity: 0;
+    transition: border .1s ease-in-out, opacity .2s ease-in-out;
+}
+
+.setup_section .boxes .box .content button:hover {
+    border: 1px solid #FBFAF2;
 }
 
 .setup_section .boxes .box .bottom {

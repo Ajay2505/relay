@@ -1,10 +1,12 @@
+@import url("/global/global.css");
 
-@media only screen and (max-width: 700px) {
-    
+@media only screen and (max-width: 768px) {
     .scale_section .right_wrapper .top_wrapper, .scale_section .right_wrapper .bottom_wrapper .box > div {
         flex-direction: column !important;
     }
-
+    .max-lg-vstack {
+        flex-direction: column;
+    }
 }
 
 @media only screen and (max-width: 1000px) {

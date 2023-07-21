@@ -1,3 +1,4 @@
+@import url("/global/global.responsive.css");
 @import url("./index.css");
 
 @media only screen and (min-width:1400px) {
@@ -6,7 +7,7 @@
     }
 }
 
-@media only screen and (max-width:1400px) {
+/* @media only screen and (max-width:1400px) {
     .vector_section .vector .img_wrapper.img_1 {
         top: 110px;
         left: 250px;
@@ -35,11 +36,18 @@
         top: 290px;
         right: 170px;
     }
-}
+} */
 
 @media only screen and (max-width: 800px) {
     .pinned_element {
+        position: relative;
+        transform: none;
+        margin: 20px auto;
+        width: 100%;
         left: 0;
+    }
+    .pinned_element .fade_in_box {
+        display: none;
     }
     .setup_section .boxes {
         flex-direction: column;
@@ -47,5 +55,14 @@
     }
     .end_pin, .skew_fix {
         background-color: var(--bg_sec);
+    }
+    .curve {
+        margin-top: -5px;
+    }
+    .setup_section .boxes .box:hover {
+        width: 100%;
+    }
+    .scale_section .right_wrapper .bottom_wrapper .box.green {
+        min-height: 350px;
     }
 }
