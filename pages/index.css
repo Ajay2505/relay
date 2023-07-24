@@ -289,17 +289,23 @@
 }
 
 .pinned_element .box.first {
-    background-color: #1C5551;
-    background-image: url("/assets/images/phone-card-green.png");
+    background-image: url("/assets/images/sales-img.jpg");
     background-repeat: no-repeat;
+    background-color: #123836;
     background-size: cover;
+    /* background-position: right; */
+    /* background-color: #1c5551; */
+    background-blend-mode: overlay;
 }
 
 .pinned_element .box.second {
-    background-color: #824FE7;
-    background-image: url("/assets/images/phone-card-purple.png");
+    background-color: #5503f8;
+    /* background-color: #824FE7; */
+    background-image: url("/assets/images/operations-img.png");
+    /* background-image: url("/assets/images/phone-card-purple.png"); */
     background-repeat: no-repeat;
     background-size: cover;
+    background-blend-mode: overlay;
 }
 
 .skew {
@@ -374,8 +380,15 @@
 }
 
 .vector_section {
+    /* background-color: #8E5AEC; */
     background-color: #824FE7;
     color: #FBFAF2;
+    overflow: visible;
+}
+
+.vector_section .content {
+    /* margin-bottom: -300px; */
+    z-index: 5;
 }
 
 .vector_section .gray {
