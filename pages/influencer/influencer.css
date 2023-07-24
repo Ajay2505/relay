@@ -204,3 +204,7 @@ nav {
 .section_build .content_wrapper .cards .text {
     color: #FBFAF299;
 }
+
+.calc_section {
+    background-position: 120% 0;
+}

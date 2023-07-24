@@ -29,7 +29,7 @@ mm.add("(min-width: 800px)", () => {
             trigger: ".pinned_element",
             pin: true,
             pinSpacer: false,
-            start: "top 70px",
+            start: "top 65px",
             endTrigger: ".end_pin",
             end: "center center",
             zIndex: -1,
@@ -157,7 +157,9 @@ pinnedInput.addEventListener("input", (evt) => {
     if(per > 15) {
         document.querySelector(".pinned_img").style.left = per + "%";
     }
+    document.querySelector(".pinned_value").innerText = evt.target.value;
 });
+
 
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 5,

@@ -339,18 +339,17 @@
 
 .end_pin .content_wrapper {
     color: #fff;
+    padding-top: 100px;
 }
 
-.end_pin .img_wrapper.overlay {
-    width: 100%;
-    height: 100%;
-    max-width: 1444px;
-    position: absolute;
-    bottom: -40%;
-    z-index: 1000;
-    background: #824FE7;
-    -webkit-mask-image: url("/assets/overlays/purple_bg.svg");
-    -webkit-mask-size: 100% 100%;
+.end_pin .content_wrapper .img_wrapper {
+    overflow: hidden;
+}
+
+.end_pin .img_wrapper .overlay {
+    width: 1340px;
+    margin-left: -110px;
+    margin-top: -100px;
 }
 
 .end_pin .content_wrapper .gray {
@@ -375,10 +374,8 @@
 }
 
 .vector_section {
-    /* background: linear-gradient(to bottom #824FE7, #8E5FE7); */
     background-color: #824FE7;
     color: #FBFAF2;
-    /* clip-path: circle(50% at 50% 0); */
 }
 
 .vector_section .gray {
