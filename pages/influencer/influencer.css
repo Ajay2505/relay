@@ -71,21 +71,6 @@ nav {
     border-image: linear-gradient(to bottom, #29292924  0%, rgba(0, 0, 0, 0)  100%) 1 100%;
 }
 
-.section_work .gray {
-    margin-inline: auto;
-    width: fit-content;
-    padding: 5px 14px;
-    background-color: #EBEBE5;
-}
-
-.section_work .steps .step {
-    /* max-width: 270px; */
-}
-
-.section_work .steps .step_1 {
-    background-color: #EFEFE8;
-}
-
 .section_empower {
     background: linear-gradient(to bottom, #FBFAF2 150px, #1C5551 150px);
     margin-top: -300px;

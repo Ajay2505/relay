@@ -148,9 +148,6 @@ gsap.to(".benefits_section .content", {
 
 const pinnedInput = document.querySelector(".pinned_input");
 
-// pinnedInput.value = max / min;
-
-
 pinnedInput.addEventListener("input", (evt) => {
     const value = evt.target.value;
     const per = ((value - evt.target.min) / (evt.target.max - evt.target.min)) * 100;

@@ -76,6 +76,19 @@ body {
     color: #333333;
 }
 
+/* Target the specific number input and hide the spin buttons */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* For Firefox, you may need this additional CSS rule */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+
 .main_heading {
     font-weight: 500;
     font-size: clamp(33px, 5vw, 42px) !important;
@@ -400,6 +413,19 @@ nav .end_content button:hover {
     top: -50%;
 } */
 
+.calc_section .content_wrapper .input_calc {
+    color: #FBFAF2;
+    outline: none;
+    border: none;
+    width: 30%;
+    /* border-bottom: 1px solid #FBFAF2; */
+    background-color: transparent;
+}
+
+.calc_section .content_wrapper .input_calc.input_plat {
+    width: 10%;
+}
+
 .calc_section .content_wrapper button {
     background-color: #FBFAF214;
     outline: none;
@@ -416,7 +442,12 @@ nav .end_content button:hover {
     -webkit-appearance: none;
     border-radius: 4px;
     height: 4px;
-    background: linear-gradient(to right, #3C9C8C 50%, #3C9C8C 50%, #254745 50%, #254745 100%); 
+    background: linear-gradient(to right, #3C9C8C 0%, #3C9C8C 0%, #254745 0%, #254745 100%); 
+}
+
+.calc_section .content_wrapper .clac_range:focus-visible {
+    outline: 1px solid #3C9C8C;
+    outline-offset: 5px;
 }
 
 .calc_section .content_wrapper .clac_range::-webkit-slider-thumb {
@@ -489,7 +520,7 @@ nav .end_content button:hover {
 .calc_section .box.second .bottom {
     background-color: #266B6580;
     padding: 15px;
-    padding-bottom: 70px;
+    /* padding-bottom: 70px; */
 }
 
 .calc_section .box.second .bottom .light_text {
@@ -945,4 +976,19 @@ footer .bubble_wrapper {
     50% {
         transform: translateY(-7px);
     }
+}
+
+.section_work .gray {
+    margin-inline: auto;
+    width: fit-content;
+    padding: 5px 14px;
+    background-color: #EBEBE5;
+}
+
+.section_work .steps .step {
+    /* max-width: 270px; */
+}
+
+.section_work .steps .step_1 {
+    background-color: #EFEFE8;
 }
