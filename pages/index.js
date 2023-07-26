@@ -176,3 +176,4 @@ document.querySelector(".main_input").addEventListener("focus", (evt) => {
 document.querySelector(".main_input").addEventListener("blur", (evt) => {
     evt.target.parentElement.classList.remove("focus");
 });
+

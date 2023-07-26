@@ -394,6 +394,17 @@ nav .end_content button:hover {
     background-blend-mode: overlay;
 }
 
+.map_section .input_wrapper {
+    backdrop-filter: blur(4px);
+}
+
+.map_section .input_wrapper input {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    max-width: 500px;
+}
+
 /* Calc */
 
 .calc_section {
@@ -983,10 +994,6 @@ footer .bubble_wrapper {
     width: fit-content;
     padding: 5px 14px;
     background-color: #EBEBE5;
-}
-
-.section_work .steps .step {
-    /* max-width: 270px; */
 }
 
 .section_work .steps .step_1 {
