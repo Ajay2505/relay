@@ -385,13 +385,10 @@ nav .end_content button:hover {
     max-width: 100%;
     margin-top: 50px;
     background-image: url("/assets/images/map.svg");
-    /* background-color: #2C3D3C; */
     background-color: #29292933;
-    /* border: 1px solid #C6C6C1; */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 100% 50%;
-    background-blend-mode: overlay;
 }
 
 .map_section .input_wrapper {
@@ -412,9 +409,8 @@ nav .end_content button:hover {
 }
 
 .map_section .input_wrapper input {
-    /* color: #FBFAF2; */
+    color: #FBFAF2;
     z-index: 2;
-    color: #fff;
     background-color: transparent;
     outline: none;
     border: none;
@@ -425,7 +421,28 @@ nav .end_content button:hover {
     display: grid;
     place-items: center;
     transform: rotate(180deg);
-    transition: transform .2s ease-in-out;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: top .2s ease-in-out, opacity .3s ease-in-out;
+}
+
+.map_section .input_wrapper .icon_wrapper.hide {
+    top: -10%;
+    opacity: 0;
+    transition: top .2s ease-in-out, opacity .3s ease-in-out;
+}
+
+.map_section .input_wrapper .x_mark {
+    transform: translateY(5px);
+    opacity: 0;
+    transition: transform .3s ease-in-out, opacity .1s ease-in-out;
+}
+
+.map_section .input_wrapper .x_mark.show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform .3s ease-in-out, opacity .1s ease-in-out;
 }
 
 .map_section .input_wrapper .icon_wrapper.rotate {
@@ -441,6 +458,7 @@ nav .end_content button:hover {
     opacity: 0;
     visibility: hidden;
     background: none;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
     transition: opacity .2s ease-in-out, transform .3s ease-in-out, visibility .2s ease-in-out;
 }
 
@@ -452,22 +470,30 @@ nav .end_content button:hover {
 }
 
 .map_section .list_div button {
-    background: #FBFAF2;
+    background-color: #FBFAF2;
     padding: 7px;
     width: 100%;
     color: #000;
-    transition: height .2s ease-in-out, display .2s ease-in-out .2s;
-}
-
-.map_section .list_div button:hover {
-    background: #fff;
+    transform-origin: top;
+    transition: transform .2s ease-in-out;
 }
 
 .map_section .list_div button.hide {
-    /* transform: scaleY(0); */
-    height: 0;
+    transform: scaleY(0);
     display: none;
+    transition: transform .2s ease-in-out;
 }
+
+.map_section .list_div button:hover {
+    background-color: #fff;
+}
+
+.map_section .list_div button.focus {
+    background: #266B65;
+    color: #fff;
+}
+
+
 
 /* Calc */
 
