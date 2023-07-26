@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/lib/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="/pages/responsive.css">
   </head>
-  <body>
+  <body onload="index()">
     <nav>
       <div class="container py-2 px-1 px-lg-5 d-flex justify-content-between align-items-center">
         <a href="/">
@@ -424,10 +424,32 @@
 
      <div class="container px-lg-5 px-2">
          <div class="img_wrapper rounded_main">
-          <div class="p-lg-5">
-            <!-- <div class="input_wrapper w-fit">
-              <input type="text" class="map_input w-full">
-            </div> -->
+          <div class="ps-lg-5 pt-lg-5 p-2">
+            <div class="input_wrapper rounded_main hstack">
+              <input type="text" class="map_input" placeholder="Pick a language">
+              <div class="icon_wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FBFAF2" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="list_div z-2 ms-lg-5 rounded_main overflow-x-hidden">
+            <!-- <button>Telugu</button>
+            <button>Hindi</button>
+            <button>English</button>
+            <button>Marathi</button>
+            <button>Tamil</button>
+            <button>Kannada</button>
+            <button>Malayalam</button>
+            <button>Bengali</button>
+            <button>Assamese</button>
+            <button>Oriya</button>
+            <button>Bhojpuri</button>
+            <button>Gujarati</button>
+            <button>Punjabi</button>
+            <button>Bihari</button> -->
           </div>
         </div> 
       </div>

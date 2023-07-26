@@ -82,29 +82,29 @@ mm.add("(min-width: 800px)", () => {
             },
         }
     });
+});
+   
     
-    gsap.to(".end_pin", {
-        background: "#824FE7",
-        duration: .4,
-        scrollTrigger: {
-            trigger: ".end_pin",
-            start: "top center",
-            end: "center top",
-            onEnter: () => {
-                gsap.to(".end_pin", { background: "#824FE7" });
-                gsap.to(".skew_fix", { background: "#824FE7" });
-            },
-            onEnterBack: () => {
-                gsap.to(".end_pin", { background: "#824FE7" })
-                gsap.to(".skew_fix", { background: "#824FE7" });
-            },
-            onLeaveBack: () => {
-                gsap.to(".skew_fix", { background: "#FBFAF2" });
-                gsap.to(".end_pin", { background: "#FBFAF2" })
-            }
+gsap.to(".end_pin", {
+    background: "#824FE7",
+    duration: .4,
+    scrollTrigger: {
+        trigger: ".end_pin",
+        start: "top center",
+        end: "center top",
+        onEnter: () => {
+            gsap.to(".end_pin", { background: "#824FE7" });
+            gsap.to(".skew_fix", { background: "#824FE7" });
+        },
+        onEnterBack: () => {
+            gsap.to(".end_pin", { background: "#824FE7" })
+            gsap.to(".skew_fix", { background: "#824FE7" });
+        },
+        onLeaveBack: () => {
+            gsap.to(".skew_fix", { background: "#FBFAF2" });
+            gsap.to(".end_pin", { background: "#FBFAF2" })
         }
-    });
-
+    }
 });
 
 gsap.to(".benefits_section .content", {
