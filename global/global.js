@@ -86,6 +86,11 @@ const mapInfo = [
 ];
 
 const calc = () => {
+    let first = 0;
+    let second = 0;
+    let hours = 0;
+    let employees_req_value = 0; 
+    let money = 0;
     document.querySelector(".input_track").addEventListener("input", (evt) => {
         const value = evt.target.value;
         if (parseInt(value) > evt.target.max) {
@@ -95,7 +100,7 @@ const calc = () => {
             evt.target.value = evt.target.min;
         }
         document.querySelector(".calc_range_1").value = evt.target.value; 
-        tracker();
+        tracker();  
     });
     
     
@@ -133,10 +138,20 @@ const calc = () => {
         const value = element.value;
         const per = (value / element.max) * 100;
         element.style.background = `linear-gradient(to right, #3C9C8C 0%, #3C9C8C ${per}%, #254745 ${per}%, #254745 100%)`;
-        document.getElementById("calc_first_price").innerText = ((15000)+(value * document.querySelector(".calc_range_3").value)*100)/80;
-        const second = (parseInt(document.querySelector(".employees_req").innerText) * 25000)/80;
-        console.log(second);
-        document.getElementById("calc_second_price").innerText = second < 1 ? 35 : second;
+        valuesSetter();
+    }
+    
+    function valuesSetter() {
+        first = ((15000)+(document.querySelector(".calc_range_2").value * document.querySelector(".calc_range_3").value) * 100)/80;
+        employees_req_value = document.querySelector(".calc_range_2").value / 90;
+        second = (employees_req_value * 25000)/80;
+        hours = employees_req_value * 8 * 22;
+        money = second / first;
+        document.querySelector(".employees_req").innerText = Math.round(employees_req_value);
+        document.getElementById("calc_first_price").innerText = +first.toFixed(2);
+        document.getElementById("calc_second_price").innerText = +second.toFixed(2);
+        document.querySelector(".more_money").innerText = +money.toFixed(2);
+        document.querySelector(".hours").innerText = +hours.toFixed(0);
     }
     
     
@@ -162,7 +177,8 @@ const calc = () => {
         const value = element.value;
         const per = (value / element.max) * 100 - 5;
         element.style.background = `linear-gradient(to right, #3C9C8C 0%, #3C9C8C ${per}%, #254745 ${per}%, #254745 100%)`;
-        document.getElementById("calc_first_price").innerText = ((15000)+(value * document.querySelector(".calc_range_3").value)*100)/80;
+        // document.getElementById("calc_first_price").innerText = ((15000)+(value * document.querySelector(".calc_range_3").value)*100)/80;
+        valuesSetter();
     }
 }
 
