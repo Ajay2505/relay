@@ -94,15 +94,18 @@ gsap.to(".end_pin", {
         end: "center top",
         onEnter: () => {
             gsap.to(".end_pin", { background: "#824FE7" });
+            gsap.to(".end_pin .content_wrapper", { opacity: 1 });
             gsap.to(".skew_fix", { background: "#824FE7" });
         },
         onEnterBack: () => {
             gsap.to(".end_pin", { background: "#824FE7" })
             gsap.to(".skew_fix", { background: "#824FE7" });
+            gsap.to(".end_pin .content_wrapper", { opacity: 1 });
         },
         onLeaveBack: () => {
             gsap.to(".skew_fix", { background: "#FBFAF2" });
             gsap.to(".end_pin", { background: "#FBFAF2" })
+            gsap.to(".end_pin .content_wrapper", { opacity: 0 });
         }
     }
 });
@@ -167,6 +170,16 @@ var swiper = new Swiper(".mySwiper", {
         disableOnInteraction: false,
     },
     speed: 7000,
+    breakpoints: {
+        600: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+        },
+        800: {
+            slidesPerView: 3,
+            spaceBetween: 50
+        }
+    }
 });
 
 document.querySelector(".main_input").addEventListener("focus", (evt) => {

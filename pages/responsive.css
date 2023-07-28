@@ -7,42 +7,11 @@
     }
 }
 
-/* @media only screen and (max-width:1400px) {
-    .vector_section .vector .img_wrapper.img_1 {
-        top: 110px;
-        left: 250px;
-    }
-    .vector_section .vector .img_wrapper.img_2 {
-        top: 110px;
-        right: 250px;
-    }
-    .vector_section .vector .img_wrapper.img_3 {
-        top: 150px;
-        left: 100px;
-    }
-    .vector_section .vector .img_wrapper.img_4 {
-        top: 230px;
-        left: 500px;
-    }
-    .vector_section .vector .img_wrapper.img_5 {
-        top: 150px;
-        right: 100px;
-    }
-    .vector_section .vector .img_wrapper.img_6 {
-        top: 290px;
-        left: 170px;
-    }
-    .vector_section .vector .img_wrapper.img_7 {
-        top: 290px;
-        right: 170px;
-    }
-} */
-
 @media only screen and (max-width: 800px) {
     .pinned_element {
         position: relative;
         transform: none;
-        margin: 20px auto;
+        margin: 20px auto 0 auto;
         width: 100%;
         left: 0;
     }
@@ -53,9 +22,6 @@
         flex-direction: column;
         gap: 30px 0;
     }
-    .end_pin, .skew_fix {
-        background-color: var(--bg_sec);
-    }
     .curve {
         margin-top: -5px;
     }
@@ -64,5 +30,30 @@
     }
     .scale_section .right_wrapper .bottom_wrapper .box.green {
         min-height: 350px;
+    }
+    .pricing_section .left_wrapper .overlay_wrapper {
+        top: -15%;
+    }
+    .scale_section .right_wrapper .top_wrapper::before {
+        content: none;
+    }
+    .benefits_section {
+        padding-bottom: 0;
+    }
+    .skew_fix {
+        height: 0;
+    }
+    .end_pin {
+        padding-block: 50px;
+    }
+    .inv_section {
+        padding-bottom: 50px;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .section_1 .right_wrapper .img_wrapper .bubble_wrapper{
+        max-width: 165px;
     }
 }

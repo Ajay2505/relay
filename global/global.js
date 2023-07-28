@@ -264,6 +264,11 @@ const map = () => {
     });
 }
 
+document.querySelector(".nav_icon_wrapper").addEventListener("click", (evt) => {
+    document.querySelector(".mobile_nav").classList.toggle("active");
+    document.querySelector(".nav_icon_wrapper").classList.toggle("active");
+});
+
 document.querySelector(".footer_input").addEventListener("focus", (evt) => {
     evt.target.parentElement.classList.add("focus");
 });

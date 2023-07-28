@@ -11,11 +11,14 @@
   <body onload="index()">
     <nav>
       <div class="container py-2 px-1 px-lg-5 d-flex justify-content-between align-items-center">
-        <a href="/">
+        <a class="logo" href="/">
           <div class="logo_wrapper">
             <img src="/assets/images/Relay Logo Final .png" alt="" />
           </div>
         </a>
+
+        <a href="javascript:void(0)" class="nav_icon_wrapper d-inline-block d-lg-none"></a>
+
         <div class="center_content d-flex align-items-center gap-5">
           <div class="link_wrapper d-flex align-items-center position-relative">
             <a class="link" href="/pages/influencer/">Influencer solutions</a>
@@ -75,6 +78,16 @@
         </div>
       </div>
     </nav>
+
+    <div class="mobile_nav d-lg-none">
+      <div class="container px-1 vstack align-items-center gap-4">
+        <a class="sub_heading" href="/pages/influencer/">Influencer Solutions</a>
+        <a class="sub_heading" href="/pages/advertisers/">Advertiser Solutions</a>
+        <a class="sub_heading" href="/">Resources</a>
+        <a class="sub_heading" href="/">Login</a>
+        <button class="nav_book_btn">Book a demo</button>
+      </div>
+    </div>
 
     <section class="section_1 p_b_md bg_main">
       <div class="container px-1 px-lg-5">
@@ -244,7 +257,7 @@
         </div>
     </section>
 
-    <section style="height: 70vh; background-color: #FBFAF2;" class="skew_fix"></section>
+    <section class="skew_fix"></section>
     
     <section class="end_pin">
         <div class="container px-1 px-lg-5 ps-lg-0">
@@ -305,7 +318,7 @@
       <div class="video_wrapper">
         <!-- <img src="/assets/videos/ezgif.com-video-to-gif.gif" alt=""> -->
         <video loop autoplay muted>
-          <source src="/assets/videos/relay web site animation.mp4">
+          <source src="/assets/videos/relay.mp4">
         </video>
       </div>
 
@@ -553,7 +566,7 @@
             </div>
           </div>
           
-          <div class="col-lg-5">
+          <div class="col-lg-5 pt-3 pt-lg-0">
             <div class="right_wrapper rounded_main">
               <h1 class="main_heading m-0">$ <span>0.25</span></h1>
               <p class="text_lg m_b_70">No change in pricing.</p>
@@ -741,7 +754,7 @@
     <section class="inv_section bg_sec p_t_sm">
       <div class="container px-1 px-lg-5">
         <p class="text_lg fw-medium text-center">Backed by some of Europe's best investors</p>
-        <div class="hstack logos justify-content-center mt-lg-4 gap-lg-5">
+        <div class="hstack logos flex-wrap justify-content-center mt-lg-4 gap-lg-5">
           <div class="img_wrapper">
             <img src="/assets/images/northzone.webp" alt="">
           </div>
@@ -756,17 +769,6 @@
     </section>
 
     <footer class="position-relative pb-3 overflow-hidden">
-      <div class="yellow_dot footer_bounce"></div>
-      <div class="mask_wrapper">
-        <div class="bubble_wrapper bounce_img">
-          <img src="/assets/images/footer_bubble.png" alt="">
-        </div>
-        <div class="video_wrapper">
-          <video autoplay loop muted>
-            <source src="/assets/videos/footervideo.mp4">
-          </video>
-        </div>
-      </div>
       <div class="container px-lg-5 px-1">
         <div class="row">
           <div class="col-lg-5">
@@ -780,6 +782,22 @@
             </div>
           </div>
         </div>
+      </div>
+      
+      <div class="yellow_dot footer_bounce"></div>
+
+      <div class="mask_wrapper">
+        <div class="bubble_wrapper bounce_img">
+          <img src="/assets/images/footer_bubble.png" alt="">
+        </div>
+        <div class="video_wrapper">
+          <video autoplay loop muted>
+            <source src="/assets/videos/footervideo.mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="container px-lg-5 px-1">
 
         <div class="row m_t_sm row_border">
           <div class="col-lg-6 p-lg-4 p-2">

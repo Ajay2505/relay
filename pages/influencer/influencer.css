@@ -1,6 +1,6 @@
 @import url("/global/global.responsive.css");
 
-nav {
+nav, .mobile_nav {
     background-color: #FBFAF2;
 }
 

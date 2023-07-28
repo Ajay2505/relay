@@ -336,6 +336,11 @@
     font-weight: 400;
 }
 
+.skew_fix {
+    height: 70vh; 
+    background-color: #FBFAF2;
+}
+
 /* END PIN */
 
 .end_pin {
