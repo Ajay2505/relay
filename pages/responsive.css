@@ -34,9 +34,6 @@
     .pricing_section .left_wrapper .overlay_wrapper {
         top: -15%;
     }
-    .scale_section .right_wrapper .top_wrapper::before {
-        content: none;
-    }
     .benefits_section {
         padding-bottom: 0;
     }

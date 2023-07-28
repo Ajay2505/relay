@@ -34,6 +34,9 @@
     footer .logo_wrapper {
         max-width: 100px;
     }
+    .scale_section .right_wrapper .top_wrapper::before {
+        content: none;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -51,6 +54,6 @@
         width: 30px;
         height: 30px;
         left: 10%;
-    }
+    }  
 }
 
