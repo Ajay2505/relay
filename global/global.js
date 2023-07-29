@@ -149,7 +149,7 @@ const calc = () => {
         second = (employees_req_value * 25000)/80;
         hours = employees_req_value * 8 * 22;
         money = (second / first) * 100;
-        document.querySelector(".employees_req").innerText = Math.round(employees_req_value);
+        document.querySelector(".employees_req").innerText = (employees_req_value) < 1 ? 1 : Math.round(employees_req_value);
         document.getElementById("calc_first_price").innerText = +first.toFixed(2);
         document.getElementById("calc_second_price").innerText = +second.toFixed(2);
         document.querySelector(".more_money").innerText = +money.toFixed(2);

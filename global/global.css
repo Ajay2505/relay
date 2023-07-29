@@ -739,6 +739,10 @@ nav .end_content button:hover, .nav_book_btn:hover {
     padding-bottom: 100px;
 }
 
+.calc_section .box.second .top .red {
+    color: #FF5A5A;
+}
+
 .calc_section .box.first .bottom {
     background-color: #2D7A73;
     padding: 15px;
