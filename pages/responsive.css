@@ -22,7 +22,7 @@
         display: none;
     }
     .skew_fix {
-        height: 30vh;
+        height: 0;
     }
     .setup_section .boxes {
         flex-direction: column;
@@ -38,7 +38,7 @@
         min-height: 350px;
     }
     .pricing_section .left_wrapper .overlay_wrapper {
-        top: -15%;
+        top: -35%;
     }
     .benefits_section {
         padding-bottom: 0;
@@ -49,11 +49,18 @@
     .inv_section {
         padding-bottom: 50px;
     }
-
+    .pinned_element.skew {
+        max-width: 330px;
+        min-width: 330px;
+    }
 }
 
 
 @media only screen and (max-width: 768px) {
+    .pinned_element.skew {
+        max-width: 270px;
+        min-width: 250px;
+    }
     .skew_fix {
         height: 0;
     }
@@ -62,6 +69,9 @@
     }
     .setup_section .boxes .box .bottom {
         margin-top: 70px;
+    }
+    .pricing_section .left_wrapper .overlay_wrapper {
+        top: -10%;
     }
 }
 
@@ -72,8 +82,11 @@
     .end_pin {
         overflow: hidden;
     }
-    .pinned_element.skew {
-        max-width: 270px;
-        min-width: 250px;
+    .pricing_section {
+        padding-bottom: 150px;
+    }
+    .pricing_section .left_wrapper .overlay_wrapper {
+        top: -6%;
+        right: -40%;
     }
 }

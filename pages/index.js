@@ -95,17 +95,20 @@ gsap.to(".end_pin", {
         onEnter: () => {
             gsap.to(".end_pin", { background: "#824FE7" });
             gsap.to(".end_pin .content_wrapper", { opacity: 1 });
+            gsap.to(".end_pin .pinned_element.skew", { opacity: 1 });
             gsap.to(".skew_fix", { background: "#824FE7" });
         },
         onEnterBack: () => {
             gsap.to(".end_pin", { background: "#824FE7" })
             gsap.to(".skew_fix", { background: "#824FE7" });
             gsap.to(".end_pin .content_wrapper", { opacity: 1 });
+            gsap.to(".end_pin .pinned_element.skew", { opacity: 1 });
         },
         onLeaveBack: () => {
             gsap.to(".skew_fix", { background: "#FBFAF2" });
             gsap.to(".end_pin", { background: "#FBFAF2" })
             gsap.to(".end_pin .content_wrapper", { opacity: 0 });
+            gsap.to(".end_pin .pinned_element.skew", { opacity: 0 });
         }
     }
 });
@@ -179,21 +182,17 @@ var swiper = new Swiper(".mySwiper", {
     },
     speed: 7000,
     breakpoints: {
-        499: {
-            slidesPerView: 2,
-            spaceBetween: 10,
+        320: {
+        slidesPerView: 2,
+        spaceBetween: 20
         },
-        // 767: {
-        //     slidesPerView: 3,
-        //     spaceBetween: 10,
-        //   },
-        768: {
-            slidesPerView: 3,
-            spaceBetween: 10,
+        480: {
+        slidesPerView: 3,
+        spaceBetween: 30
         },
-        1000: {
-            slidesPerView: 5,
-            spaceBetween: 70
+        640: {
+        slidesPerView: 4,
+        spaceBetween: 40
         }
     }
 });

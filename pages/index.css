@@ -146,7 +146,7 @@
 }
 
 .pinned_element.skew {
-    opacity: 1;
+    opacity: 0;
 }
 
 .pinned_element.skew .box.add, .pinned_element.skew .box.purple {
@@ -512,7 +512,7 @@
     padding: 2rem;
     border-radius: 20px;
     color: #FBFAF2;
-    height: 560px;
+    height: 650px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -524,7 +524,8 @@
 }
 
 .setup_section .boxes .box .content {
-    max-width: 300px;
+    width: 100%;
+    max-width: 370px;
 }
 
 .setup_section .boxes .box .content button {
@@ -648,7 +649,8 @@
 
 .pricing_section {
     background-color: #FBFAF2;
-    padding-block: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     overflow: hidden;
     position: relative;
 }

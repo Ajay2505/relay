@@ -489,6 +489,7 @@ nav .end_content button:hover, .nav_book_btn:hover {
     background-color: #1C5551;
     padding-top: 100px;
     color: #FBFAF2;
+    position: relative;
 }
 
 .map_section .sec_heading {
@@ -506,17 +507,32 @@ nav .end_content button:hover, .nav_book_btn:hover {
 }
 
 .map_section .img_wrapper {
-    opacity: .4;
+    position: relative;
     min-height: 500px;
     max-width: 100%;
     margin-top: 50px;
-    background-image: url("/assets/images/map.svg");
     background-color: #29292933;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
     background-position: 100% 50%;
 }
 
+.map_section .img_wrapper .img_itself {
+    position: absolute;
+    inset: 0;
+    top: -30%;
+
+}
+
+.map_section .img_wrapper .img_itself svg {
+    width: 100%;
+    color: #223735;
+    object-fit: cover;
+    height: 170%;
+}
+
+  
 .map_section .input_wrapper {
     background-color: #25474580;
     backdrop-filter: blur(4px);
@@ -541,6 +557,10 @@ nav .end_content button:hover, .nav_book_btn:hover {
     outline: none;
     border: none;
     width: 100%;
+}
+
+.map_section .input_wrapper input::placeholder {
+    color: #fbfaf244;
 }
 
 .map_section .input_wrapper .icon_wrapper {
@@ -599,6 +619,7 @@ nav .end_content button:hover, .nav_book_btn:hover {
     background-color: #FBFAF2;
     padding: 7px;
     width: 100%;
+    opacity: 1;
     color: #000;
     transform-origin: top;
     transition: transform .2s ease-in-out;
@@ -611,14 +632,42 @@ nav .end_content button:hover, .nav_book_btn:hover {
 }
 
 .map_section .list_div button:hover {
-    background-color: #fff;
+    background-color: #EFEFE8;
 }
 
 .map_section .list_div button.focus {
-    background: #266B65;
+    background: #2d857e;
     color: #fff;
 }
 
+.map_section .img_wrapper .content {
+    width: 100%;
+    min-height: 350px;
+    max-width: 400px;
+    position: absolute;
+    bottom: 30px;
+    background-color: #266B65;
+    transform: translateY(-20px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .2s ease-in-out, transform .3s ease-in-out, visibility .2s ease-in-out;
+}
+
+.map_section .img_wrapper .content.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .2s ease-in-out, transform .3s ease-in-out, visibility .2s ease-in-out;
+}
+
+.map_section .img_wrapper .content p{
+    color: #FBFAF299;
+    margin-bottom: 5px;
+}
+
+.map_section .img_wrapper .content .white {
+    color: #FBFAF2;
+}
 
 
 /* Calc */

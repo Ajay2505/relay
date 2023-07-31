@@ -69,19 +69,34 @@ const inf = () => {
 
 const mapInfo = [
     {
-        lang: "English"
+        lang: "English",
+        first: 30000,
+        second: 3,
+        third: 90000
     },
     {
-        lang: "French"
+        lang: "French",
+        first: 12000,
+        second: 2.5,
+        third: 30000
     }, 
     {
         lang: "German",
+        first: 15000,
+        second: 1.5,
+        third: 22500
     },
     {
         lang: "Spanish",
+        first: 13000,
+        second: 3,
+        third: 39000
     },
     {
-        lang: "Indian Languages"
+        lang: "Indian Languages",
+        first: 25000,
+        second: 2.5,
+        third: 625000
     }
 ];
 
@@ -187,12 +202,24 @@ const map = () => {
       evt.target.parentElement.classList.add("focus");
       evt.target.nextElementSibling.classList.add("rotate");
       document.querySelector(".list_div").classList.add("show");
+      document.querySelector(".map_content").classList.add("hide");
+      setTimeout(() => {
+          document.querySelector(".map_content").classList.remove("active");
+      }, 200);
     });
 
     document.querySelector(".map_input").addEventListener("blur", (evt) => {
       evt.target.parentElement.classList.remove("focus");
       evt.target.nextElementSibling.classList.remove("rotate");
       document.querySelector(".list_div").classList.remove("show");
+      if (evt.target.value.length < 1) {
+        document.querySelector(".map_content").classList.remove("active");
+      } else {
+        document.querySelector(".list_div button.focus")?.click();
+        const event = new Event('input', { bubbles: true });
+        document.querySelector(".map_input").dispatchEvent(event);
+        document.querySelector(".map_content").classList.add("active");
+      }
     });
     
     mapInfo.forEach((info, idx) => {
@@ -204,8 +231,17 @@ const map = () => {
         document.querySelector(".list_div").appendChild(button);
         button.addEventListener("click", (evt) => {
             document.querySelector(".map_input").value = evt.target.innerText;
+            document.querySelector(".map_content").classList.add("active");
+            setMapInfo(idx);
         });
     });
+
+    function setMapInfo(idx) {
+        document.querySelector(".map_content .main").innerText = mapInfo[idx]?.lang;
+        document.querySelector(".map_content .first").innerText = mapInfo[idx]?.first;
+        document.querySelector(".map_content .second").innerText = mapInfo[idx]?.second;
+        document.querySelector(".map_content .third").innerText = mapInfo[idx]?.third;
+    }
 
     let focusIndex = 0;
 
@@ -235,31 +271,35 @@ const map = () => {
         if (evt.key === "Enter") {
             document.querySelector(".list_div button.focus")?.click();
             evt.target.blur();
-        } else if(evt.key === "ArrowUp") {
-            if (focusIndex <= 0) {
-                console.log("at top");
-                return;
-            } else {
-                focusIndex--;
-                console.log("go up");
-            }
-        } else if(evt.key === "ArrowDown") {
-            if (focusIndex + 1 > document.querySelectorAll(".list_div button:not(.hide)")?.length) {
-                console.log("end");
-                console.log(focusIndex);
-            } else {
-                console.log("go down");
-                focusIndex++;
-                console.log(focusIndex);
-            }
-        }
-
+        }    
+        //  else if(evt.key === "ArrowUp") {
+        //     if (focusIndex <= 0) {
+        //         console.log("at top");
+        //         return;
+        //     } else {
+        //         focusIndex--;
+        //         console.log("go up");
+        //     }
+        // } else if(evt.key === "ArrowDown") {
+        //     if (focusIndex + 1 > document.querySelectorAll(".list_div button:not(.hide)")?.length) {
+        //         console.log("end");
+        //         console.log(focusIndex);
+        //     } else {
+        //         console.log("go down");
+        //         focusIndex++;
+        //         console.log(focusIndex);
+        //     }
+        // }
     });
 
     document.querySelector(".x_mark").addEventListener("click", () => {
         document.querySelector(".map_input").value = "";
         const event = new Event('input', { bubbles: true });
         document.querySelector(".map_input").dispatchEvent(event);
+        document.querySelector(".map_content").classList.remove("active");
+        setTimeout(() => {
+            document.querySelector(".map_input").focus();
+        }, 350)
     });
 }
 
