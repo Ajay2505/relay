@@ -7,6 +7,12 @@
     }
 }
 
+@media only screen and (min-width: 1000px) {
+    nav .nav_icon_wrapper {
+        display: none !important;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .scale_section .right_wrapper .top_wrapper, .scale_section .right_wrapper .bottom_wrapper .box > div {
         flex-direction: column !important;
@@ -40,6 +46,9 @@
 }
 
 @media only screen and (max-width: 600px) {
+    .max-md-vstack {
+        flex-direction: column;
+    }
     .calc_section {
         background-position: -40% 0;
     }

@@ -142,18 +142,17 @@ const calc = () => {
     }
     
     function valuesSetter() {
-        const platformValue = document.querySelector(".calc_range_3").value;
-        let rough = 450 / (5 * platformValue);
+        let rough = 450 / (5 * document.querySelector(".calc_range_3").value);
         first = ((15000)+(document.querySelector(".calc_range_2").value * document.querySelector(".calc_range_3").value) * 100)/80;
-        employees_req_value = document.querySelector(".calc_range_2").value / rough;
+        employees_req_value = Math.ceil(document.querySelector(".calc_range_2").value / rough);
         second = (employees_req_value * 25000)/80;
         hours = employees_req_value * 8 * 22;
         money = (second / first) * 100;
-        document.querySelector(".employees_req").innerText = (employees_req_value) < 1 ? 1 : Math.round(employees_req_value);
+        document.querySelector(".employees_req").innerText = employees_req_value;
         document.getElementById("calc_first_price").innerText = +first.toFixed(2);
         document.getElementById("calc_second_price").innerText = +second.toFixed(2);
         document.querySelector(".more_money").innerText = +money.toFixed(2);
-        document.querySelector(".hours").innerText = +hours.toFixed(0);
+        document.querySelector(".hours").innerText = hours;
     }
     
     

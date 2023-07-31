@@ -7,7 +7,10 @@
     }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
+    .section_1 .right_wrapper .img_wrapper .bubble_wrapper {
+        max-width: 250px;
+    }
     .pinned_element {
         position: relative;
         transform: none;
@@ -17,6 +20,9 @@
     }
     .pinned_element .fade_in_box {
         display: none;
+    }
+    .skew_fix {
+        height: 30vh;
     }
     .setup_section .boxes {
         flex-direction: column;
@@ -37,20 +43,37 @@
     .benefits_section {
         padding-bottom: 0;
     }
-    .skew_fix {
-        height: 0;
-    }
     .end_pin {
         padding-block: 50px;
     }
     .inv_section {
         padding-bottom: 50px;
     }
+
 }
 
 
+@media only screen and (max-width: 768px) {
+    .skew_fix {
+        height: 0;
+    }
+    .setup_section .boxes .box .content button {
+        opacity: 1;
+    }
+    .setup_section .boxes .box .bottom {
+        margin-top: 70px;
+    }
+}
+
 @media only screen and (max-width: 600px) {
     .section_1 .right_wrapper .img_wrapper .bubble_wrapper{
-        max-width: 165px;
+        max-width: 200px;
+    }
+    .end_pin {
+        overflow: hidden;
+    }
+    .pinned_element.skew {
+        max-width: 270px;
+        min-width: 250px;
     }
 }

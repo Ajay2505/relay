@@ -145,6 +145,18 @@
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
 }
 
+.pinned_element.skew {
+    opacity: 1;
+}
+
+.pinned_element.skew .box.add, .pinned_element.skew .box.purple {
+    opacity: 1;
+    position: relative;
+    visibility: visible;
+    display: block;
+    top: 0;
+}
+
 .pinned_element .content {
     padding: 15px;
 }
@@ -309,7 +321,7 @@
 }
 
 .skew {
-    opacity: .5 !important;
+    opacity: .5;
     transform: translateX(-5px) skewX(-10deg) !important;
     transition: transform 1s ease-in-out, opacity .2s ease-in-out !important;
 }  

@@ -1,28 +1,28 @@
 gsap.registerPlugin(ScrollTrigger);
 
-const boxes = gsap.timeline({ delay: 0 });
-boxes.to(".fade_box", {
-    opacity: 0,
-    y: -100,
-    stagger: .1
-});
-
-boxes.fromTo(".fade_in_box", {
-    opacity: 0,
-    visibility: "hidden",
-    y: -10
-}, {
-    opacity: 1,
-    visibility: "visible",
-    y: 0,
-    duration: .2
-});
-
-boxes.pause();
 
 const mm = gsap.matchMedia();
 
-mm.add("(min-width: 800px)", () => {
+mm.add("(min-width: 1300px)", () => {
+    const boxes = gsap.timeline({ delay: 0 });
+    boxes.to(".fade_box", {
+        opacity: 0,
+        y: -100,
+        stagger: .1
+    });
+    
+    boxes.fromTo(".fade_in_box", {
+        opacity: 0,
+        visibility: "hidden",
+        y: -10
+    }, {
+        opacity: 1,
+        visibility: "visible",
+        y: 0,
+        duration: .2
+    });
+    
+    boxes.pause();
     gsap.to(".pinned_element", {
         opacity: 1,
         scrollTrigger: {
@@ -149,9 +149,9 @@ gsap.to(".benefits_section .content", {
     }
 });
 
-const pinnedInput = document.querySelector(".pinned_input");
+const pinnedInput = document.querySelectorAll(".pinned_input");
 
-pinnedInput.addEventListener("input", (evt) => {
+pinnedInput[0].addEventListener("input", (evt) => {
     const value = evt.target.value;
     const per = ((value - evt.target.min) / (evt.target.max - evt.target.min)) * 100;
     if(per > 15) {
@@ -160,6 +160,14 @@ pinnedInput.addEventListener("input", (evt) => {
     document.querySelector(".pinned_value").innerText = evt.target.value;
 });
 
+pinnedInput[1].addEventListener("input", (evt) => {
+    const value = evt.target.value;
+    const per = ((value - evt.target.min) / (evt.target.max - evt.target.min)) * 100;
+    if(per > 15) {
+        document.querySelectorAll(".pinned_img")[1].style.left = per + "%";
+    }
+    document.querySelectorAll(".pinned_value")[1].innerText = evt.target.value;
+});
 
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 5,
@@ -171,13 +179,21 @@ var swiper = new Swiper(".mySwiper", {
     },
     speed: 7000,
     breakpoints: {
-        600: {
-            slidesPerView: 1,
+        499: {
+            slidesPerView: 2,
             spaceBetween: 10,
         },
-        800: {
+        // 767: {
+        //     slidesPerView: 3,
+        //     spaceBetween: 10,
+        //   },
+        768: {
             slidesPerView: 3,
-            spaceBetween: 50
+            spaceBetween: 10,
+        },
+        1000: {
+            slidesPerView: 5,
+            spaceBetween: 70
         }
     }
 });

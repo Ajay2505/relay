@@ -200,3 +200,70 @@ nav, .section_main, .section_2, .mobile_nav {
     color: #FBFAF299;
 }
 
+@media only screen and (max-width: 768px) {
+    .section_main .absolute_block {
+        position: relative;
+        top: 0;
+    }
+    .section_main .icon_wrapper {
+        max-width: 60px;
+    }
+    .section_main .mask_wrapper .img_wrapper {
+        max-width: 250px;
+        right: 30%;
+        bottom: 0;
+    }
+    .section_build .col_rev {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .section_build .icon_wrapper {
+        max-width: 70px;
+        top: 30px;
+        left: 340px;
+    }
+    .section_build .mask_wrapper {
+        margin-left: 0;
+        transform: translateY(20px);
+    }
+    .section_build .mask_wrapper .img_wrapper {
+        left: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .section_main .dot {
+        width: 30px;
+        height: 30px;
+        bottom: 15%;
+    }
+    .section_main .icon_wrapper {
+        max-width: 30px;
+        bottom: 0;
+        display: grid;
+        place-items: inherit;
+    }
+    .section_main .mask_wrapper .img_wrapper {
+        max-width: 150px;
+        right: 30%;
+        bottom: 0;
+    }
+    .section_build .content_wrapper .cards {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    .section_work {
+        padding-bottom: 50px;
+    }
+    .section_empower {
+        padding-top: 50px;
+        margin-top: 0;
+        background: var(--bg_sec);
+    }
+    .section_empower .spacer {
+        padding-block: 0;
+    }
+    .section_empower .cards {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
