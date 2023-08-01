@@ -8,65 +8,6 @@ const inf = () => {
     map();
 }
 
-// const mapInfo = [
-//     {
-//         lang: "Telugu",
-//         info: "Something about it"
-//     },
-//     {
-//         lang: "Hindi",
-//         info: "Something about it"
-//     },
-//     {
-//         lang: "English",
-//         info: "Something about it"
-//     },
-//     {
-//         lang: "Marathi",
-//         info: "Something about it"
-//     },
-//     {
-//         lang: "Tamil",
-//         info: "Something about it"
-//     },
-//     {
-//         lang: "Kannada",
-//         info: "Something about it"
-//     },
-//     {
-//         lang: "Malayalam",
-//         info: "Something about it"
-//     },
-//     {
-//         lang: "Bengali",
-//         info: "Something about it"
-//     },
-//     {
-//         lang: "Assamese",
-//         info: "Something about it"
-//     },
-//     {
-//         lang: "Oriya",
-//         info: "Something about it"
-//     },
-//     {
-//         lang: "Bhojpuri",
-//         info: "Something about it"
-//     },
-//     {
-//         lang: "Gujarati",
-//         info: "Something about it"
-//     },
-//     {
-//         lang: "Punjabi",
-//         info: "Something about it"
-//     },
-//     {
-//         lang: "Bihari",
-//         info: "Something about it"
-//     },
-// ]
-
 const mapInfo = [
     {
         lang: "English",
@@ -233,8 +174,8 @@ const map = () => {
             document.querySelector(".map_input").value = evt.target.innerText;
             const event = new Event('input', { bubbles: true });
             document.querySelector(".map_input").dispatchEvent(event);
-            document.querySelector(".map_content").classList.add("active");
             setMapInfo(idx);
+            document.querySelector(".map_content").classList.add("active");
         });
     });
 
@@ -314,5 +255,4 @@ document.querySelector(".footer_input").addEventListener("focus", (evt) => {
 document.querySelector(".footer_input").addEventListener("blur", (evt) => {
     evt.target.parentElement.classList.remove("focus");
 });
-
 

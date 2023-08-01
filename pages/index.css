@@ -402,12 +402,17 @@
 }
 
 .vector_section {
-    /* background: linear-gradient(to bottom, #824FE7, #8E5FE7, #824FE7); */
-    background: #8E5FE7;
+    /* background: #8E5FE7; */
     /* background-color: #824FE7; */
     color: #FBFAF2;
     overflow: visible;
 }
+
+/* @supports (-ms-ime-align: auto) {
+    .vector_section {
+        background: #824FE7; 
+    }
+} */
 
 .vector_section .content {
     transform: translateY(150px);
