@@ -195,18 +195,32 @@ nav, .mobile_nav {
     background-position: 120% 0;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
     .section_main .main_spacer {
-        padding-block: 200px;
+        padding-block: 210px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .section_main .main_spacer {
+        padding-block: 0;
+    }
+    .section_main .absolute_block {
+        position: relative !important;
+    }
+    section.section_empower {
+        margin-top: 0;
+        background: #1C5551;
+        padding-top: 50px;
+    }
+    .section_work {
+        padding-bottom: 50px;
     }
 }
 
 @media only screen and (max-width: 500px) {
     .section_main .grid {
         grid-template-columns: repeat(1, minmax(0, 1fr));
-    }
-    .section_main .absolute_block {
-        position: relative !important;
     }
     .section_empower .cards {
         gap: 25px 0;
@@ -238,13 +252,5 @@ nav, .mobile_nav {
     .section_build .icon_wrapper {
         top: 20px;
         left: 100px;
-    }
-    .section_work {
-        padding-bottom: 50px;
-    }
-    section.section_empower {
-        margin-top: 0;
-        background: #1C5551;
-        padding-top: 50px;
     }
 }

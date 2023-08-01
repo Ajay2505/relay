@@ -231,6 +231,8 @@ const map = () => {
         document.querySelector(".list_div").appendChild(button);
         button.addEventListener("click", (evt) => {
             document.querySelector(".map_input").value = evt.target.innerText;
+            const event = new Event('input', { bubbles: true });
+            document.querySelector(".map_input").dispatchEvent(event);
             document.querySelector(".map_content").classList.add("active");
             setMapInfo(idx);
         });
@@ -272,24 +274,21 @@ const map = () => {
             document.querySelector(".list_div button.focus")?.click();
             evt.target.blur();
         }    
-        //  else if(evt.key === "ArrowUp") {
-        //     if (focusIndex <= 0) {
-        //         console.log("at top");
-        //         return;
-        //     } else {
-        //         focusIndex--;
-        //         console.log("go up");
-        //     }
-        // } else if(evt.key === "ArrowDown") {
-        //     if (focusIndex + 1 > document.querySelectorAll(".list_div button:not(.hide)")?.length) {
-        //         console.log("end");
-        //         console.log(focusIndex);
-        //     } else {
-        //         console.log("go down");
-        //         focusIndex++;
-        //         console.log(focusIndex);
-        //     }
-        // }
+         else if(evt.key === "ArrowUp") {
+            if (focusIndex <= 0) {
+                return;
+            } else {
+                document.querySelectorAll(".list_div button")[focusIndex].classList.remove("focus");
+                focusIndex--;
+                document.querySelectorAll(".list_div button")[focusIndex].classList.add("focus");
+            }
+        } else if(evt.key === "ArrowDown") {
+            if (!(focusIndex + 2 > document.querySelectorAll(".list_div button:not(.hide)")?.length)) {
+                document.querySelectorAll(".list_div button")[focusIndex].classList.remove("focus");
+                focusIndex++;
+                document.querySelectorAll(".list_div button")[focusIndex].classList.add("focus");
+            } 
+        }
     });
 
     document.querySelector(".x_mark").addEventListener("click", () => {

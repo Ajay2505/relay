@@ -8,6 +8,9 @@
 }
 
 @media only screen and (max-width: 1200px) {
+    .vector_section .content {
+        transform: translateY(100px);
+    }
     .section_1 .right_wrapper .img_wrapper .bubble_wrapper {
         max-width: 250px;
     }
@@ -53,6 +56,9 @@
         max-width: 330px;
         min-width: 330px;
     }
+    .pricing_section .right_wrapper .overlay_wrapper {
+        top: 14%;
+    }
 }
 
 
@@ -73,6 +79,9 @@
     .pricing_section .left_wrapper .overlay_wrapper {
         top: -10%;
     }
+    .vector_section .content {
+        transform: translateY(50px);
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -83,10 +92,16 @@
         overflow: hidden;
     }
     .pricing_section {
-        padding-bottom: 150px;
+        padding-bottom: 50px !important;
+    }
+    .scale_section {
+        padding-top: 50px !important;
     }
     .pricing_section .left_wrapper .overlay_wrapper {
         top: -6%;
         right: -40%;
+    }
+    .vector_section .content {
+        transform: translateY(30px);
     }
 }

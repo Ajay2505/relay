@@ -84,7 +84,7 @@ mm.add("(min-width: 1300px)", () => {
     });
 });
    
-    
+// 192481
 gsap.to(".end_pin", {
     background: "#824FE7",
     duration: .4,
@@ -94,6 +94,7 @@ gsap.to(".end_pin", {
         end: "center top",
         onEnter: () => {
             gsap.to(".end_pin", { background: "#824FE7" });
+            // gsap.to(".end_pin", { background: "#824FE7" });
             gsap.to(".end_pin .content_wrapper", { opacity: 1 });
             gsap.to(".end_pin .pinned_element.skew", { opacity: 1 });
             gsap.to(".skew_fix", { background: "#824FE7" });
@@ -197,6 +198,19 @@ var swiper = new Swiper(".mySwiper", {
     }
 });
 
+document.querySelector(".main_input").addEventListener("input", (evt) => {
+    if (evt.target.validity.valid) {
+        evt.target.parentElement.classList.remove("error");
+        evt.target.nextElementSibling.disabled = false;
+    } else {
+        evt.target.parentElement.classList.add("error");
+        evt.target.nextElementSibling.disabled = true;
+    }
+    if (evt.target.value < 1) {
+        evt.target.nextElementSibling.disabled = true;
+    }
+});
+
 document.querySelector(".main_input").addEventListener("focus", (evt) => {
     evt.target.parentElement.classList.add("focus");
 });
@@ -204,4 +218,3 @@ document.querySelector(".main_input").addEventListener("focus", (evt) => {
 document.querySelector(".main_input").addEventListener("blur", (evt) => {
     evt.target.parentElement.classList.remove("focus");
 });
-

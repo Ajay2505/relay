@@ -14,6 +14,9 @@
 }
 
 @media only screen and (max-width: 768px) {
+    .w-70 {
+        width: 100%;
+    }
     .scale_section .right_wrapper .top_wrapper, .scale_section .right_wrapper .bottom_wrapper .box > div {
         flex-direction: column !important;
     }
@@ -66,3 +69,11 @@
     }  
 }
 
+@media only screen and (min-width: 768px) {
+    .w-lg-70{
+        width: 70%;
+    }
+    .w-lg-80{
+        width: 80%;
+    }
+}

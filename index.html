@@ -6,7 +6,9 @@
     <title>Relay</title>
     <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/lib/swiper/swiper-bundle.min.css">
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <link rel="stylesheet" href="/pages/responsive.css">
+
   </head>
   <body onload="index()">
     <nav>
@@ -74,7 +76,7 @@
         </div>
         <div class="end_content d-flex align-items-center gap-4">
           <a href="/">Login</a>
-          <button>Book a Demo</button>
+          <button onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ajaykumar-tetramind/demo'});return false;">Book a Demo</button>
         </div>
       </div>
     </nav>
@@ -92,7 +94,7 @@
     <section class="section_1 p_b_md bg_main">
       <div class="container px-1 px-lg-5">
         <div class="row">
-          <div class="col-lg-5">
+          <div class="col-xl-5">
             <div class="left_wrapper">
               <div class="content">
                 <h1 class="main_heading m-0">
@@ -111,7 +113,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-6 ms-auto">
+          <div class="col-xl-6 ms-auto">
             <div class="right_wrapper position-relative">
               <div class="gray_dot"></div>
               <!-- <div class="floating_block">
@@ -360,14 +362,14 @@
         </div>
     </section>
 
-    <section class="vector_section p_bl_sm position-relative">
+    <section class="vector_section p_b_sm position-relative">
       <div class="container">
         <div class="row">
-          <div class="col-lg-7 mx-auto">
+          <div class="col-xl-7 mx-auto">
             <div class="content">
               <p class="text-center gray text_xs rounded_main">Seamless data flow</p>
               <h1 class="sec_heading text-center my-lg-4 my-2">Global Benefits at your Fingertips</h1>
-              <p class="text-center">Add any handle and get complete details in less than 10 minutes whether you have 40 or 40000 influencers.</p>
+              <p class="text-center w-70 mx-auto">Add any handle and get complete details in less than 10 minutes whether you have 40 or 40000 influencers.</p>
 
             </div>
           </div>
@@ -382,8 +384,11 @@
       </div>
 
     </section>
+    
     <div class="curve">
-      <svg viewBox="0 0 1440 83" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0.896912H1440C976 110.368 464 110.368 0 0.896912Z" fill="#824FE7"></path></svg>
+      <svg viewBox="0 0 1440 83" fill="#8E5FE7" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 0.896912H1440C976 110.368 464 110.368 0 0.896912Z" fill="#8E5FE7"></path>
+      </svg>
     </div>
     
     <section class="setup_section p_b_sm">
@@ -617,46 +622,59 @@
     <section class="pricing_section p_b_md">
       <div class="container px-lg-5 px-1">
         <div class="row">
-          <div class="col-lg-7">
+          <div class="col-xl-7">
 
             <div class="left_wrapper w-full h-full">
               <div class="w-70">
                 <div class="content_wrapper">
-                  <p class="gray rounded_main text_xs">PRICING</p>
-                  <h1 class="sec_heading my-lg-4">Replacing your data, operators, and Excel sheets</h1>
-                  <p class="text_sm">Join us on a seamless journey of AI-enabled automation of digital agencies.</p>
-                </div>
-                <div class="overlay_wrapper">
-                  <div class="img_wrapper bounce_xs">
-                    <img src="/assets/images/bubble_orange.png" alt="">
-                  </div>
+                  <p class="gray rounded_main text_xs text-uppercase">Influencer management</p>
+                  <h1 class="sec_heading my-lg-4 my-2">Smart Cost Savings: Transforming Operations with Automation, Data Tracking, and AI Analytics, Leaving Excel Sheets Behind                  </h1>
+                  <p class="text_sm">Elevate Your Influencer Management with Smart Cost Savings! Embrace Automation, Data Tracking, and AI Analytics to optimize your campaigns, leaving manual processes and Excel sheets in the past. Unlock efficient and effective influencer collaborations - contact us now to level up your success!                  </p>
                 </div>
               </div>
             </div>
           </div>
           
-          <div class="col-lg-5 pt-3 pt-lg-0">
-            <div class="right_wrapper rounded_main">
+          <div class="col-xl-5 pt-3 pt-lg-0">
+            <div class="right_wrapper rounded_main mt-4 ">
               <h1 class="main_heading m-0">$ <span>0.25</span></h1>
               <p class="text_lg m_b_70">No change in pricing.</p>
-              <p class="text_lg fw-medium mb-4">Same price, all benefits</p>
+              <p class="text_lg fw-medium mb-4">Unleash Influencer Managment              </p>
               <div class="hstack mb-4">
                 <div class="icon_wrapper w-full me-2">
                   <img class="mb-auto" src="/assets/icons/tick_light.svg" alt="">
                 </div>
-                <p class="text_lg fw-light">Fast. Go from account created to covered employees in minutes</p>
+                <p class="text_lg fw-light">Unlimited User Logins at No Extra Cost: Empower Your Team Collaboratively.</p>
               </div>
               <div class="hstack mb-4">
                 <div class="icon_wrapper w-full me-2">
                   <img class="mb-auto" src="/assets/icons/tick_light.svg" alt="">
                 </div>
-                <p class=" text_lg fw-light">Cost-efficient. Enjoy transparent and cost-efficient flat pricing, and admin-busting productivity                </p>
+                <p class=" text_lg fw-light">Seamless API Connectivity with Major Platforms: Auto Data Updates for Unparalleled Insights.                </p>
               </div>
               <div class="hstack mb-4">
                 <div class="icon_wrapper w-full me-2">
                   <img class="mb-auto" src="/assets/icons/tick_light.svg" alt="">
                 </div>
-                <p class=" text_lg fw-light">Integrated. Health and pension providers built-in, meaning no delays or double-entry                </p>
+                <p class=" text_lg fw-light">Automated Media Kit for All Your Influencers: Boost Efficiency with a Click.                </p>
+              </div>
+              <div class="hstack mb-4">
+                <div class="icon_wrapper w-full me-2">
+                  <img class="mb-auto" src="/assets/icons/tick_light.svg" alt="">
+                </div>
+                <p class=" text_lg fw-light">Effortless Media Kit Sharing: Reach Unlimited Brands Instantly.                </p>
+              </div>
+              <div class="hstack mb-4">
+                <div class="icon_wrapper w-full me-2">
+                  <img class="mb-auto" src="/assets/icons/tick_light.svg" alt="">
+                </div>
+                <p class=" text_lg fw-light">Automated Video Audit: Ensure Brand Guideline Compliance with Precision
+                </p>
+              </div>
+              <div class="overlay_wrapper">
+                <div class="img_wrapper bounce_xs">
+                  <img src="/assets/images/bubble_orange.png" alt="">
+                </div>
               </div>
             </div>
           </div>
@@ -944,8 +962,7 @@
       </div>
   </footer>
 
-
-    
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
     <script src="/lib/swiper/swiper-bundle.min.js"></script>
     <script src="/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="/lib/gsap/gsap.min.js"></script>
