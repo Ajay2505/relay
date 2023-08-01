@@ -243,5 +243,5 @@ document.querySelector(".main_input").addEventListener("blur", (evt) => {
 if(navigator.platform.match('Mac') !== null) {
     document.querySelector('.vector_section').style.background = '#8E5FE7'; //  for Mac users
 } else {
-    document.querySelector('.vector_section').style.background = '#824FE7'; // for Windows users
+    document.querySelector('.vector_section').style.background = '#8355E4'; // for Windows users
 }

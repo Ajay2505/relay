@@ -408,12 +408,6 @@
     overflow: visible;
 }
 
-/* @supports (-ms-ime-align: auto) {
-    .vector_section {
-        background: #824FE7; 
-    }
-} */
-
 .vector_section .content {
     transform: translateY(150px);
     z-index: 5;
