@@ -220,23 +220,28 @@ document.querySelector(".main_input").addEventListener("blur", (evt) => {
 });
 
 
-// Get the user agent string
-const userAgent = navigator.userAgent.toLowerCase();
+// // Get the user agent string
+// const userAgent = navigator.userAgent.toLowerCase();
 
-// Function to check if the user is on a Mac
-function isMac() {
-    return /macintosh|mac os x/i.test(userAgent);
-}
+// // Function to check if the user is on a Mac
+// function isMac() {
+//     return /macintosh|mac os x/i.test(userAgent);
+// }
 
-// Function to check if the user is on Windows
-function isWindows() {
-    return /windows|win32/i.test(userAgent);
-}
+// // Function to check if the user is on Windows
+// function isWindows() {
+//     return /windows|win32/i.test(userAgent);
+// }
 
-// Apply different styles based on the operating system
-if (isMac()) {
+// // Apply different styles based on the operating system
+// if (isMac()) {
+//     document.querySelector('.vector_section').style.background = '#8E5FE7'; //  for Mac users
+// } else if (isWindows()) {
+//     document.querySelector('.vector_section').style.background = '#824FE7'; // for Windows users
+// }
+
+if(navigator.platform.match('Mac') !== null) {
     document.querySelector('.vector_section').style.background = '#8E5FE7'; //  for Mac users
-} else if (isWindows()) {
+} else {
     document.querySelector('.vector_section').style.background = '#824FE7'; // for Windows users
 }
-
