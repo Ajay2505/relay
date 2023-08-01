@@ -5,6 +5,9 @@
     .curve {
         margin-top: -2px;
     }
+    .vector_section .content {
+        transform: translateY(240px);
+    }
 }
 
 @media only screen and (max-width: 1200px) {
