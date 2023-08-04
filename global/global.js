@@ -4,7 +4,7 @@ const index = () => {
 }
 
 const inf = () => {
-    calc();
+    salesCalc();
     map();
 }
 
@@ -56,21 +56,14 @@ const calc = () => {
             evt.target.value = evt.target.min;
         }
         document.querySelector(".calc_range_1").value = evt.target.value; 
-        tracker();  
+        inputCalc(document.querySelector(".calc_range_1"));  
     });
     
     
     document.querySelector(".calc_range_1").addEventListener("input", (evt) => {
         document.querySelector(".input_track").value = evt.target.value;
-        tracker();
+        inputCalc(evt.target);
     });
-    
-    function tracker() {
-        const element = document.querySelector(".calc_range_1");
-        const value = element.value;
-        const per = (value / element.max) * 100;
-        element.style.background = `linear-gradient(to right, #3C9C8C 0%, #3C9C8C ${per}%, #254745 ${per}%, #254745 100%)`;
-    }
 
     document.querySelector(".input_influ").addEventListener("input", (evt) => {
         const value = parseInt(evt.target.value);
@@ -81,21 +74,15 @@ const calc = () => {
             evt.target.value = evt.target.min;
         }
         document.querySelector(".calc_range_2").value = evt.target.value; 
-        influencer();
+        inputCalc(document.querySelector(".calc_range_2"));
+        valuesSetter();
     });
     
     document.querySelector(".calc_range_2").addEventListener("input", (evt) => {
         document.querySelector(".input_influ").value = evt.target.value;
-        influencer();
-    });
-    
-    function influencer() {
-        const element = document.querySelector(".calc_range_2");
-        const value = element.value;
-        const per = (value / element.max) * 100;
-        element.style.background = `linear-gradient(to right, #3C9C8C 0%, #3C9C8C ${per}%, #254745 ${per}%, #254745 100%)`;
+        inputCalc(evt.target);
         valuesSetter();
-    }
+    });
     
     function valuesSetter() {
         let rough = 450 / (5 * document.querySelector(".calc_range_3").value);
@@ -136,6 +123,27 @@ const calc = () => {
         element.style.background = `linear-gradient(to right, #3C9C8C 0%, #3C9C8C ${per}%, #254745 ${per}%, #254745 100%)`;
         valuesSetter();
     }
+}
+
+const salesCalc = () => {
+    document.querySelector(".calc_range_1").addEventListener("input", evt => {
+        inputCalc(evt.target);
+    });
+    document.querySelector(".calc_range_2").addEventListener("input", evt => {
+        inputCalc(evt.target);
+    });
+    document.querySelector(".calc_range_3").addEventListener("input", evt => {
+        inputCalc(evt.target);
+    });
+    document.querySelector(".calc_range_4").addEventListener("input", evt => {
+        inputCalc(evt.target);
+    });
+}
+
+function inputCalc(element) {
+    const value = element.value;
+    const per = (value / element.max) * 100;
+    element.style.background = `linear-gradient(to right, #3C9C8C 0%, #3C9C8C ${per}%, #254745 ${per}%, #254745 100%)`;
 }
 
 const map = () => {
@@ -219,16 +227,18 @@ const map = () => {
             if (focusIndex <= 0) {
                 return;
             } else {
-                document.querySelectorAll(".list_div button")[focusIndex].classList.remove("focus");
+                document.querySelectorAll(".list_div button:not(.hide)")[focusIndex].classList.remove("focus");
                 focusIndex--;
-                document.querySelectorAll(".list_div button")[focusIndex].classList.add("focus");
+                document.querySelectorAll(".list_div button:not(.hide)")[focusIndex].classList.add("focus");
             }
         } else if(evt.key === "ArrowDown") {
-            if (!(focusIndex + 2 > document.querySelectorAll(".list_div button:not(.hide)")?.length)) {
-                document.querySelectorAll(".list_div button")[focusIndex].classList.remove("focus");
-                focusIndex++;
-                document.querySelectorAll(".list_div button")[focusIndex].classList.add("focus");
-            } 
+            const test = (() => {
+                if (!(focusIndex + 2 > document.querySelectorAll(".list_div button:not(.hide)")?.length)) {
+                    document.querySelectorAll(".list_div button:not(.hide)")[focusIndex].classList.remove("focus");
+                    focusIndex++;
+                    document.querySelectorAll(".list_div button:not(.hide)")[focusIndex].classList.add("focus");
+                }
+            })();
         }
     });
 
@@ -239,7 +249,7 @@ const map = () => {
         document.querySelector(".map_content").classList.remove("active");
         setTimeout(() => {
             document.querySelector(".map_input").focus();
-        }, 350)
+        }, 350);
     });
 }
 

@@ -597,6 +597,10 @@
     position: relative;
 }
 
+.pricing_section .text {
+    text-justify: inter-word;
+}
+
 /* .pricing_section .left_wrapper {
     padding-bottom: 150px;
 } */
@@ -651,6 +655,12 @@
     background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzI2IiBoZWlnaHQ9IjQyMCIgdmlld0JveD0iMCAwIDcyNiA0MjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik01MTAuMTE1IDIyOC4zMjZDNTEzLjM4MyAyNDAuNTIzIDUwNy41MjIgMjU0LjMyNyA0OTUuNDA0IDI1Ny41NzRMMzY2LjY5MiAyOTIuMDYzQzM1OC41NTIgMjk0LjI0NCAzNTAuODQ0IDI4Ny4wOTEgMzUxLjQ1MSAyNzguNjM3QzM1MS43OTcgMjczLjgxNyAzNTQuODg2IDI2OS41NzcgMzU5LjI5OCAyNjcuNjczQzQwMi44NjQgMjQ4Ljg2NiA0MjcuMTU5IDIwMC4yMjkgNDE0LjQzMyAxNTIuNzM3QzQwMC40NTcgMTAwLjU3NiAzNDcuMTE2IDY5LjU0NzMgMjk1LjI5NCA4My40MzMxQzI3OC45MzUgODcuODE2NCAyNjQuNjgzIDk2LjE1MTIgMjUzLjI3OCAxMDcuMTQ3QzI0NS42NzQgMTE0LjQ3NyAyMzUuMTc5IDExOC4zMDggMjI0Ljc3MSAxMTYuNTM0QzIwOS4xNTIgMTEzLjg3MSAxOTYuNjI5IDk5LjUyMjYgMTk0LjIwNiA4My43Nzg5QzE5My42NjEgODAuMjQwOCAxOTIuOTE5IDc2LjY5NjMgMTkxLjk3MSA3My4xNTgyQzE3Ny45OTQgMjAuOTk3MSAxMjQuNjU0IC0xMC4wMzEyIDcyLjgzMTQgMy44NTQ1NEMyMS4wMDkgMTcuNzQwMyAtOS42NzEyMSA3MS4yODE5IDQuMzA1MzMgMTIzLjQ0M0MxMS41NzA5IDE1MC41NTkgMjkuNDc0MSAxNzEuOTYzIDUyLjI3MTggMTg0LjMxNkM1Ni41OTQ4IDE4Ni42NTkgNTkuOTkyIDE5MC41MTkgNjEuMjY5IDE5NS4yODVDNjIuMjcyNiAxOTkuMDMxIDYxLjg4MiAyMDIuOTk2IDYwLjM2MTkgMjA2LjU1M0M0Ny4zNTc2IDIzNi45ODIgNDQuMDg0NSAyNzEuOTAxIDUzLjMzNzIgMzA2LjQzMkM3NS4xNzU1IDM4Ny45MzQgMTU4LjUyIDQzNi40MTYgMjM5LjQ5MyA0MTQuNzE5QzI1Ni42NzIgNDEwLjExNiAyNzIuMzY1IDQwMi43MjMgMjg2LjIyIDM5My4xNTRDMzMyLjM5MyAzNjEuMjYyIDM3Mi44NDcgMzE1LjcyIDQyNy4wMTEgMzAxLjIwN0M0OTIuMzk2IDI4My42ODcgNTY2LjczMyAzMTkuNTY2IDYzMy41MzIgMzA4LjU4M0M2MzcuMDY5IDMwOC4wMDEgNjQwLjYxMSAzMDcuMjQgNjQ0LjE0NyAzMDYuMjkzQzcwMi40NDcgMjkwLjY3MSA3MzYuOTYyIDIzMC40MzcgNzIxLjIzOCAxNzEuNzU2QzcwNS41MTUgMTEzLjA3NCA2NDUuNTA3IDc4LjE2NzQgNTg3LjIwNiA5My43ODg5QzUyOC45MDYgMTA5LjQxIDQ5NC4zOTEgMTY5LjY0NSA1MTAuMTE1IDIyOC4zMjZaIiBmaWxsPSIjRjVGNEVEIi8+Cjwvc3ZnPgo=");
     background-repeat: no-repeat;
     background-position: -20% 150%;
+}
+
+.faq_section .gray {
+    width: fit-content;
+    padding: 5px 14px;
+    background-color: #EBEBE5;
 }
 
 .faq_section .bottom {
@@ -717,17 +727,23 @@
     color: inherit;
 }
 
+.accordion-button:not(.collapsed)::after {
+    transform: scale(.6) rotate(-180deg);
+}
+
 .accordion-button::after {
     transform: scale(.6);
 }
 
 .accordion-body {
     opacity: 0;
-    transition: opacity .2s ease-in-out;    
+    transform: scale(.9);
+    transition: opacity .1s ease-in-out, transform .25s ease-in-out;    
 }
 
 .collapse.show .accordion-body {
     opacity: 1;
+    transform: scale(1);
 }
 
 .inv_section .logos .img_wrapper {

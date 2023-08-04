@@ -563,6 +563,10 @@ nav .end_content button:hover, .nav_book_btn:hover {
     color: #fbfaf244;
 }
 
+.map_section .input_wrapper input:focus + div div.icon_wrapper {
+    transform: translateY(-50%) rotate(180deg);
+}
+
 .map_section .input_wrapper .icon_wrapper {
     display: grid;
     place-items: center;
@@ -570,7 +574,7 @@ nav .end_content button:hover, .nav_book_btn:hover {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    transition: top .2s ease-in-out, opacity .3s ease-in-out;
+    transition: top .2s ease-in-out, opacity .3s ease-in-out, transform .2s ease-in-out;
 }
 
 .map_section .input_wrapper .icon_wrapper.hide {

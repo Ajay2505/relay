@@ -242,8 +242,8 @@ document.querySelector(".main_input").addEventListener("blur", (evt) => {
 
 if(navigator.platform.match('Mac') !== null) {
     document.querySelector('.vector_section').style.background = '#8E5FE7'; //  for Mac users
-    document.querySelector('.curve svg').style.color = '#8E5FE7'; 
+    document.querySelector('.curve svg').style.fill = '#8E5FE7'; 
 } else {
     document.querySelector('.vector_section').style.background = '#8355E4'; // for Windows users
-    document.querySelector('.curve svg').style.color = '#8355E4'; 
+    document.querySelector('.curve svg').style.fill = '#8355E4'; 
 }

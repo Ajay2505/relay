@@ -191,8 +191,18 @@ nav, .mobile_nav {
     color: #FBFAF299;
 }
 
+
+/* Calc Section */
 .calc_section {
     background-position: 120% 0;
+}
+
+.calc_section .box.second {
+    background-color: #266B6580;
+}
+
+.calc_section .box.second .bottom {
+    background-color: inherit;
 }
 
 @media only screen and (max-width: 1024px) {
