@@ -343,14 +343,14 @@
     </div>
     <div class="container mt-4 px-1 px-lg-5">
       <div class="row">
-        <div class="col-lg-4">
+        <div class="col-lg-5 pe-lg-5">
           <div class="content_wrapper w-full h-full d-grid place-items-center">
-            <div class="w-full">
-                <p class="text_lg mb-2">Number of employees in Sales team <span class="ps-1"><input min="1" step="1" value="1" max="50" style="width: fit-content;" class="input_calc calc_input_1" type="number"></span></p>
+            <div class="w-full h-fit">
+                <p class="text_lg mb-2">Number of employees in Sales team <span class="ps-1"><input min="1" step="1" value="1" max="50" class="input_calc calc_input_1" type="number"></span></p>
                 <div class="input_wrapper mb-2">
                   <input step="1" value="1" min="1" max="50" class="clac_range calc_range_1 mb-4 w-full" type="range" name="">
                 </div>
-                <p class="text_lg mb-2">Time taken to build one proposal <span class="ps-1"><input min="1" step="1" value="1" max="99" class="input_calc calc_input_2" type="number"></span></p>
+                <p class="text_lg mb-2">Time taken to build one proposal (Hrs) <span class="ps-1"><input min="1" step="1" value="1" max="99" class="input_calc calc_input_2" type="number"></span></p>
                 <div class="input_wrapper mb-2 position-relative">
                   <input step="1" value="1" min="1" max="99" class="clac_range calc_range_2 mb-4 w-full" type="range" name="">
                 </div>
@@ -358,55 +358,64 @@
                 <div class="input_wrapper mb-2 position-relative">
                   <input step="1" value="1" min="1" max="50" class="clac_range calc_range_3 mb-4 w-full" type="range" name="">
                 </div>
-                <p class="text_lg mb-2">Conversion rate (% age) <span class="ps-1"><input min="1" step="1" value="1" max="50" class="input_calc calc_input_4" type="number"></span></p>
-                <div class="input_wrapper mb-2 position-relative">
-                  <input step="1" value="1" min="1" max="50" class="clac_range calc_range_4 mb-4 w-full" type="range" name="">
+                <p class="text_lg mb-2">Average Order Value (USD) <span class="ps-1"><input min="100" step="1" value="100" max="9500" class="input_calc calc_input_4" type="number"></span></p>
+                <div class="input_wrapper position-relative">
+                  <input step="1" value="100" min="100" max="9500" class="clac_range calc_range_4 w-full" type="range" name="">
                 </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-4 ps-lg-5 ms-auto mt-2 mt-lg-0">
-          <div class="box first">
-            <div class="d-flex w-full h-full flex-column justify-content-between ">
-              <div class="top">
-                <p>with Relay</p>
-                <h1 class="m-0 mt-2">
-                  <span class="fs-4 m-0">$</span>
-                  <span id="calc_first_price" class="sec_heading">200</span>
-                  <span class="fs-6 fw-lighter">/month</span>
-                </h1>
-              </div>
-              <div class="bottom">
-                <p>Cost of service</p>
-              </div>
-            </div>
+
+        <div class="col-lg-7 ms-auto mt-3 me-0 pe-0 mt-lg-0">
+
+          <div class="table_overlay rounded_main overflow-hidden">
+
+            <table class="table sales_table m-0 p-3 w-full h-full">
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td class="middle">with Relay</td>
+                  <td class="last">using current process</td>
+                </tr>
+                <tr>
+                  <td>No of Proposals in a week</td>
+                  <td class="middle with_1">37.5</td>
+                  <td class="last curr_1">37.5</td>
+                </tr>
+                <tr>
+                  <td>No of proposals in a month</td>
+                  <td class="middle with_2">150</td>
+                  <td class="last curr_2">150</td>
+                </tr>
+                <tr>
+                  <td>Conversion / Orders in a month</td>
+                  <td class="middle with_3">1.5</td>
+                  <td class="last curr_3">1.5</td>
+                </tr>
+                <tr>
+                  <td>Order book value</td>
+                  <td class="middle">$ <span class="with_4">150.00</span></td>
+                  <td class="last">$ <span class="curr_4">150.00</span></td>
+                </tr>
+                <tr>
+                  <td>Avg TAT for proposal building (hrs)</td>
+                  <td class="middle with_5">$20.00</td>
+                  <td class="last curr_5">$20.00</td>
+                </tr>
+                <tr>
+                  <td>Cost Per Sale</td>
+                  <td class="middle">₹ <span class="with_6"> 50,000</span></td>
+                  <td class="last">₹ <span class="curr_6">56,667</span></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-        </div>
-        <div class="col-lg-4 mt-2 mt-lg-0">
-          <div class="box second">
-            <div class="d-flex w-full h-full flex-column justify-content-between">
-              <div class="top">
-                <p>without Relay</p>
-                <h1 class="m-0 mt-2">
-                  <span class="fs-4 m-0">$</span>
-                  <span id="calc_second_price" class="sec_heading">35</span>
-                  <span class="fs-6 fw-lighter">/month</span>
-                </h1>
-                <p class="my-lg-4">You spend <span class="red"><span class="more_money">17.36</span>%</span> more money</p>
-              </div>
-              <div class="bottom">
-                <h4 class="m-0 employees_req">1</h4>
-                <p class="mb-2 light_text">Employees required for manually scraping the data</p>
-                <h4 class="m-0 hours">20</h4>
-                <p class="light_text">Hours spent per month just updating excel sheets</p>
-              </div>
-            </div>
-          </div>
-        </div>
+
       </div>
+
       <div class="row">
-        <div class="col-lg-8 ps-lg-5 mt-2 ms-auto">
-          <p style="color: #FBFAF299;">*Estimated figures based on average salary, hours per month spent on admin and broker fees            </p>
+        <div class="col-lg-7 mt-2 ms-auto">
+          <p style="color: #FBFAF299;">*Salary cost INR 75000</p>
         </div>
       </div>
     </div>

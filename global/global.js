@@ -126,18 +126,104 @@ const calc = () => {
 }
 
 const salesCalc = () => {
+    document.querySelector(".calc_input_1").addEventListener("input", evt => {
+        const value = parseInt(evt.target.value);
+        if (value > evt.target.max) {
+            evt.target.value = evt.target.max;
+        }
+        else if (value < evt.target.min) {
+            evt.target.value = evt.target.min;
+        }
+        document.querySelector(".calc_range_1").value = evt.target.value; 
+        inputCalc(document.querySelector(".calc_range_1"));
+        valuesSetter();
+    });
     document.querySelector(".calc_range_1").addEventListener("input", evt => {
         inputCalc(evt.target);
+        document.querySelector(".calc_input_1").value = evt.target.value;
+        valuesSetter();
+    });
+
+    document.querySelector(".calc_input_2").addEventListener("input", evt => {
+        const value = parseInt(evt.target.value);
+        if (value > evt.target.max) {
+            evt.target.value = evt.target.max;
+        }
+        else if (value < evt.target.min) {
+            evt.target.value = evt.target.min;
+        }
+        document.querySelector(".calc_range_2").value = evt.target.value; 
+        inputCalc(document.querySelector(".calc_range_2"));
+        valuesSetter();
     });
     document.querySelector(".calc_range_2").addEventListener("input", evt => {
         inputCalc(evt.target);
+        document.querySelector(".calc_input_2").value = evt.target.value;
+        valuesSetter();
+    });
+
+
+    document.querySelector(".calc_input_3").addEventListener("input", evt => {
+        const value = parseInt(evt.target.value);
+        if (value > evt.target.max) {
+            evt.target.value = evt.target.max;
+        }
+        else if (value < evt.target.min) {
+            evt.target.value = evt.target.min;
+        }
+        document.querySelector(".calc_range_3").value = evt.target.value; 
+        inputCalc(document.querySelector(".calc_range_3"));
+        valuesSetter();
     });
     document.querySelector(".calc_range_3").addEventListener("input", evt => {
+        document.querySelector(".calc_input_3").value = evt.target.value; 
         inputCalc(evt.target);
+        valuesSetter();
+    });
+    let timer;
+    document.querySelector(".calc_input_4").addEventListener("input", evt => {
+        clearTimeout(timer);
+        const value = parseInt(evt.target.value);
+        if (value > evt.target.max) {
+            timer = setTimeout(() => {
+                evt.target.value = evt.target.max;
+            }, 700);
+        }
+        else if (value < evt.target.min) {
+            timer = setTimeout(() => {
+                evt.target.value = evt.target.min;
+            }, 1000);
+        }
+        document.querySelector(".calc_range_4").value = evt.target.value; 
+        inputCalc(document.querySelector(".calc_range_4"));
+        valuesSetter();
     });
     document.querySelector(".calc_range_4").addEventListener("input", evt => {
         inputCalc(evt.target);
+        document.querySelector(".calc_input_4").value = evt.target.value;
+        valuesSetter();
     });
+
+    function valuesSetter() {
+        const value1 = document.querySelector(".calc_range_1").value;
+        const value2 = document.querySelector(".calc_range_2").value;
+        const value3 = document.querySelector(".calc_range_3").value;
+        const value4 = document.querySelector(".calc_range_4").value;
+        const with_1 = ((7.5 * value1)/1) * 5;
+        const curr_1 = ((7.5 * value1)/value2) * 5;
+        document.querySelector(".with_1").innerText = +with_1.toFixed(2);
+        document.querySelector(".curr_1").innerText = +curr_1.toFixed(2);
+        document.querySelector(".with_2").innerText = Math.round(with_1 * 4);
+        document.querySelector(".curr_2").innerText = Math.round(curr_1 * 4);
+        document.querySelector(".with_3").innerText = +((with_1 * 4 * value3) / 100).toFixed(2);
+        document.querySelector(".curr_3").innerText = +((curr_1 * 4 * value3) / 100).toFixed(2);
+        document.querySelector(".with_4").innerText = +(((with_1 * 4 * value3) / 100) * value4).toFixed(2);
+        document.querySelector(".curr_4").innerText = +(((curr_1 * 4 * value3) / 100) * value4).toFixed(2);
+        document.querySelector(".with_5").innerText = +(30 / ((with_1 * 4 * value3) / 100)).toFixed(2);
+        document.querySelector(".curr_5").innerText = +(30 / ((curr_1 * 4 * value3) / 100)).toFixed(2);
+        document.querySelector(".with_6").innerText = Math.round((75000 + 10000) / ((with_1 * 4 * value3) / 100));
+        document.querySelector(".curr_6").innerText = Math.round((75000) / ((curr_1 * 4 * value3) / 100));
+    }
 }
 
 function inputCalc(element) {

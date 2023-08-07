@@ -205,6 +205,36 @@ nav, .mobile_nav {
     background-color: inherit;
 }
 
+.calc_section .table_overlay {
+    background-color: #29292933;
+}
+
+.calc_section .table_overlay .sales_table {
+    border: none;
+    z-index: 1;
+    --bs-table-bg: inherit;
+}
+
+.calc_section .table_overlay .sales_table tr td {
+    padding: 20px !important;
+}
+
+.calc_section .table_overlay .sales_table .middle {
+    background-color: #266B65;
+    padding-inline: 20px !important;
+    text-align: center;
+}
+
+.calc_section .table_overlay .sales_table .last {
+    background-color: #2D7A73;
+    text-align: center;
+}
+
+.calc_section .sales_table td {
+    color: #FBFAF2;
+    border: none;
+}
+
 @media only screen and (max-width: 1024px) {
     .section_main .main_spacer {
         padding-block: 210px;
