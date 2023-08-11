@@ -68,6 +68,7 @@
     width: fit-content;
     background-color: #fff;
     padding: 15px;
+    padding-bottom: 8px;
     border-radius: 15px;
     z-index: 10;
     bottom: 0;
@@ -251,6 +252,12 @@
 
 .pinned_element .box.add .absolute_block {
     border-top-left-radius: 10px;
+    transition: transform .2s ease-in-out, opacity .3s ease-in-out;
+}
+
+.pinned_element .box.add .absolute_block.hide {
+    transform: translateY(10px);
+    opacity: 0;
 }
 
 .pinned_element .box.purple .absolute_block {

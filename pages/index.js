@@ -84,7 +84,7 @@ mm.add("(min-width: 1300px)", () => {
     });
 });
    
-// 192481
+// 192481 0C396C 824FE7
 gsap.to(".end_pin", {
     background: "#824FE7",
     duration: .4,
@@ -211,6 +211,14 @@ document.querySelector(".main_input").addEventListener("input", (evt) => {
     }
 });
 
+document.querySelector(".main_range").addEventListener("input", evt => {
+    const element = evt.target;
+    document.querySelector(".main_range_value").innerText = element.value;
+    const value = element.value;
+    const per = (value / element.max) * 100;
+    element.style.background = `linear-gradient(to right, #824FE7 0%, #824FE7 ${per}%, #EBEBE5 ${per}%, #EBEBE5 100%)`;
+});
+
 document.querySelector(".main_input").addEventListener("focus", (evt) => {
     evt.target.parentElement.classList.add("focus");
 });
@@ -219,26 +227,15 @@ document.querySelector(".main_input").addEventListener("blur", (evt) => {
     evt.target.parentElement.classList.remove("focus");
 });
 
-
-// // Get the user agent string
-// const userAgent = navigator.userAgent.toLowerCase();
-
-// // Function to check if the user is on a Mac
-// function isMac() {
-//     return /macintosh|mac os x/i.test(userAgent);
-// }
-
-// // Function to check if the user is on Windows
-// function isWindows() {
-//     return /windows|win32/i.test(userAgent);
-// }
-
-// // Apply different styles based on the operating system
-// if (isMac()) {
-//     document.querySelector('.vector_section').style.background = '#8E5FE7'; //  for Mac users
-// } else if (isWindows()) {
-//     document.querySelector('.vector_section').style.background = '#824FE7'; // for Windows users
-// }
+const skewBtns = document.querySelectorAll(".skew_add_btn");
+skewBtns.forEach(btn => {
+    btn.addEventListener("click", evt => {
+        let nextAbsoluteBlock = evt.target.nextElementSibling;
+        if (nextAbsoluteBlock && nextAbsoluteBlock.classList.contains("absolute_block")) {
+            nextAbsoluteBlock.classList.toggle("hide");
+        }
+    });
+});
 
 if(navigator.platform.match('Mac') !== null) {
     document.querySelector('.vector_section').style.background = '#8E5FE7'; //  for Mac users

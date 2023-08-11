@@ -37,9 +37,6 @@
         flex-direction: column;
         gap: 30px 0;
     }
-    .curve {
-        margin-top: -5px;
-    }
     .setup_section .boxes .box:hover {
         width: 100%;
     }
