@@ -1,15 +1,18 @@
 @import url("/global/global.responsive.css");
 @import url("./index.css");
 
-@media only screen and (min-width: 1600px) {
+/* @media only screen and (min-width: 1600px) {
     .vector_section .content {
         transform: translateY(240px);
     }
-}
+} */
 
 @media only screen and (min-width:1400px) {
     .curve {
         margin-top: -2px;
+    }
+    .video_container {
+        max-width: 1320px;
     }
 }
 

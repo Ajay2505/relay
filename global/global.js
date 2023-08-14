@@ -84,21 +84,6 @@ const calc = () => {
         valuesSetter();
     });
     
-    function valuesSetter() {
-        let rough = 450 / (5 * document.querySelector(".calc_range_3").value);
-        first = ((15000)+(document.querySelector(".calc_range_2").value * document.querySelector(".calc_range_3").value) * 100)/80;
-        employees_req_value = Math.ceil(document.querySelector(".calc_range_2").value / rough);
-        second = (employees_req_value * 25000)/80;
-        hours = employees_req_value * 8 * 22;
-        money = (second / first) * 100;
-        document.querySelector(".employees_req").innerText = employees_req_value;
-        document.getElementById("calc_first_price").innerText = +first.toFixed(2);
-        document.getElementById("calc_second_price").innerText = +second.toFixed(2);
-        document.querySelector(".more_money").innerText = +money.toFixed(2);
-        document.querySelector(".hours").innerText = hours;
-    }
-    
-    
     document.querySelector(".input_plat").addEventListener("input", (evt) => {
         const value = parseInt(evt.target.value);
          if (value > evt.target.max) {
@@ -122,6 +107,22 @@ const calc = () => {
         const per = (value / element.max) * 100 - 5;
         element.style.background = `linear-gradient(to right, #3C9C8C 0%, #3C9C8C ${per}%, #254745 ${per}%, #254745 100%)`;
         valuesSetter();
+    }
+
+    function valuesSetter() {
+        let rough = 450 / (5 * document.querySelector(".calc_range_3").value);
+        first = (15000 + document.querySelector(".calc_range_2").value * document.querySelector(".calc_range_3").value * 100) / 80;
+        employees_req_value = Math.ceil(
+          document.querySelector(".calc_range_2").value / rough
+        );
+        second = (employees_req_value * 25000) / 80;
+        hours = employees_req_value * 8 * 22;
+        money = (second / first) * 100;
+        document.querySelector(".employees_req").innerText = employees_req_value;
+        document.getElementById("calc_first_price").innerText = first.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        document.getElementById("calc_second_price").innerText = second.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        document.querySelector(".more_money").innerText = +money.toFixed(2);
+        document.querySelector(".hours").innerText = hours.toLocaleString("en-US");
     }
 }
 
@@ -217,12 +218,12 @@ const salesCalc = () => {
         document.querySelector(".curr_2").innerText = Math.round(curr_1 * 4);
         document.querySelector(".with_3").innerText = +((with_1 * 4 * value3) / 100).toFixed(2);
         document.querySelector(".curr_3").innerText = +((curr_1 * 4 * value3) / 100).toFixed(2);
-        document.querySelector(".with_4").innerText = +(((with_1 * 4 * value3) / 100) * value4).toFixed(2);
-        document.querySelector(".curr_4").innerText = +(((curr_1 * 4 * value3) / 100) * value4).toFixed(2);
+        document.querySelector(".with_4").innerText = (((with_1 * 4 * value3) / 100) * value4).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        document.querySelector(".curr_4").innerText = (((curr_1 * 4 * value3) / 100) * value4).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
         document.querySelector(".with_5").innerText = +(30 / ((with_1 * 4 * value3) / 100)).toFixed(2);
         document.querySelector(".curr_5").innerText = +(30 / ((curr_1 * 4 * value3) / 100)).toFixed(2);
-        document.querySelector(".with_6").innerText = Math.round((75000 + 10000) / ((with_1 * 4 * value3) / 100));
-        document.querySelector(".curr_6").innerText = Math.round((75000) / ((curr_1 * 4 * value3) / 100));
+        document.querySelector(".with_6").innerText = (Math.round((75000 + 10000) / ((with_1 * 4 * value3) / 100))).toLocaleString("en-IN");
+        document.querySelector(".curr_6").innerText = (Math.round((75000) / ((curr_1 * 4 * value3) / 100))).toLocaleString("en-IN");
     }
 }
 
