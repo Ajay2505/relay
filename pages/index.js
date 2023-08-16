@@ -3,7 +3,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const mm = gsap.matchMedia();
 
-mm.add("(min-width: 1300px)", () => {
+mm.add("(min-width: 1200px)", () => {
     const boxes = gsap.timeline({ delay: 0 });
     boxes.to(".fade_box", {
         opacity: 0,
