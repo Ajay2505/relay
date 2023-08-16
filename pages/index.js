@@ -213,7 +213,7 @@ document.querySelector(".main_input").addEventListener("input", (evt) => {
 
 document.querySelector(".main_range").addEventListener("input", evt => {
     const element = evt.target;
-    document.querySelector(".main_range_value").innerText = element.value;
+    document.querySelector(".main_range_value").innerText = parseInt(element.value).toLocaleString("en-US");
     const value = element.value;
     const per = (value / element.max) * 100;
     element.style.background = `linear-gradient(to right, #824FE7 0%, #824FE7 ${per}%, #EBEBE5 ${per}%, #EBEBE5 100%)`;

@@ -875,17 +875,14 @@ nav .end_content button:hover, .nav_book_btn:hover {
     min-height: 250px;
 }
 
-.scale_section .right_wrapper .top_wrapper .box.orange .new_img_wrapper, 
-.scale_section .right_wrapper .top_wrapper .box.purple .new_img_wrapper {
+.scale_section .right_wrapper .box .new_img_wrapper {
     background-color: transparent; 
-    border-radius: 15px;
     overflow: hidden;
-    max-width: 150px;
+    max-width: 110px;
     transition: filter .2s ease-in-out;
 }
 
-.scale_section .right_wrapper .top_wrapper .box.orange:hover .new_img_wrapper,
-.scale_section .right_wrapper .top_wrapper .box.purple:hover .new_img_wrapper {
+.scale_section .right_wrapper .top_wrapper .box:hover .new_img_wrapper {
     filter: invert(1);
 }
 
