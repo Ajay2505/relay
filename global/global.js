@@ -353,3 +353,15 @@ document.querySelector(".footer_input").addEventListener("blur", (evt) => {
     evt.target.parentElement.classList.remove("focus");
 });
 
+document.querySelector(".footer_input").addEventListener("input", (evt) => {
+    if (evt.target.validity.valid) {
+        evt.target.parentElement.classList.remove("error");
+        evt.target.nextElementSibling.disabled = false;
+    } else {
+        evt.target.parentElement.classList.add("error");
+        evt.target.nextElementSibling.disabled = true;
+    }
+    if (evt.target.value < 1) {
+        evt.target.nextElementSibling.disabled = true;
+    }
+});

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relay</title>
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/lib/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./influencer.css">
@@ -490,7 +491,7 @@
               <div class="box green rounded_main w-full h-90">
                 <div class="hstack w-full h-full justify-content-between align-items-center">
                   <div class="left w-full pe-lg-5 h-full">
-                    <h1 class="ter_heading fw-normal mb-2">Advertisers</h1>
+                    <h1 class="ter_heading fw-normal mb-2">Ad Platforms</h1>
                     <p>Thoroughly conduct content audits for comprehensive insights and optimization.                      </p>
                   </div>
                   <div class="right w-full h-full d-flex justify-content-around flex-column -mt-3">
@@ -525,8 +526,8 @@
           <div class="content_wrapper">
             <h1 class="sec_heading mb-lg-4 mb-2 fw-light">Get started with Relay today</h1>
             <div class="input_wrapper mb-2">
-              <input class="footer_input" placeholder="What's your work email?" type="text" />
-              <button type="button" disabled>Get Started</button>
+              <input class="footer_input" placeholder="What's your work email?" type="email" />
+              <button type="button" class="footer_btn" disabled onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ajaykumar-tetramind/demo'});return false;">Get Started</button>
             </div>
             <p style="color: #FBFAF299;">👋 No initial fees or contracts – get started in minutes</p>
           </div>
@@ -589,10 +590,10 @@
               <div class="border_left p-lg-4 p-2 top w-full h-full">
                 <p class="text_lg mb-lg-4 mb-2">Our Content</p>
                 <div class="hstack gap-4 flex-wrap">
-                  <a href="/" class="bg_link">Case studies                      </a>
+                  <a href="/" class="bg_link">Case studies</a>
                   <a href="/" class="bg_link">Blogs</a>
                   <a href="/" class="bg_link">Product</a>
-                  <a href="/" class="bg_link">Meet the Team                      </a>
+                  <a href="/" class="bg_link">Meet the Team</a>
                 </div>
               </div>
             </div>
@@ -625,6 +626,7 @@
     </div>
 </footer>
 
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
     <script src="/lib/swiper/swiper-bundle.min.js"></script>
     <script src="/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="/lib/gsap/gsap.min.js"></script>

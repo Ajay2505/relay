@@ -60,7 +60,7 @@
         min-width: 330px;
     }
     .pricing_section .right_wrapper .overlay_wrapper {
-        top: 14%;
+        top: 0;
     }
 }
 

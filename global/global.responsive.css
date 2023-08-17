@@ -6,7 +6,13 @@
         display: none !important;
     }
 }
+@media only screen and (min-width: 1200px) {
+    .pb_lg_md {
+        padding-bottom: 150px;
+    }
 
+
+}
 @media only screen and (min-width: 1000px) {
     nav .nav_icon_wrapper {
         display: none !important;
