@@ -101,6 +101,10 @@ input[type="number"] {
     font-size: 32px !important;
 }
 
+.text_xl {
+    font-size: 24px !important;
+}
+
 .sub_heading {
     font-size: 20px !important;
 }
@@ -228,6 +232,171 @@ input[type="number"] {
 .row {
     margin: 0;
 }
+
+.hstack-lg-rev {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+.hstack-lg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendy_modal {
+    position: fixed;
+    inset: 0;
+    z-index: 110;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: clip-path .3s cubic-bezier(.22,.64,.87,.38);
+}
+
+.calendy_modal.show {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.calendy_modal .modal_content {
+    width: 100%;
+    height: 100%;
+    z-index: 111;
+    max-width: 95vw;
+    max-height: 92vh;
+    position: relative;
+    background-color: #FBFAF2;
+}
+
+.calendy_modal .purple {
+    color: var(--bg_sec);
+    fill: var(--bg_sec);
+}
+
+.calendy_modal .gray_bg {
+    width: fit-content;
+    padding: 10px 5px;
+}
+
+.calendy_modal .logo_wrapper {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    max-width: 90px;
+}
+
+.calendy_modal .close_icon_wrapper {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 2;
+    color: var(--bg_sec);
+}
+
+.calendy_modal .slide1_img_wrapper img{
+    object-fit: cover;
+}
+
+.calendy_modal .slide2_content p {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.calendy_modal .desc {
+    margin-top: 50px;
+    font-style: italic;
+}
+
+.calendy_modal .desc p {
+    margin-bottom: 20px;
+}
+
+.calendy_modal .arrows {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.calendy_modal .arrows .calendly_arrow {
+    padding-inline: 10px;
+    padding-block: 5px;
+    color: #FBFAF2;
+    max-width: 40px;
+    max-height: 40px;
+    transform: translateY(-2px);
+    background-color: #333333;
+}
+
+.calendy_modal .arrows .calendly_arrow.calendly-prev {
+    border-right: 1px dotted;
+    border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #Fbfaf2 50%, rgba(0, 0, 0, 0)) 1 100%;
+}
+
+.calendy_modal .arrows .calendly_arrow svg {
+    width: 100%;
+    height: 100%;
+}
+
+.calendy_modal .arrows .calendly_arrow:not(.swiper-button-disabled):hover {
+    opacity: .9;
+}
+
+.calendy_modal .arrows .calendly_arrow.swiper-button-disabled svg {
+    opacity: .5;
+}
+
+.calendy_modal .arrows .calendly_arrow.calendly-next svg {
+    transform: rotate(180deg);
+}
+
+.calendy_modal .calendly_form {
+    padding-top: 40px;
+}
+
+.calendy_modal .calendly_form .input_wrapper {
+    margin-bottom: 40px;
+}
+
+.calendy_modal .calendly_form label {
+    color: var(--bg_sec);
+}
+
+.calendy_modal .calendly_form input {
+    outline: none;
+    border: none;
+    width: 90%;
+    color: var(--bg_sec);
+    font-size: 20px;
+    padding: 10px 5px 5px 5px;
+    background-color: transparent;
+    box-shadow: rgba(130, 78, 230, 0.3) 0px 1px;
+    transition: box-shadow .1s ease-in-out;
+}
+
+.calendy_modal .calendly_form input::placeholder {
+    opacity: .3;
+    color: var(--bg_sec);
+}
+
+.calendy_modal .calendly_form input:focus {
+    box-shadow: rgb(130, 78, 230) 0px 2px;
+}
+
+.calendy_modal .calendly_form button {
+    color: #FBFAF2;
+    padding: 5px 15px;
+    border-radius: 5px;
+    background-color: #333333;
+}
+
 
 /* Navbar */
 nav{
@@ -675,6 +844,39 @@ nav .end_content button:hover, .nav_book_btn:hover {
 
 /* Calc */
 
+
+.calc_section .roi_calc_wrapper, .calc_section .sales_wrapper {
+    height: 0;
+    transition: transform .3s ease-in-out, height 0s ease-in-out;
+}
+
+.calc_section .roi_calc_wrapper {
+    transform: translate(-100%, 0);
+}
+
+.calc_section .sales_wrapper {
+    transform: translate(100%, 0);
+}
+
+.calc_section .roi_calc_wrapper.active, .calc_section .sales_wrapper.active {
+    height: 100%;
+    transform: translate(0,0);
+}
+
+.calc_section .text_wrapper h1 {
+    position: absolute;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: transform .3s ease-in-out, opacity .3s ease-in-out;
+}
+
+.calc_section .text_wrapper h1.active {
+    position: relative;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
 .calc_section {
     background-color: #1C5551;
     padding-block: 100px;
@@ -692,6 +894,36 @@ nav .end_content button:hover, .nav_book_btn:hover {
     top: -50%;
 } */
 
+.calc_section .table_overlay {
+    background-color: #29292933;
+}
+
+.calc_section .table_overlay .sales_table {
+    border: none;
+    z-index: 1;
+    --bs-table-bg: inherit;
+}
+
+.calc_section .table_overlay .sales_table tr td {
+    padding: 20px !important;
+}
+
+.calc_section .table_overlay .sales_table .middle {
+    background-color: #266B65;
+    padding-inline: 20px !important;
+    text-align: center;
+}
+
+.calc_section .table_overlay .sales_table .last {
+    background-color: #2D7A73;
+    text-align: center;
+}
+
+.calc_section .sales_table td {
+    color: #FBFAF2;
+    border: none;
+}
+
 .calc_section .content_wrapper .input_calc {
     color: #FBFAF2;
     outline: none;
@@ -703,6 +935,14 @@ nav .end_content button:hover, .nav_book_btn:hover {
 
 .calc_section .content_wrapper .input_calc.input_plat {
     width: 10%;
+}
+
+.calc_section button .tick_wrapper {
+    transform: translateY(-2px);
+}
+
+.calc_section button .tick_wrapper svg {
+    transition: width .1s ease-in-out;
 }
 
 .calc_section .content_wrapper button {
@@ -827,7 +1067,6 @@ nav .end_content button:hover, .nav_book_btn:hover {
 }
 
 .scale_section .content_wrapper .img_wrapper {
-    max-width: 90%;
     height: 100%;
     margin-top: 70px;
 }
@@ -866,7 +1105,8 @@ nav .end_content button:hover, .nav_book_btn:hover {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    min-height: 350px;
+    min-height: 390px;
+    height: 100%;
     transition: color .2s ease-out, background-color .3s ease-out;
 }
 
@@ -1073,6 +1313,21 @@ nav .end_content button:hover, .nav_book_btn:hover {
 
 .scale_section .right_wrapper .top_wrapper .box.orange:hover .pill.third {
     height: 168px;
+}
+
+.scale_section .right_wrapper .box button {
+    background-color: transparent;
+    padding: 15px;
+    display: grid;
+    place-items: center;
+    fill: #333333;
+    border: 1px solid #C6C6C1;
+    transition: border .1s ease-in-out, fill .2s ease-in-out;
+}
+
+.scale_section .right_wrapper .box:hover button {
+    fill: #fff;
+    border: 1px solid #fff;
 }
 
 /* Footer */

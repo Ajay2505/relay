@@ -11,6 +11,103 @@
     <link rel="stylesheet" href="./advertisers.css">
 </head>
 <body>
+  
+  <div class="calendy_modal">
+    <div class="modal_content rounded_main overflow-auto">
+
+      <div class="logo_wrapper">
+        <img src="/assets/images/Relay Logo Final .png" alt="">
+      </div>
+
+      <a href="javascrip:void(0);" class="close_icon_wrapper">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+        </svg>
+      </a>
+
+      <div class="swiper calendlySwiper w-full h-full">
+        <div class="swiper-wrapper">
+          
+          <div class="swiper-slide overflow-auto w-full h-full">
+            <div class="hstack-lg-rev w-full h-full">
+              <div class="w-full h-full ps-lg-5 ps-2 pt-3 pe-lg-5 pe-3 pt-lg-5 pt-3 calendly_scroll">
+                <div class="hstack flex-nowrap mt-5 pt-3">
+                  <div class="w-fit mb-auto pe-2 mt-1">
+                    <p class="purple text_lg align-items-center gap-1 d-flex text-nowrap">1 
+                      <svg fill="currColor" height="10" width="11"><path fill="currColor" d="M7.586 5L4.293 1.707 5.707.293 10.414 5 5.707 9.707 4.293 8.293z"></path><path d="M8 4v2H0V4z"></path></svg>
+                    </p>
+                  </div>
+                  <div class="w-full slide2_content">
+                    <h1 class="text_xl mb-2">What is your name and contact details?</h1>
+                    <form class="calendly_form" action="">
+                      <div class="input_wrapper vstack">
+                        <label for="name">First name</label>
+                        <input type="text" name="name" id="name" placeholder="Jane">
+                      </div>
+                      <div class="input_wrapper vstack">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="name@example.com">
+                      </div>
+                      <button class="hstack flex-nowrap sub_heading gap-1" type="submit">OK 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                          <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                        </svg>
+                      </button>
+                    </form>
+                  </div>
+
+                </div>
+              </div>
+              <div class="w-full h-full slide1_img_wrapper">
+                <img class="w-full h-full" src="/assets/images/calendly_img_1.jpeg" alt="">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide w-full h-full overflow-auto pt-lg-5 pt-3 pe-lg-3 pe-1">
+            <div class="w-full h-full hstack-lg justify-content-between">
+              <div class="w-full h-full ps-lg-5 ps-2 pt-3 pe-lg-5 pe-3 calendly_scroll_up">
+                <div class="hstack flex-nowrap mt-5">
+                  <div class="w-fit mb-auto pe-2 mt-1">
+                    <p class="purple text_lg align-items-center gap-1 d-flex text-nowrap">2 
+                      <svg fill="currColor" height="10" width="11"><path fill="currColor" d="M7.586 5L4.293 1.707 5.707.293 10.414 5 5.707 9.707 4.293 8.293z"></path><path d="M8 4v2H0V4z"></path></svg>
+                    </p>
+                  </div>
+                  <div class="w-full slide2_content">
+                    <h1 class="text_xl mb-2">Book a demo with our team* </h1>
+                    <p>On the call we'll go through your needs and show you how Relay might work for your team.</p>
+                    <div class="desc">
+                      <p>On the call we'll go through your needs and show you how Relay might work for your team.</p>
+                      <p>On the call we'll go through your needs and show you how Relay might work for your team.</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="w-full h-full">
+                <div class="calendly-inline-widget" data-url="https://calendly.com/ajaykumar-tetramind/book-a-demo?hide_event_type_details=1" style="min-width:320px;height:600px;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="arrows hstack flex-nowrap">
+          <div class="calendly-prev calendly_arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+            </svg>
+          </div>
+          <div class="calendly-next calendly_arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
   <nav>
     <div class="container py-2 px-1 px-lg-5 d-flex justify-content-between align-items-center">
       <a class="logo" href="/">
@@ -70,13 +167,10 @@
           <a class="link" href="/">Resources</a>
         </div>
 
-        <!-- <div class="link_wrapper d-flex align-items-center position-relative">
-          <a class="link" href="/">Products</a>
-        </div> -->
       </div>
       <div class="end_content d-flex align-items-center gap-4">
         <a href="/">Login</a>
-        <button onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ajaykumar-tetramind/demo'});return false;">Book a Demo</button>
+        <button onclick="calendlyModal()">Book a Demo</button>
       </div>
     </div>
   </nav>
@@ -87,7 +181,7 @@
       <a class="sub_heading" href="/pages/advertisers/">Advertiser Solutions</a>
       <a class="sub_heading" href="/">Resources</a>
       <a class="sub_heading" href="/">Login</a>
-      <button class="nav_book_btn">Book a demo</button>
+      <button onclick="calendlyModal()" class="nav_book_btn">Book a demo</button>
     </div>
   </div>
 
@@ -327,10 +421,11 @@
                     <p>Efficiently reduce the sales cycle with our AI-powered automation solutions.                    </p>
                   </div>
 
-                  <div class="new_img_wrapper mx-auto">
+                  <!-- <div class="new_img_wrapper mx-auto">
                     <img style="background-color: inherit" src="/assets/images/social-media.png" alt="" srcset="">
-                  </div>
-                  <!-- <div class="hstack mt-auto">
+                  </div> -->
+
+                  <div class="hstack mt-auto">
                     <div class="first pill"></div>
 
                     <div class="second pill position-relative">
@@ -348,7 +443,7 @@
                       <img src="/assets/images/scale_bubble_orange.png" alt="">
                     </div>
 
-                  </div> -->
+                  </div>
 
                 </div>
 
@@ -358,14 +453,14 @@
                     <p>Streamline project management effortlessly with our comprehensive tools.                    </p>
                   </div>
                   <div class="bottom mt-auto">
-                    <div class="new_img_wrapper mx-auto">
+                    <!-- <div class="new_img_wrapper mx-auto">
                       <img src="/assets/images/advertisig-agency.png" alt="">
-                    </div>
-                    <!-- <div class="circle circle_1"></div>
+                    </div> -->
+                    <div class="circle circle_1"></div>
                     <div class="circle circle_2"></div>
                     <div class="img_wrapper">
                       <img src="/assets/images/scal_bubble_purple.png" alt="">
-                    </div> -->
+                    </div>
                   </div>
                 </div>
 
@@ -379,10 +474,10 @@
                       <p>Thoroughly conduct content audits for comprehensive insights and optimization.                      </p>
                     </div>
                     <div class="right w-full h-full d-flex justify-content-around flex-column -mt-3">
-                      <div class="mx-auto new_img_wrapper">
+                      <!-- <div class="mx-auto new_img_wrapper">
                         <img src="/assets/images/ads.png" alt="">
-                      </div>
-                      <!-- <div class="pills">
+                      </div> -->
+                      <div class="pills">
                         <div class="circle"></div>
                       </div>
                       <div class="pills">
@@ -392,7 +487,7 @@
                         <div class="img_wrapper">
                           <img src="/assets/images/profile.png" alt="">
                         </div>
-                      </div> -->
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -411,7 +506,7 @@
               <h1 class="sec_heading mb-lg-4 mb-2 fw-light">Get started with Relay today</h1>
               <div class="input_wrapper mb-2">
                 <input class="footer_input" placeholder="What's your work email?" type="email" />
-                <button type="button" class="footer_btn" disabled onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ajaykumar-tetramind/demo'});return false;">Get Started</button>
+                <button type="button" class="footer_btn" disabled onclick="calendlyModal()">Get Started</button>
               </div>
               <p style="color: #FBFAF299;">👋 No initial fees or contracts – get started in minutes</p>
             </div>
@@ -453,7 +548,7 @@
                   </div>
                 </div>
                 <div class="w-full h-full p-lg-4 p-2 border_left">
-                  <p class="text_lg mb-lg-4 mb-2">Solutions</p>
+                  <p class="text_lg mb-lg-4 mb-2">Narratives</p>
                   <div class="vstack gap-2">
                     <a href="/">Social Media</a>
                     <a href="/">Agencies</a>
@@ -463,8 +558,6 @@
                 <div class="w-full h-full p-lg-4 p-2 border_left">
                   <p class="text_lg mb-lg-4 mb-2">Resources</p>
                   <div class="vstack gap-2">
-                    <a href="/">Content</a>
-                    <a href="/">Help Center</a>
                     <a href="/">Relay Calculator</a>
                     <a href="/">Careers</a>
                   </div>
@@ -476,7 +569,6 @@
                   <div class="hstack gap-4 flex-wrap">
                     <a href="/" class="bg_link">Case studies</a>
                     <a href="/" class="bg_link">Blogs</a>
-                    <a href="/" class="bg_link">Product</a>
                     <a href="/" class="bg_link">Meet the Team</a>
                   </div>
                 </div>

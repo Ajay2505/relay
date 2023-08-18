@@ -10,9 +10,8 @@
     .pb_lg_md {
         padding-bottom: 150px;
     }
-
-
 }
+
 @media only screen and (min-width: 1000px) {
     nav .nav_icon_wrapper {
         display: none !important;
@@ -20,8 +19,12 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .w-70 {
+    /* .w-70 {
         width: 100%;
+    } */
+    .calendy_modal .slide1_img_wrapper {
+        max-width: 500px;
+        max-height: 600px;
     }
     .scale_section .right_wrapper .top_wrapper, .scale_section .right_wrapper .bottom_wrapper .box > div {
         flex-direction: column !important;
@@ -81,5 +84,17 @@
     }
     .w-lg-80{
         width: 80%;
+    }
+    .hstack-lg-rev {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .hstack-lg {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
     }
 }

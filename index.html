@@ -10,6 +10,106 @@
     <link rel="stylesheet" href="/pages/responsive.css">
   </head>
   <body onload="index()">
+
+    <div class="calendy_modal">
+      <div class="modal_content rounded_main overflow-auto">
+
+        <div class="logo_wrapper">
+          <img src="/assets/images/Relay Logo Final .png" alt="">
+        </div>
+
+        <a href="javascript:void(0)" class="close_icon_wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+          </svg>
+        </a>
+
+        <div class="swiper calendlySwiper w-full h-full">
+          <div class="swiper-wrapper">
+            
+            <div class="swiper-slide overflow-auto w-full h-full">
+              <div class="hstack-lg-rev w-full h-full">
+                <div class="w-full h-full ps-lg-5 ps-2 pt-3 pe-lg-5 pe-3 pt-lg-5 pt-3 calendly_scroll">
+                  <div class="hstack flex-nowrap mt-5 pt-3">
+                    <div class="w-fit mb-auto pe-2 mt-1">
+                      <p class="purple text_lg align-items-center gap-1 d-flex text-nowrap">1 
+                        <svg fill="currColor" height="10" width="11"><path fill="currColor" d="M7.586 5L4.293 1.707 5.707.293 10.414 5 5.707 9.707 4.293 8.293z"></path><path d="M8 4v2H0V4z"></path></svg>
+                      </p>
+                    </div>
+                    <div class="w-full">
+                      <h1 class="text_xl mb-2">What is your name and contact details?</h1>
+                      <form class="calendly_form" action="">
+                        <div class="input_wrapper vstack">
+                          <label for="name">First name</label>
+                          <input type="text" name="name" id="name" placeholder="Jane">
+                        </div>
+                        <div class="input_wrapper vstack">
+                          <label for="email">Email</label>
+                          <input type="email" name="email" id="email" placeholder="name@example.com">
+                        </div>
+                        <div class="hstack gap-3">
+                          <button class="hstack flex-nowrap sub_heading gap-1" type="submit">OK 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                            </svg>
+                          </button>
+                          <p class="text_md d-none d-lg-block gray_bg">press <span class="fw-bolder"> Enter ↵</span></p>
+                        </div>
+                      </form>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="w-full h-full slide1_img_wrapper">
+                  <img class="w-full h-full" src="/assets/images/calendly_img_1.jpeg" alt="">
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide w-full h-full overflow-auto pt-lg-5 pt-3 pe-lg-3 pe-1">
+              <div class="w-full h-full hstack-lg justify-content-between">
+                <div class="w-full h-full ps-lg-5 ps-2 pt-3 pe-lg-5 pe-3 calendly_scroll_up">
+                  <div class="hstack flex-nowrap mt-5">
+                    <div class="w-fit mb-auto pe-2 mt-1">
+                      <p class="purple text_lg align-items-center gap-1 d-flex text-nowrap">2 
+                        <svg fill="currColor" height="10" width="11"><path fill="currColor" d="M7.586 5L4.293 1.707 5.707.293 10.414 5 5.707 9.707 4.293 8.293z"></path><path d="M8 4v2H0V4z"></path></svg>
+                      </p>
+                    </div>
+                    <div class="w-full slide2_content">
+                      <h1 class="text_xl mb-2">Book a demo with our team* </h1>
+                      <p>On the call we'll go through your needs and show you how Relay might work for your team.</p>
+                      <div class="desc">
+                        <p>On the call we'll go through your needs and show you how Relay might work for your team.</p>
+                        <p>On the call we'll go through your needs and show you how Relay might work for your team.</p>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="w-full h-full">
+                  <div class="calendly-inline-widget" data-url="https://calendly.com/ajaykumar-tetramind/book-a-demo?hide_event_type_details=1" style="min-width:320px;height:600px;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="arrows hstack flex-nowrap">
+            <div class="calendly-prev calendly_arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+              </svg>
+            </div>
+            <div class="calendly-next calendly_arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
     <nav>
       <div class="container py-2 px-1 px-lg-5 d-flex justify-content-between align-items-center">
         <a class="logo" href="/">
@@ -69,13 +169,10 @@
             <a class="link" href="/">Resources</a>
           </div>
 
-          <!-- <div class="link_wrapper d-flex align-items-center position-relative">
-            <a class="link" href="/">Products</a>
-          </div> -->
         </div>
         <div class="end_content d-flex align-items-center gap-4">
           <a href="/">Login</a>
-          <button onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ajaykumar-tetramind/demo'});return false;">Book a Demo</button>
+          <button onclick="calendlyModal()">Book a Demo</button>
         </div>
       </div>
     </nav>
@@ -86,7 +183,7 @@
         <a class="sub_heading" href="/pages/advertisers/">Advertiser Solutions</a>
         <a class="sub_heading" href="/">Resources</a>
         <a class="sub_heading" href="/">Login</a>
-        <button class="nav_book_btn">Book a demo</button>
+        <button onclick="calendlyModal()" class="nav_book_btn">Book a demo</button>
       </div>
     </div>
 
@@ -104,7 +201,7 @@
                 <p class="sub_heading my-lg-4 my-2">Embark on a revolutionary growth journey, where collaboration and innovation converge, and together, we'll soar to new heights in the dynamic world with the first CRM engineered exclusively for digital agencies.                 </p>
                 <div class="input_wrapper">
                   <input class="main_input" placeholder="What's your work email?" type="email" />
-                  <button disabled onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ajaykumar-tetramind/demo'});return false;" type="button">Learn more</button>
+                  <button disabled onclick="calendlyModal()" type="button">Learn more</button>
                 </div>
                 <p class="my-3 gray_dark">
                   👋 Unlimited users, flexible pricing, reduced cost of operations & sales - get started in minutes
@@ -117,9 +214,9 @@
               <div class="gray_dot"></div>
               <div class="floating_block">
                 <p>Set budget to find suitable Influencers for your brand.</p>
-                <h2 class="mt-3">$ <span class="main_range_value">5,000</span></h2>
+                <h2 class="mt-3">$ <span class="main_range_value">44,090</span></h2>
                 <div class="input_wrapper">
-                  <input step="1" min="1" max="10000" class="main_range mb-4 w-full" type="range" name="">
+                  <input step="1" min="180" max="88000" class="main_range mb-4 w-full" type="range" name="">
                 </div>
               </div>
               <div class="img_wrapper">
@@ -538,83 +635,188 @@
 
     <section class="calc_section overflow-hidden">
       <div class="container px-1 px-lg-5 pb-5 position-relative">
-        <!-- <div class="img_wrapper">
-          <img src="/assets/overlays/calc.svg" alt=""> 
-        </div> -->
-        <p class="gray rounded_main text_xs">ROI CALCULATOR</p>
-        <h1 class="sec_heading my-4">See how much you can save</h1>
-        <button class="talk rounded_main" type="button">Talk to us</button>
+        <div class="hstack">
+          <button class="ops_button gray rounded_main text_xs w-fit hstack place-items-center text-uppercase me-lg-4">OPS ROI 
+            <span class="tick_wrapper">
+              <svg width="0" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" class="c-PJLV"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.5 11.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0Zm-3.457-1.233.517-.543-1.086-1.034-.517.543-2.79 2.93-1.124-1.18-.517-.543-1.086 1.034.517.543 1.667 1.75a.75.75 0 0 0 1.086 0l3.333-3.5Z" fill="#FBFAF2" fill-opacity="0.6"></path></svg>
+            </span>
+          </button>
+          <button class="sales_button gray rounded_main text_xs w-fit hstack place-items-center text-uppercase me-lg-4">sales ROI 
+            <span class="tick_wrapper">
+              <svg width="0" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" class="c-PJLV"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.5 11.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0Zm-3.457-1.233.517-.543-1.086-1.034-.517.543-2.79 2.93-1.124-1.18-.517-.543-1.086 1.034.517.543 1.667 1.75a.75.75 0 0 0 1.086 0l3.333-3.5Z" fill="#FBFAF2" fill-opacity="0.6"></path></svg>
+            </span>
+          </button>
+        </div>
+        
+        <div class="text_wrapper overflow-hidden position-relative">
+          <h1 class="sec_heading my-4">See how much you can save</h1>
+          <h1 class="sec_heading my-4">See how much you can earn more</h1>
+        </div>
+        <button class="talk rounded_main"  onclick="calendlyModal()" type="button">Talk to us</button>
       </div>
       <div class="container mt-4 px-1 px-lg-5">
-        <div class="row">
-          <div class="col-lg-4 px-0 pe-lg-5">
-            <div class="content_wrapper w-full h-full d-grid place-items-center">
-              <div class="w-full">
-                  <p class="text_lg mb-2">How many Influencers do you manage overall? <span class="ps-1"><input min="1" step="1" value="1" max="10000" class="input_calc input_track" type="number"></span></p>
-                  <div class="input_wrapper">
-                    <input step="1" value="1" min="1" max="10000" class="clac_range calc_range_1 mb-4 w-full" type="range" name="">
+        <div class="overflow-hidden">
+
+          <div class="roi_calc_wrapper">
+            <div class="row">
+              <div class="col-lg-4 px-0 pe-lg-5">
+                <div class="content_wrapper w-full h-full d-grid place-items-center">
+                  <div class="w-full">
+                      <p class="text_lg mb-2">How many Influencers do you manage overall? <span class="ps-1"><input min="1" step="1" value="1" max="10000" class="input_calc input_track" type="number"></span></p>
+                      <div class="input_wrapper">
+                        <input step="1" value="1" min="1" max="10000" class="clac_range ops_range_1 mb-4 w-full" type="range" name="">
+                      </div>
+                      <p class="text_lg mb-2">How many active influencers do you manage overall? <span class="ps-1"><input min="1" step="1" value="1" max="10000" class="input_calc input_influ" type="number"></span></p>
+                      <div class="input_wrapper position-relative">
+                        <input step="1" value="1" min="1" max="10000" class="clac_range ops_range_2 mb-4 w-full" type="range" name="">
+                      </div>
+                      <p class="text_lg mt-4 mb-2">On how many platforms? <span class="ps-1"><input min="1" step="1" value="1" max="7" class="input_calc input_plat" type="number"></span></p>
+                      <div class="input_wrapper position-relative">
+                        <input step="1" value="1" min="1" max="7" class="clac_range ops_range_3 mb-4 w-full" type="range" name="">
+                      </div>
+                      <!-- <div class="hstack gap-3 mt-2">
+                        <button class="button hstack justify-content-between" type="button">Health Insurance 
+                          <span class="h-full svg">
+                            <img src="/assets/icons/calc_btn_tick.svg" alt="">
+                          </span> 
+                        </button>
+                        <button class="button hstack justify-content-between" type="button">Retirement</button>
+                      </div> -->  
                   </div>
-                  <p class="text_lg mb-2">How many active influencers do you manage overall? <span class="ps-1"><input min="1" step="1" value="1" max="10000" class="input_calc input_influ" type="number"></span></p>
-                  <div class="input_wrapper position-relative">
-                    <input step="1" value="1" min="1" max="10000" class="clac_range calc_range_2 mb-4 w-full" type="range" name="">
+                </div>
+              </div>
+              <div class="col-lg-4 mx-auto ps-lg-5 mt-2 mt-lg-0">
+                <div class="box first">
+                  <div class="d-flex w-full h-full flex-column justify-content-between ">
+                    <div class="top">
+                      <p>with Relay</p>
+                      <h1 class="m-0 mt-2">
+                        <span class="fs-4 m-0">$</span>
+                        <span id="calc_first_price" class="sec_heading">188.75</span>
+                        <span class="fs-6 fw-lighter">/month</span>
+                      </h1>
+                    </div>
+                    <div class="bottom">
+                      <p>Cost of service</p>
+                    </div>
                   </div>
-                  <p class="text_lg mt-4 mb-2">On how many platforms? <span class="ps-1"><input min="1" step="1" value="1" max="7" class="input_calc input_plat" type="number"></span></p>
-                  <div class="input_wrapper position-relative">
-                    <input step="1" value="1" min="1" max="7" class="clac_range calc_range_3 mb-4 w-full" type="range" name="">
+                </div>
+              </div>
+              <div class="col-lg-4 pe-0 ps-lg-5 mt-2 mt-lg-0">
+                <div class="box second">
+                  <div class="d-flex w-full h-full flex-column justify-content-between">
+                    <div class="top">
+                      <p>Manually</p>
+                      <h1 class="m-0 mt-2">
+                        <span class="fs-4 m-0">$</span>
+                        <span id="calc_second_price" class="sec_heading">312.5</span>
+                        <span class="fs-6 fw-lighter">/month</span>
+                      </h1>
+                      <p class="my-lg-4">You spend <span class="red"><span class="more_money">165.56</span>%</span> more money</p>
+                    </div>
+                    <div class="bottom">
+                      <h4 class="m-0 employees_req">1</h4>
+                      <p class="mb-2 light_text">Employees required for manually scraping the data</p>
+                      <h4 class="m-0 hours">176</h4>
+                      <p class="light_text">Hours spent per month just updating excel sheets</p>
+                    </div>
                   </div>
-                  <!-- <div class="hstack gap-3 mt-2">
-                    <button class="button hstack justify-content-between" type="button">Health Insurance 
-                      <span class="h-full svg">
-                        <img src="/assets/icons/calc_btn_tick.svg" alt="">
-                      </span> 
-                    </button>
-                    <button class="button hstack justify-content-between" type="button">Retirement</button>
-                  </div> -->  
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-8 ps-lg-5 mt-2 ms-auto">
+                <p style="color: #FBFAF299;">*Estimated figures based on average salary, hours per month spent on admin and broker fees            </p>
               </div>
             </div>
           </div>
-          <div class="col-lg-4 mx-auto ps-lg-5 mt-2 mt-lg-0">
-            <div class="box first">
-              <div class="d-flex w-full h-full flex-column justify-content-between ">
-                <div class="top">
-                  <p>with Relay</p>
-                  <h1 class="m-0 mt-2">
-                    <span class="fs-4 m-0">$</span>
-                    <span id="calc_first_price" class="sec_heading">188.75</span>
-                    <span class="fs-6 fw-lighter">/month</span>
-                  </h1>
+          
+          <div class="sales_wrapper">
+            <div class="row">
+              <div class="col-lg-5 px-0 pe-lg-5">
+                <div class="content_wrapper w-full h-full d-grid place-items-center">
+                  <div class="w-full h-fit">
+                    <p class="text_lg mb-2">Number of employees in Sales team <span class="ps-1"><input min="1" step="1"
+                          value="1" max="50" class="input_calc calc_input_1" type="number"></span></p>
+                    <div class="input_wrapper mb-2">
+                      <input step="1" value="1" min="1" max="50" class="clac_range calc_range_1 mb-4 w-full" type="range"
+                        name="">
+                    </div>
+                    <p class="text_lg mb-2">Time taken to build one proposal (Hrs) <span class="ps-1"><input min="1" step="1"
+                          value="1" max="99" class="input_calc calc_input_2" type="number"></span></p>
+                    <div class="input_wrapper mb-2 position-relative">
+                      <input step="1" value="1" min="1" max="99" class="clac_range calc_range_2 mb-4 w-full" type="range"
+                        name="">
+                    </div>
+                    <p class="text_lg mb-2">Conversion rate (% age) <span class="ps-1"><input min="1" step="1" value="1"
+                          max="50" class="input_calc calc_input_3" type="number"></span></p>
+                    <div class="input_wrapper mb-2 position-relative">
+                      <input step="1" value="1" min="1" max="50" class="clac_range calc_range_3 mb-4 w-full" type="range"
+                        name="">
+                    </div>
+                    <p class="text_lg mb-2">Average Order Value (USD) <span class="ps-1"><input min="100" step="1" value="100"
+                          max="9500" class="input_calc calc_input_4" type="number"></span></p>
+                    <div class="input_wrapper position-relative">
+                      <input step="1" value="100" min="100" max="9500" class="clac_range calc_range_4 w-full" type="range"
+                        name="">
+                    </div>
+                  </div>
                 </div>
-                <div class="bottom">
-                  <p>Cost of service</p>
+              </div>
+      
+              <div class="col-lg-7 mt-3 mx-0 pe-0 mt-lg-0">
+      
+                <div class="table_overlay rounded_main overflow-hidden">
+      
+                  <table class="table sales_table m-0 p-3 w-full h-full">
+                    <tbody>
+                      <tr>
+                        <td></td>
+                        <td class="middle">with Relay</td>
+                        <td class="last">using current process</td>
+                      </tr>
+                      <tr>
+                        <td>No of Proposals in a week</td>
+                        <td class="middle with_1">37.5</td>
+                        <td class="last curr_1">37.5</td>
+                      </tr>
+                      <tr>
+                        <td>No of proposals in a month</td>
+                        <td class="middle with_2">150</td>
+                        <td class="last curr_2">150</td>
+                      </tr>
+                      <tr>
+                        <td>Conversion / Orders in a month</td>
+                        <td class="middle with_3">1.5</td>
+                        <td class="last curr_3">1.5</td>
+                      </tr>
+                      <tr>
+                        <td>Order book value</td>
+                        <td class="middle text-nowrap">$ <span class="with_4">150.00</span></td>
+                        <td class="last text-nowrap">$ <span class="curr_4">150.00</span></td>
+                      </tr>
+                      <tr>
+                        <td>Avg TAT for proposal building (hrs)</td>
+                        <td class="middle with_5">20.00</td>
+                        <td class="last curr_5">20.00</td>
+                      </tr>
+                      <tr>
+                        <td>Cost Per Sale</td>
+                        <td class="middle text-nowrap">₹ <span class="with_6"> 50,000</span></td>
+                        <td class="last text-nowrap">₹ <span class="curr_6">56,667</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+      
+              </div>
+      
+              <div class="row">
+                <div class="col-lg-7 mt-2 ms-auto">
+                  <p style="color: #FBFAF299;">*Salary cost INR 75000</p>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-lg-4 pe-0 ps-lg-5 mt-2 mt-lg-0">
-            <div class="box second">
-              <div class="d-flex w-full h-full flex-column justify-content-between">
-                <div class="top">
-                  <p>Manually</p>
-                  <h1 class="m-0 mt-2">
-                    <span class="fs-4 m-0">$</span>
-                    <span id="calc_second_price" class="sec_heading">312.5</span>
-                    <span class="fs-6 fw-lighter">/month</span>
-                  </h1>
-                  <p class="my-lg-4">You spend <span class="red"><span class="more_money">165.56</span>%</span> more money</p>
-                </div>
-                <div class="bottom">
-                  <h4 class="m-0 employees_req">1</h4>
-                  <p class="mb-2 light_text">Employees required for manually scraping the data</p>
-                  <h4 class="m-0 hours">176</h4>
-                  <p class="light_text">Hours spent per month just updating excel sheets</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-8 ps-lg-5 mt-2 ms-auto">
-            <p style="color: #FBFAF299;">*Estimated figures based on average salary, hours per month spent on admin and broker fees            </p>
           </div>
         </div>
       </div>
@@ -691,7 +893,7 @@
               <p class="rounded_main gray text_xs">START, SCALE AND SAVE</p>
               <h1 class="sec_heading mt-4">Offering core benefits is timely and expensive – we'll help with both.</h1>
               <div class="img_wrapper">
-                <!-- <img src="/assets/images/mobile.webp" alt=""> -->
+                <!-- <img src="/assets/images/Relay Mobile.png" alt=""> -->
               </div>
             </div>
           </div>
@@ -702,12 +904,18 @@
                   <div>
                     <h1 class="ter_heading fw-normal mb-2">Social Media</h1>
                     <p>Efficiently reduce the sales cycle with our AI-powered automation solutions.                    </p>
+                    <button class="my-3 position-absolute rounded_main">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                      </svg>
+                    </button>
                   </div>
 
-                  <div class="new_img_wrapper mx-auto">
+                  <!-- <div class="new_img_wrapper mx-auto">
                     <img style="background-color: inherit" src="/assets/images/social-media.png" alt="" srcset="">
-                  </div>
-                  <!-- <div class="hstack mt-auto">
+                  </div> -->
+
+                  <div class="hstack mt-auto">
                     <div class="first pill"></div>
 
                     <div class="second pill position-relative">
@@ -725,24 +933,29 @@
                       <img src="/assets/images/scale_bubble_orange.png" alt="">
                     </div>
 
-                  </div> -->
+                  </div>
 
                 </div>
 
                 <div class="purple box mt-2 mt-lg-0 position-relative rounded_main w-full h-full">
                   <div class="">
                     <h1 class="ter_heading fw-normal mb-2">Agencies</h1>
-                    <p>Streamline project management effortlessly with our comprehensive tools.                    </p>
+                    <p>Streamline project management effortlessly with our comprehensive tools.</p>
+                    <button class="my-3 position-absolute rounded_main">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                      </svg>
+                    </button>
                   </div>
                   <div class="bottom mt-auto">
-                    <div class="new_img_wrapper mx-auto">
+                    <!-- <div class="new_img_wrapper mx-auto">
                       <img src="/assets/images/advertisig-agency.png" alt="">
-                    </div>
-                    <!-- <div class="circle circle_1"></div>
+                    </div> -->
+                    <div class="circle circle_1"></div>
                     <div class="circle circle_2"></div>
                     <div class="img_wrapper">
                       <img src="/assets/images/scal_bubble_purple.png" alt="">
-                    </div> -->
+                    </div>
                   </div>
                 </div>
 
@@ -751,15 +964,20 @@
               <div class="w-full h-full bottom_wrapper p-3 pe-0">
                 <div class="box green rounded_main w-full h-90">
                   <div class="hstack w-full h-full justify-content-between align-items-center">
-                    <div class="left w-full pe-lg-5 h-full">
+                    <div class="left w-full pe-lg-5 h-full pb-5 pb-md-0">
                       <h1 class="ter_heading fw-normal mb-2">Ad Platforms</h1>
-                      <p>Thoroughly conduct content audits for comprehensive insights and optimization.                      </p>
+                      <p>Thoroughly conduct content audits for comprehensive insights and optimization.</p>
+                      <button class="my-3 position-absolute rounded_main">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
+                      </button>
                     </div>
                     <div class="right w-full h-full d-flex justify-content-around flex-column -mt-3">
-                      <div class="mx-auto new_img_wrapper">
+                      <!-- <div class="mx-auto new_img_wrapper">
                         <img src="/assets/images/ads.png" alt="">
-                      </div>
-                      <!-- <div class="pills">
+                      </div> -->
+                      <div class="pills">
                         <div class="circle"></div>
                       </div>
                       <div class="pills">
@@ -769,7 +987,7 @@
                         <div class="img_wrapper">
                           <img src="/assets/images/profile.png" alt="">
                         </div>
-                      </div> -->
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -787,7 +1005,7 @@
             <div class="w-full h-full">
               <div class="content_wrapper">
                 <p class="gray rounded_main text_xs">FAQ</p>
-                <h1 class="sec_heading my-lg-4 my-2">What would you like to know about Yonder?</h1>
+                <h1 class="sec_heading my-lg-4 my-2">What would you like to know about Relay?</h1>
                 <button class="text_sm"> <span><img src="/assets/icons/talk_icon.svg" alt=""></span> Talk to us</button>
               </div>
               <div class="bottom">
@@ -864,7 +1082,7 @@
               <h1 class="sec_heading mb-lg-4 mb-2 fw-light">Get started with Relay today</h1>
               <div class="input_wrapper mb-2">
                 <input class="footer_input" placeholder="What's your work email?" type="email" />
-                <button type="button" class="footer_btn" disabled onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ajaykumar-tetramind/demo'});return false;">Get Started</button>
+                <button type="button" class="footer_btn" disabled onclick="calendlyModal()">Get Started</button>
               </div>
               <p style="color: #FBFAF299;">👋 No initial fees or contracts – get started in minutes</p>
             </div>
@@ -906,7 +1124,7 @@
                   </div>
                 </div>
                 <div class="w-full h-full p-lg-4 p-2 border_left">
-                  <p class="text_lg mb-lg-4 mb-2">Solutions</p>
+                  <p class="text_lg mb-lg-4 mb-2">Narratives</p>
                   <div class="vstack gap-2">
                     <a href="/">Social Media</a>
                     <a href="/">Agencies</a>
@@ -916,8 +1134,6 @@
                 <div class="w-full h-full p-lg-4 p-2 border_left">
                   <p class="text_lg mb-lg-4 mb-2">Resources</p>
                   <div class="vstack gap-2">
-                    <a href="/">Content</a>
-                    <a href="/">Help Center</a>
                     <a href="/">Relay Calculator</a>
                     <a href="/">Careers</a>
                   </div>
@@ -929,7 +1145,6 @@
                   <div class="hstack gap-4 flex-wrap">
                     <a href="/" class="bg_link">Case studies</a>
                     <a href="/" class="bg_link">Blogs</a>
-                    <a href="/" class="bg_link">Product</a>
                     <a href="/" class="bg_link">Meet the Team</a>
                   </div>
                 </div>

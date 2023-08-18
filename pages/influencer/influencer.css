@@ -205,39 +205,9 @@ nav, .mobile_nav {
     background-color: inherit;
 }
 
-.calc_section .table_overlay {
-    background-color: #29292933;
-}
-
-.calc_section .table_overlay .sales_table {
-    border: none;
-    z-index: 1;
-    --bs-table-bg: inherit;
-}
-
-.calc_section .table_overlay .sales_table tr td {
-    padding: 20px !important;
-}
-
-.calc_section .table_overlay .sales_table .middle {
-    background-color: #266B65;
-    padding-inline: 20px !important;
-    text-align: center;
-}
-
-.calc_section .table_overlay .sales_table .last {
-    background-color: #2D7A73;
-    text-align: center;
-}
-
-.calc_section .sales_table td {
-    color: #FBFAF2;
-    border: none;
-}
-
 @media only screen and (max-width: 1024px) {
     .section_main .main_spacer {
-        padding-block: 210px;
+        padding-block: 280px;
     }
 }
 
@@ -245,8 +215,12 @@ nav, .mobile_nav {
     .section_main .main_spacer {
         padding-block: 0;
     }
+    .section_main .grid {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
     .section_main .absolute_block {
         position: relative !important;
+        margin-block: 40px;
     }
     section.section_empower {
         margin-top: 0;
@@ -256,16 +230,6 @@ nav, .mobile_nav {
     .section_work {
         padding-bottom: 50px;
     }
-}
-
-@media only screen and (max-width: 500px) {
-    .section_main .grid {
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-    }
-    .section_empower .cards {
-        gap: 25px 0;
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-    }
     .section_main .grid .second, .section_main .grid .fourth {
         border-left: none;
     }
@@ -273,6 +237,13 @@ nav, .mobile_nav {
         border-bottom: 1px solid;
         border-image-slice: 1;
         border-image-source: linear-gradient(to right, rgba(0,0,0,0) 0%, #29292924 100%);
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .section_empower .cards {
+        gap: 25px 0;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
     }
     .section_empower .cards > div, .section_empower .cards > div.second, .section_empower .cards > div.first {
         border: none;

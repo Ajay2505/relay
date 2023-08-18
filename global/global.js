@@ -1,10 +1,10 @@
 const index = () => {
-    calc();
+    mainCalc(true);
     map();
 }
 
 const inf = () => {
-    salesCalc();
+    mainCalc();   
     map();
 }
 
@@ -41,6 +41,30 @@ const mapInfo = [
     }
 ];
 
+
+const mainCalc = (bool) => {
+    calc();
+    salesCalc();
+    const headings = document.querySelectorAll(".calc_section .text_wrapper h1");
+    document.querySelector(".ops_button").addEventListener("click", (evt) => {
+        evt.target.querySelector("svg").style.width = 20;
+        document.querySelector(".sales_button svg").style.width = 0;
+        document.querySelector(".roi_calc_wrapper").classList.add("active");
+        document.querySelector(".sales_wrapper").classList.remove("active");
+        headings[0].classList.add("active");
+        headings[1].classList.remove("active");
+    });
+    document.querySelector(".sales_button").addEventListener("click", (evt) => {
+        evt.target.querySelector("svg").style.width = 20;
+        document.querySelector(".ops_button svg").style.width = 0;
+        document.querySelector(".sales_wrapper").classList.add("active");
+        document.querySelector(".roi_calc_wrapper").classList.remove("active");
+        headings[0].classList.remove("active");
+        headings[1].classList.add("active");
+    });
+    bool ? document.querySelector(".ops_button").click() : document.querySelector(".sales_button").click();
+}
+
 const calc = () => {
     let first = 0;
     let second = 0;
@@ -55,12 +79,12 @@ const calc = () => {
         else if (parseInt(value) < evt.target.min) {
             evt.target.value = evt.target.min;
         }
-        document.querySelector(".calc_range_1").value = evt.target.value; 
-        inputCalc(document.querySelector(".calc_range_1"));  
+        document.querySelector(".ops_range_1").value = evt.target.value; 
+        inputCalc(document.querySelector(".ops_range_1"));  
     });
     
     
-    document.querySelector(".calc_range_1").addEventListener("input", (evt) => {
+    document.querySelector(".ops_range_1").addEventListener("input", (evt) => {
         document.querySelector(".input_track").value = evt.target.value;
         inputCalc(evt.target);
     });
@@ -73,12 +97,12 @@ const calc = () => {
         else if (value < evt.target.min) {
             evt.target.value = evt.target.min;
         }
-        document.querySelector(".calc_range_2").value = evt.target.value; 
-        inputCalc(document.querySelector(".calc_range_2"));
+        document.querySelector(".ops_range_2").value = evt.target.value; 
+        inputCalc(document.querySelector(".ops_range_2"));
         valuesSetter();
     });
     
-    document.querySelector(".calc_range_2").addEventListener("input", (evt) => {
+    document.querySelector(".ops_range_2").addEventListener("input", (evt) => {
         document.querySelector(".input_influ").value = evt.target.value;
         inputCalc(evt.target);
         valuesSetter();
@@ -92,17 +116,17 @@ const calc = () => {
         else if (value <= evt.target.min) {
             evt.target.value = evt.target.min;
         }
-        document.querySelector(".calc_range_3").value = evt.target.value; 
+        document.querySelector(".ops_range_3").value = evt.target.value; 
         platforms();
     });
     
-    document.querySelector(".calc_range_3").addEventListener("input", (evt) => {
+    document.querySelector(".ops_range_3").addEventListener("input", (evt) => {
         document.querySelector(".input_plat").value = evt.target.value;
         platforms();
     });
     
     function platforms() {
-        const element = document.querySelector(".calc_range_3");
+        const element = document.querySelector(".ops_range_3");
         const value = element.value;
         const per = (value / element.max) * 100 - 5;
         element.style.background = `linear-gradient(to right, #3C9C8C 0%, #3C9C8C ${per}%, #254745 ${per}%, #254745 100%)`;
@@ -110,10 +134,10 @@ const calc = () => {
     }
 
     function valuesSetter() {
-        let rough = 450 / (5 * document.querySelector(".calc_range_3").value);
-        first = (15000 + document.querySelector(".calc_range_2").value * document.querySelector(".calc_range_3").value * 100) / 80;
+        let rough = 450 / (5 * document.querySelector(".ops_range_3").value);
+        first = (15000 + document.querySelector(".ops_range_2").value * document.querySelector(".ops_range_3").value * 100) / 80;
         employees_req_value = Math.ceil(
-          document.querySelector(".calc_range_2").value / rough
+          document.querySelector(".ops_range_2").value / rough
         );
         second = (employees_req_value * 25000) / 80;
         hours = employees_req_value * 8 * 22;
@@ -365,3 +389,70 @@ document.querySelector(".footer_input").addEventListener("input", (evt) => {
         evt.target.nextElementSibling.disabled = true;
     }
 });
+
+const calendlySwiper = new Swiper(".calendlySwiper", {
+    direction: "vertical",
+    navigation: {
+        nextEl: ".calendly-next",
+        prevEl: ".calendly-prev",
+    },
+    // pagination: {
+    //   el: ".calendly-pagination",
+    //   clickable: true,
+    // },
+});
+
+
+const calendlyModal = () => {
+    document.querySelector(".calendy_modal").classList.add("show");
+    document.getElementById("name").focus();
+    document.body.style.overflow = 'hidden';
+    calendlySwiper.slideTo(0);
+};
+
+document.addEventListener('keydown', (evt) => {
+    if (evt.key === 'Enter') {
+        const activeSlideIndex = calendlySwiper.activeIndex;
+        if (document.querySelector(".calendy_modal").classList.contains("show") && activeSlideIndex === 0) {
+            calendlySwiper.slideTo(1);
+        }
+    }        
+});
+
+document.querySelector(".calendy_modal .close_icon_wrapper").addEventListener("click", () => {
+    document.querySelector(".calendy_modal").classList.remove("show");
+    document.body.style.overflow = 'auto';
+});
+
+
+document.querySelector(".calendly_form").addEventListener("submit", (evt) => {
+    evt.preventDefault();
+    calendlySwiper.slideNext();
+});
+
+// Check if the screen width is 1200px or above
+if (window.innerWidth >= 1200) {
+    const scrollListener = document.querySelector('.calendly_scroll');
+    let prevScrollPos = 0;
+  
+    scrollListener.addEventListener('wheel', function(event) {
+      const currentScrollPos = event.deltaY;
+      if (currentScrollPos < prevScrollPos) {
+        calendlySwiper.slideNext();
+      }
+      prevScrollPos = currentScrollPos;
+    });
+  
+    const scrollListener2 = document.querySelector('.calendly_scroll_up');
+    let prevScrollPos2 = 0;
+  
+    scrollListener2.addEventListener('wheel', function(event) {
+      const currentScrollPos = event.deltaY;
+  
+      if (currentScrollPos < prevScrollPos) {
+        calendlySwiper.slidePrev();
+      }
+      prevScrollPos2 = currentScrollPos;
+    });
+  }
+  
