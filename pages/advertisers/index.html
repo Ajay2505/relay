@@ -19,7 +19,7 @@
         <img src="/assets/images/Relay Logo Final .png" alt="">
       </div>
 
-      <a href="javascrip:void(0);" class="close_icon_wrapper">
+      <a href="javascript:void(0)" class="close_icon_wrapper">
         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
           <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
         </svg>
@@ -37,7 +37,7 @@
                       <svg fill="currColor" height="10" width="11"><path fill="currColor" d="M7.586 5L4.293 1.707 5.707.293 10.414 5 5.707 9.707 4.293 8.293z"></path><path d="M8 4v2H0V4z"></path></svg>
                     </p>
                   </div>
-                  <div class="w-full slide2_content">
+                  <div class="w-full">
                     <h1 class="text_xl mb-2">What is your name and contact details?</h1>
                     <form class="calendly_form" action="">
                       <div class="input_wrapper vstack">
@@ -48,11 +48,14 @@
                         <label for="email">Email</label>
                         <input type="email" name="email" id="email" placeholder="name@example.com">
                       </div>
-                      <button class="hstack flex-nowrap sub_heading gap-1" type="submit">OK 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
-                          <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
-                        </svg>
-                      </button>
+                      <div class="hstack gap-3">
+                        <button class="hstack flex-nowrap sub_heading gap-1" type="submit">OK 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                          </svg>
+                        </button>
+                        <p class="text_md d-none d-lg-block gray_bg">press <span class="fw-bolder"> Enter ↵</span></p>
+                      </div>
                     </form>
                   </div>
 
@@ -602,6 +605,7 @@
       </div>
   </footer>
 
+    <script src="/lib/swiper/swiper-bundle.min.js"></script>
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
     <script src="/global/global.js"></script>
 </body>

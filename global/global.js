@@ -8,39 +8,6 @@ const inf = () => {
     map();
 }
 
-const mapInfo = [
-    {
-        lang: "English",
-        first: 30000,
-        second: 3,
-        third: 90000
-    },
-    {
-        lang: "French",
-        first: 12000,
-        second: 2.5,
-        third: 30000
-    }, 
-    {
-        lang: "German",
-        first: 15000,
-        second: 1.5,
-        third: 22500
-    },
-    {
-        lang: "Spanish",
-        first: 13000,
-        second: 3,
-        third: 39000
-    },
-    {
-        lang: "Indian Languages",
-        first: 25000,
-        second: 2.5,
-        third: 625000
-    }
-];
-
 
 const mainCalc = (bool) => {
     calc();
@@ -257,6 +224,39 @@ function inputCalc(element) {
     element.style.background = `linear-gradient(to right, #3C9C8C 0%, #3C9C8C ${per}%, #254745 ${per}%, #254745 100%)`;
 }
 
+const mapInfo = [
+    {
+        lang: "English",
+        first: 30000,
+        second: 3,
+        third: 90000
+    },
+    {
+        lang: "French",
+        first: 12000,
+        second: 2.5,
+        third: 30000
+    }, 
+    {
+        lang: "German",
+        first: 15000,
+        second: 1.5,
+        third: 22500
+    },
+    {
+        lang: "Spanish",
+        first: 13000,
+        second: 3,
+        third: 39000
+    },
+    {
+        lang: "Indian Languages",
+        first: 25000,
+        second: 2.5,
+        third: 625000
+    }
+];
+
 const map = () => {
     document.querySelector(".map_input").addEventListener("focus", (evt) => {
       evt.target.parentElement.classList.add("focus");
@@ -454,5 +454,5 @@ if (window.innerWidth >= 1200) {
       }
       prevScrollPos2 = currentScrollPos;
     });
-  }
+}
   
