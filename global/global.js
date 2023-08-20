@@ -16,20 +16,33 @@ const mainCalc = (bool) => {
     document.querySelector(".ops_button").addEventListener("click", (evt) => {
         evt.target.querySelector("svg").style.width = 20;
         document.querySelector(".sales_button svg").style.width = 0;
-        document.querySelector(".roi_calc_wrapper").classList.add("active");
-        document.querySelector(".sales_wrapper").classList.remove("active");
         headings[0].classList.add("active");
         headings[1].classList.remove("active");
     });
     document.querySelector(".sales_button").addEventListener("click", (evt) => {
         evt.target.querySelector("svg").style.width = 20;
         document.querySelector(".ops_button svg").style.width = 0;
-        document.querySelector(".sales_wrapper").classList.add("active");
-        document.querySelector(".roi_calc_wrapper").classList.remove("active");
         headings[0].classList.remove("active");
         headings[1].classList.add("active");
     });
-    bool ? document.querySelector(".ops_button").click() : document.querySelector(".sales_button").click();
+
+    if (bool) {
+        document.querySelector(".ops_button").click();
+    }
+
+    const calcSwiper = new Swiper(".calcSwiper", {
+        navigation: {
+            nextEl: ".sales_button",
+            prevEl: ".ops_button",
+        },
+        spaceBetween: 70,
+        allowTouchMove: false
+    });
+
+    if (!bool) {
+        document.querySelector(".sales_button").click();
+    }
+    
 }
 
 const calc = () => {

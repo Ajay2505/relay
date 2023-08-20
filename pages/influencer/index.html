@@ -1202,12 +1202,12 @@
   <section id="calculator" class="calc_section overflow-hidden">
     <div class="container px-1 px-lg-5 pb-5 position-relative">
       <div class="hstack">
-        <button class="ops_button gray rounded_main text_xs w-fit hstack place-items-center text-uppercase me-lg-4">OPS ROI 
+        <button class="ops_button gray rounded_main text_xs w-fit hstack place-items-center text-uppercase me-4">OPS ROI 
           <span class="tick_wrapper">
             <svg width="0" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" class="c-PJLV"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.5 11.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0Zm-3.457-1.233.517-.543-1.086-1.034-.517.543-2.79 2.93-1.124-1.18-.517-.543-1.086 1.034.517.543 1.667 1.75a.75.75 0 0 0 1.086 0l3.333-3.5Z" fill="#FBFAF2" fill-opacity="0.6"></path></svg>
           </span>
         </button>
-        <button class="sales_button gray rounded_main text_xs w-fit hstack place-items-center text-uppercase me-lg-4">sales ROI 
+        <button class="sales_button gray rounded_main text_xs w-fit hstack place-items-center text-uppercase">sales ROI 
           <span class="tick_wrapper">
             <svg width="0" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" class="c-PJLV"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.5 11.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0Zm-3.457-1.233.517-.543-1.086-1.034-.517.543-2.79 2.93-1.124-1.18-.517-.543-1.086 1.034.517.543 1.667 1.75a.75.75 0 0 0 1.086 0l3.333-3.5Z" fill="#FBFAF2" fill-opacity="0.6"></path></svg>
           </span>
@@ -1220,171 +1220,177 @@
       </div>
       <button class="talk rounded_main"  onclick="calendlyModal()" type="button">Talk to us</button>
     </div>
-    <div class="container mt-4 px-1 px-lg-5">
-      <div class="overflow-hidden">
 
-        <div class="roi_calc_wrapper">
-          <div class="row">
-            <div class="col-lg-4 px-0 pe-lg-5">
-              <div class="content_wrapper w-full h-full d-grid place-items-center">
-                <div class="w-full">
-                    <p class="text_lg mb-2">How many Influencers do you manage overall? <span class="ps-1"><input min="1" step="1" value="1" max="10000" class="input_calc input_track" type="number"></span></p>
-                    <div class="input_wrapper">
-                      <input step="1" value="1" min="1" max="10000" class="clac_range ops_range_1 mb-4 w-full" type="range" name="">
-                    </div>
-                    <p class="text_lg mb-2">How many active influencers do you manage overall? <span class="ps-1"><input min="1" step="1" value="1" max="10000" class="input_calc input_influ" type="number"></span></p>
-                    <div class="input_wrapper position-relative">
-                      <input step="1" value="1" min="1" max="10000" class="clac_range ops_range_2 mb-4 w-full" type="range" name="">
-                    </div>
-                    <p class="text_lg mt-4 mb-2">On how many platforms? <span class="ps-1"><input min="1" step="1" value="1" max="7" class="input_calc input_plat" type="number"></span></p>
-                    <div class="input_wrapper position-relative">
-                      <input step="1" value="1" min="1" max="7" class="clac_range ops_range_3 mb-4 w-full" type="range" name="">
-                    </div>
-                    <!-- <div class="hstack gap-3 mt-2">
-                      <button class="button hstack justify-content-between" type="button">Health Insurance 
-                        <span class="h-full svg">
-                          <img src="/assets/icons/calc_btn_tick.svg" alt="">
-                        </span> 
-                      </button>
-                      <button class="button hstack justify-content-between" type="button">Retirement</button>
-                    </div> -->  
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 mx-auto ps-lg-5 mt-2 mt-lg-0">
-              <div class="box first">
-                <div class="d-flex w-full h-full flex-column justify-content-between ">
-                  <div class="top">
-                    <p>with Relay</p>
-                    <h1 class="m-0 mt-2">
-                      <span class="fs-4 m-0">$</span>
-                      <span id="calc_first_price" class="sec_heading">188.75</span>
-                      <span class="fs-6 fw-lighter">/month</span>
-                    </h1>
-                  </div>
-                  <div class="bottom">
-                    <p>Cost of service</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 pe-0 ps-lg-5 mt-2 mt-lg-0">
-              <div class="box second">
-                <div class="d-flex w-full h-full flex-column justify-content-between">
-                  <div class="top">
-                    <p>Manually</p>
-                    <h1 class="m-0 mt-2">
-                      <span class="fs-4 m-0">$</span>
-                      <span id="calc_second_price" class="sec_heading">312.5</span>
-                      <span class="fs-6 fw-lighter">/month</span>
-                    </h1>
-                    <p class="my-lg-4">You spend <span class="red"><span class="more_money">165.56</span>%</span> more money</p>
-                  </div>
-                  <div class="bottom">
-                    <h4 class="m-0 employees_req">1</h4>
-                    <p class="mb-2 light_text">Employees required for manually scraping the data</p>
-                    <h4 class="m-0 hours">176</h4>
-                    <p class="light_text">Hours spent per month just updating excel sheets</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-8 ps-lg-5 mt-2 ms-auto">
-              <p style="color: #FBFAF299;">*Estimated figures based on average salary, hours per month spent on admin and broker fees            </p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="sales_wrapper">
-          <div class="row">
-            <div class="col-lg-5 px-0 pe-lg-5">
-              <div class="content_wrapper w-full h-full d-grid place-items-center">
-                <div class="w-full h-fit">
-                  <p class="text_lg mb-2">Number of employees in Sales team <span class="ps-1"><input min="1" step="1"
-                        value="1" max="50" class="input_calc calc_input_1" type="number"></span></p>
-                  <div class="input_wrapper mb-2">
-                    <input step="1" value="1" min="1" max="50" class="clac_range calc_range_1 mb-4 w-full" type="range"
-                      name="">
-                  </div>
-                  <p class="text_lg mb-2">Time taken to build one proposal (Hrs) <span class="ps-1"><input min="1" step="1"
-                        value="1" max="99" class="input_calc calc_input_2" type="number"></span></p>
-                  <div class="input_wrapper mb-2 position-relative">
-                    <input step="1" value="1" min="1" max="99" class="clac_range calc_range_2 mb-4 w-full" type="range"
-                      name="">
-                  </div>
-                  <p class="text_lg mb-2">Conversion rate (% age) <span class="ps-1"><input min="1" step="1" value="1"
-                        max="50" class="input_calc calc_input_3" type="number"></span></p>
-                  <div class="input_wrapper mb-2 position-relative">
-                    <input step="1" value="1" min="1" max="50" class="clac_range calc_range_3 mb-4 w-full" type="range"
-                      name="">
-                  </div>
-                  <p class="text_lg mb-2">Average Order Value (USD) <span class="ps-1"><input min="100" step="1" value="100"
-                        max="9500" class="input_calc calc_input_4" type="number"></span></p>
-                  <div class="input_wrapper position-relative">
-                    <input step="1" value="100" min="100" max="9500" class="clac_range calc_range_4 w-full" type="range"
-                      name="">
-                  </div>
-                </div>
-              </div>
-            </div>
-    
-            <div class="col-lg-7 mt-3 mx-0 pe-0 mt-lg-0">
-    
-              <div class="table_overlay rounded_main overflow-hidden">
-    
-                <table class="table sales_table m-0 p-3 w-full h-full">
-                  <tbody>
-                    <tr>
-                      <td></td>
-                      <td class="middle">with Relay</td>
-                      <td class="last">using current process</td>
-                    </tr>
-                    <tr>
-                      <td>No of Proposals in a week</td>
-                      <td class="middle with_1">37.5</td>
-                      <td class="last curr_1">37.5</td>
-                    </tr>
-                    <tr>
-                      <td>No of proposals in a month</td>
-                      <td class="middle with_2">150</td>
-                      <td class="last curr_2">150</td>
-                    </tr>
-                    <tr>
-                      <td>Conversion / Orders in a month</td>
-                      <td class="middle with_3">1.5</td>
-                      <td class="last curr_3">1.5</td>
-                    </tr>
-                    <tr>
-                      <td>Order book value</td>
-                      <td class="middle text-nowrap">$ <span class="with_4">150.00</span></td>
-                      <td class="last text-nowrap">$ <span class="curr_4">150.00</span></td>
-                    </tr>
-                    <tr>
-                      <td>Avg TAT for proposal building (hrs)</td>
-                      <td class="middle with_5">20.00</td>
-                      <td class="last curr_5">20.00</td>
-                    </tr>
-                    <tr>
-                      <td>Cost Per Sale</td>
-                      <td class="middle text-nowrap">₹ <span class="with_6"> 50,000</span></td>
-                      <td class="last text-nowrap">₹ <span class="curr_6">56,667</span></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-    
-            </div>
-    
+    <div class="container mt-4 px-1 px-lg-5">
+      <div class="swiper calcSwiper w-full h-full">
+        <div class="swiper-wrapper w-full h-full">
+          <div class="swiper-slide w-full h-full">
+            <div class="roi_calc_wrapper">
             <div class="row">
-              <div class="col-lg-7 mt-2 ms-auto">
-                <p style="color: #FBFAF299;">*Salary cost INR 75000</p>
+              <div class="col-lg-4 px-0 pe-lg-5">
+                <div class="content_wrapper w-full h-full d-grid place-items-center">
+                  <div class="w-full">
+                      <p class="text_lg mb-2">How many Influencers do you manage overall? <span class="ps-1"><input min="1" step="1" value="1" max="10000" class="input_calc input_track" type="number"></span></p>
+                      <div class="input_wrapper">
+                        <input step="1" value="1" min="1" max="10000" class="clac_range ops_range_1 mb-4 w-full" type="range" name="">
+                      </div>
+                      <p class="text_lg mb-2">How many active influencers do you manage overall? <span class="ps-1"><input min="1" step="1" value="1" max="10000" class="input_calc input_influ" type="number"></span></p>
+                      <div class="input_wrapper position-relative">
+                        <input step="1" value="1" min="1" max="10000" class="clac_range ops_range_2 mb-4 w-full" type="range" name="">
+                      </div>
+                      <p class="text_lg mt-4 mb-2">On how many platforms? <span class="ps-1"><input min="1" step="1" value="1" max="7" class="input_calc input_plat" type="number"></span></p>
+                      <div class="input_wrapper position-relative">
+                        <input step="1" value="1" min="1" max="7" class="clac_range ops_range_3 mb-4 w-full" type="range" name="">
+                      </div>
+                      <!-- <div class="hstack gap-3 mt-2">
+                        <button class="button hstack justify-content-between" type="button">Health Insurance 
+                          <span class="h-full svg">
+                            <img src="/assets/icons/calc_btn_tick.svg" alt="">
+                          </span> 
+                        </button>
+                        <button class="button hstack justify-content-between" type="button">Retirement</button>
+                      </div> -->  
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 mx-auto ps-lg-5 mt-2 mt-lg-0">
+                <div class="box first">
+                  <div class="d-flex w-full h-full flex-column justify-content-between ">
+                    <div class="top">
+                      <p>with Relay</p>
+                      <h1 class="m-0 mt-2">
+                        <span class="fs-4 m-0">$</span>
+                        <span id="calc_first_price" class="sec_heading">188.75</span>
+                        <span class="fs-6 fw-lighter">/month</span>
+                      </h1>
+                    </div>
+                    <div class="bottom">
+                      <p>Cost of service</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 pe-0 ps-lg-5 mt-2 mt-lg-0">
+                <div class="box second">
+                  <div class="d-flex w-full h-full flex-column justify-content-between">
+                    <div class="top">
+                      <p>Manually</p>
+                      <h1 class="m-0 mt-2">
+                        <span class="fs-4 m-0">$</span>
+                        <span id="calc_second_price" class="sec_heading">312.5</span>
+                        <span class="fs-6 fw-lighter">/month</span>
+                      </h1>
+                      <p class="my-lg-4">You spend <span class="red"><span class="more_money">165.56</span>%</span> more money</p>
+                    </div>
+                    <div class="bottom">
+                      <h4 class="m-0 employees_req">1</h4>
+                      <p class="mb-2 light_text">Employees required for manually scraping the data</p>
+                      <h4 class="m-0 hours">176</h4>
+                      <p class="light_text">Hours spent per month just updating excel sheets</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-8 ps-lg-5 mt-2 ms-auto">
+                <p style="color: #FBFAF299;">*Estimated figures based on average salary, hours per month spent on admin and broker fees            </p>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="swiper-slide w-full h-full">
+              <div class="sales_wrapper">
+              <div class="row">
+                <div class="col-lg-5 px-0 pe-lg-5">
+                  <div class="content_wrapper w-full h-full d-grid place-items-center">
+                    <div class="w-full h-fit">
+                      <p class="text_lg mb-2">Number of employees in Sales team <span class="ps-1"><input min="1" step="1"
+                            value="1" max="50" class="input_calc calc_input_1" type="number"></span></p>
+                      <div class="input_wrapper mb-2">
+                        <input step="1" value="1" min="1" max="50" class="clac_range calc_range_1 mb-4 w-full" type="range"
+                          name="">
+                      </div>
+                      <p class="text_lg mb-2">Time taken to build one proposal (Hrs) <span class="ps-1"><input min="1" step="1"
+                            value="1" max="99" class="input_calc calc_input_2" type="number"></span></p>
+                      <div class="input_wrapper mb-2 position-relative">
+                        <input step="1" value="1" min="1" max="99" class="clac_range calc_range_2 mb-4 w-full" type="range"
+                          name="">
+                      </div>
+                      <p class="text_lg mb-2">Conversion rate (% age) <span class="ps-1"><input min="1" step="1" value="1"
+                            max="50" class="input_calc calc_input_3" type="number"></span></p>
+                      <div class="input_wrapper mb-2 position-relative">
+                        <input step="1" value="1" min="1" max="50" class="clac_range calc_range_3 mb-4 w-full" type="range"
+                          name="">
+                      </div>
+                      <p class="text_lg mb-2">Average Order Value (USD) <span class="ps-1"><input min="100" step="1" value="100"
+                            max="9500" class="input_calc calc_input_4" type="number"></span></p>
+                      <div class="input_wrapper position-relative">
+                        <input step="1" value="100" min="100" max="9500" class="clac_range calc_range_4 w-full" type="range"
+                          name="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        
+                <div class="col-lg-7 mt-3 mx-0 pe-0 mt-lg-0">
+        
+                  <div class="table_overlay rounded_main overflow-hidden">
+        
+                    <table class="table sales_table m-0 p-3 w-full h-full">
+                      <tbody>
+                        <tr>
+                          <td></td>
+                          <td class="middle">with Relay</td>
+                          <td class="last">using current process</td>
+                        </tr>
+                        <tr>
+                          <td>No of Proposals in a week</td>
+                          <td class="middle with_1">37.5</td>
+                          <td class="last curr_1">37.5</td>
+                        </tr>
+                        <tr>
+                          <td>No of proposals in a month</td>
+                          <td class="middle with_2">150</td>
+                          <td class="last curr_2">150</td>
+                        </tr>
+                        <tr>
+                          <td>Conversion / Orders in a month</td>
+                          <td class="middle with_3">1.5</td>
+                          <td class="last curr_3">1.5</td>
+                        </tr>
+                        <tr>
+                          <td>Order book value</td>
+                          <td class="middle text-nowrap">$ <span class="with_4">150.00</span></td>
+                          <td class="last text-nowrap">$ <span class="curr_4">150.00</span></td>
+                        </tr>
+                        <tr>
+                          <td>Avg TAT for proposal building (hrs)</td>
+                          <td class="middle with_5">20.00</td>
+                          <td class="last curr_5">20.00</td>
+                        </tr>
+                        <tr>
+                          <td>Cost Per Sale</td>
+                          <td class="middle text-nowrap">₹ <span class="with_6"> 50,000</span></td>
+                          <td class="last text-nowrap">₹ <span class="curr_6">56,667</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+        
+                </div>
+        
+                <div class="row">
+                  <div class="col-lg-7 mt-2 ms-auto">
+                    <p style="color: #FBFAF299;">*Salary cost INR 75000</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
     </div>
   </section>
 

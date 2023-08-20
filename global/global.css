@@ -844,20 +844,6 @@ nav .end_content button:hover, .nav_book_btn:hover {
 
 /* Calc */
 
-
-.calc_section .roi_calc_wrapper, .calc_section .sales_wrapper {
-    height: 0;
-    transition: transform .3s ease-in-out, height 0s ease-in-out;
-}
-
-.calc_section .roi_calc_wrapper {
-    transform: translate(-100%, 0);
-}
-
-.calc_section .sales_wrapper {
-    transform: translate(100%, 0);
-}
-
 .calc_section .roi_calc_wrapper.active, .calc_section .sales_wrapper.active {
     height: 100%;
     transform: translate(0,0);
@@ -866,16 +852,24 @@ nav .end_content button:hover, .nav_book_btn:hover {
 .calc_section .text_wrapper h1 {
     position: absolute;
     opacity: 0;
-    transform: translateX(-50%);
-    transition: transform .3s ease-in-out, opacity .3s ease-in-out;
+    transform: translateY(100%) rotate(4deg);
+    transition: transform .3s ease-in-out, opacity .4s ease-in-out;
 }
 
 .calc_section .text_wrapper h1.active {
     position: relative;
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0) rotate(0);
 }
 
+.calc_section .ops_button:disabled, .calc_section .sales_button:disabled {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.calc_section .swiper-wrapper {
+    transition-timing-function: linear;
+}
 
 .calc_section {
     background-color: #1C5551;
@@ -887,12 +881,6 @@ nav .end_content button:hover, .nav_book_btn:hover {
     /* background-size: 700px 700px; */
     background-image: url("/assets/overlays/calc.svg");
 }
-/* 
-.calc_section .img_wrapper {
-    position: absolute;
-    right: -20%;
-    top: -50%;
-} */
 
 .calc_section .table_overlay {
     background-color: #29292933;
@@ -1068,7 +1056,6 @@ nav .end_content button:hover, .nav_book_btn:hover {
 
 .scale_section .content_wrapper .img_wrapper {
     height: 100%;
-    margin-top: 70px;
 }
 
 .scale_section .right_wrapper {
