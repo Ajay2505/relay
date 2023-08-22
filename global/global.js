@@ -318,7 +318,8 @@ const map = () => {
             resetColors();
             const targetBBox = targetPath.getBBox();
         
-            const viewBoxX = targetBBox.x - 40;
+            const isLargeScreen = window.innerWidth >= 1024; // Adjust the breakpoint as needed
+            const viewBoxX = isLargeScreen ? targetBBox.x - 40 : targetBBox.x;
             const viewBoxY = targetBBox.y;
             const viewBoxWidth = targetBBox.width;
             const viewBoxHeight = targetBBox.height;

@@ -826,7 +826,6 @@ nav .end_content button:hover, .nav_book_btn:hover {
     position: absolute;
     bottom: 30px;
     background-color: #cdacdcbd;
-    /* color: #9a56b8; */
     transform: translateY(-20px);
     opacity: 0;
     visibility: hidden;
