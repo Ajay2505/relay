@@ -109,7 +109,7 @@ const calc = () => {
         const element = document.querySelector(".ops_range_3");
         const value = element.value;
         const per = (value / element.max) * 100 - 5;
-        element.style.background = `linear-gradient(to right, #3C9C8C 0%, #3C9C8C ${per}%, #254745 ${per}%, #254745 100%)`;
+        element.style.background = `linear-gradient(to right, #9a56b8 0%, #9a56b8 ${per}%, #5e3075 ${per}%, #5e3075 100%)`;
         valuesSetter();
     }
 
@@ -234,7 +234,7 @@ const salesCalc = () => {
 function inputCalc(element) {
     const value = element.value;
     const per = (value / element.max) * 100;
-    element.style.background = `linear-gradient(to right, #3C9C8C 0%, #3C9C8C ${per}%, #254745 ${per}%, #254745 100%)`;
+    element.style.background = `linear-gradient(to right, #9a56b8 0%, #9a56b8 ${per}%, #5e3075 ${per}%, #5e3075 100%)`;
 }
 
 const mapInfo = [
@@ -242,31 +242,36 @@ const mapInfo = [
         lang: "English",
         first: 30000,
         second: 3,
-        third: 90000
+        third: 90000,
+        pathID: "GB"
     },
     {
         lang: "French",
         first: 12000,
         second: 2.5,
-        third: 30000
+        third: 30000,
+        pathID: "FR"
     }, 
     {
         lang: "German",
         first: 15000,
         second: 1.5,
-        third: 22500
+        third: 22500,
+        pathID: "DE"
     },
     {
         lang: "Spanish",
         first: 13000,
         second: 3,
-        third: 39000
+        third: 39000,
+        pathID: "ES"
     },
     {
         lang: "Indian Languages",
         first: 25000,
         second: 2.5,
-        third: 625000
+        third: 625000,
+        pathID: "IN"
     }
 ];
 
@@ -308,9 +313,80 @@ const map = () => {
             document.querySelector(".map_input").dispatchEvent(event);
             setMapInfo(idx);
             document.querySelector(".map_content").classList.add("active");
+            const svg = document.getElementById('map_svg');
+            const targetPath = document.getElementById(info?.pathID);
+            resetColors();
+            const targetBBox = targetPath.getBBox();
+        
+            const viewBoxX = targetBBox.x - 40;
+            const viewBoxY = targetBBox.y;
+            const viewBoxWidth = targetBBox.width;
+            const viewBoxHeight = targetBBox.height;
+        
+            targetPath.setAttribute('fill', '#cdacdc');
+            gsap.to(svg, {
+                duration: 0.5,
+                attr: {
+                  viewBox: `${viewBoxX} ${viewBoxY} ${viewBoxWidth} ${viewBoxHeight}`
+                },
+                ease: 'power2.out'
+            });
         });
     });
 
+    function resetColors() {
+        mapInfo.forEach(info => {
+            document.getElementById(info?.pathID).setAttribute('fill', 'currentColor');
+        });
+    }
+    
+    function setMap() {
+        
+        // Get the SVG element
+        const svg = document.getElementById('map_svg');
+        
+        // Array to store the path IDs
+        const pathIDs = mapInfo.map(info => info.pathID);
+        
+        // Calculate the collective bounding box that encompasses all specified paths
+        const combinedBBox = pathIDs.reduce((bbox, pathID) => {
+          const pathElement = document.getElementById(pathID);
+          if (pathElement) {
+            const pathBBox = pathElement.getBBox();
+            bbox.x = Math.min(bbox.x, pathBBox.x);
+            bbox.y = Math.min(bbox.y, pathBBox.y);
+            bbox.width = Math.max(bbox.width, pathBBox.x + pathBBox.width);
+            bbox.height = Math.max(bbox.height, pathBBox.y + pathBBox.height);
+          }
+          return bbox;
+        }, { x: Infinity, y: Infinity, width: -Infinity, height: -Infinity });
+        
+        // Calculate new viewBox values
+        const viewBoxX = combinedBBox.x;
+        const viewBoxY = combinedBBox.y;
+        const viewBoxWidth = combinedBBox.width - combinedBBox.x;
+        const viewBoxHeight = combinedBBox.height - combinedBBox.y;
+        
+        // Set the new viewBox on the SVG
+        gsap.to(svg, {
+            duration: 0.5,
+            attr: {
+              viewBox: `${viewBoxX} ${viewBoxY} ${viewBoxWidth} ${viewBoxHeight}`
+            },
+            ease: 'power2.out'
+        });
+        setAllColors();
+    }
+    setMap();
+    function setAllColors() {
+        mapInfo.forEach(info => {
+          const pathElement = document.getElementById(info?.pathID);
+          if (pathElement) {
+            pathElement.setAttribute('fill', '#cdacdc');
+          }
+        });
+    }
+    
     function setMapInfo(idx) {
         document.querySelector(".map_content .main").innerText = mapInfo[idx]?.lang;
         document.querySelector(".map_content .first").innerText = mapInfo[idx]?.first;
@@ -329,6 +405,7 @@ const map = () => {
         } else {
             document.querySelector(".x_mark").classList.remove("show");
             document.querySelector(".map_icon").classList.remove("hide");
+            setAllColors();
         }
         mapInfo.forEach((info, idx) => {
             if (info?.lang.toLocaleLowerCase().match(value.toLocaleLowerCase())) {

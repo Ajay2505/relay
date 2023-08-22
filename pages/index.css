@@ -316,7 +316,7 @@
 .pinned_element .box.first {
     background-image: url("/assets/images/sales-img.jpg");
     background-repeat: no-repeat;
-    background-color: #123836;
+    background-color: #2b2347;
     background-size: cover;
     /* background-position: right; */
     /* background-color: #1c5551; */
@@ -529,7 +529,7 @@
     position: absolute;
     top: 0;
     right: 300px;
-    background-color: #3C9C8C;
+    background-color: #cdacdc;
     transition: top .3s ease-in-out, transform .4s ease-in-out;
 }
 
@@ -554,7 +554,7 @@
 }
 
 .setup_section .boxes .box.green {
-    background-color: #1C5551;
+    background-color: #9a56b8;
 }
 
 .setup_section .boxes .box.purple {

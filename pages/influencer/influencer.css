@@ -73,7 +73,7 @@ nav, .mobile_nav {
 }
 
 .section_empower {
-    background: linear-gradient(to bottom, #FBFAF2 150px, #1C5551 150px);
+    background: linear-gradient(to bottom, #FBFAF2 150px, var(--bg-pink) 150px);
     margin-top: -300px;
     overflow: hidden;
     color: #FBFAF2;
@@ -131,7 +131,7 @@ nav, .mobile_nav {
 
 .section_build {
     color: #FBFAF2;
-    background-color: #1C5551;
+    background-color: var(--bg-pink);
 }
 
 .section_build .mask_wrapper {
@@ -216,7 +216,7 @@ nav, .mobile_nav {
     }
     section.section_empower {
         margin-top: 0;
-        background: #1C5551;
+        background: var(--bg-pink);
         padding-top: 50px;
     }
     .section_work {
