@@ -1,6 +1,12 @@
 @import url("/global/global.css");
 
 
+@media only screen and (max-width: 1150px) {
+    footer .mask_wrapper {
+        position: relative;
+    }
+}
+
 @media only screen and (max-width: 1000px) {
     nav .center_content, nav .end_content {
         display: none !important;
@@ -32,9 +38,6 @@
     .max-lg-vstack {
         flex-direction: column;
     }
-    footer .mask_wrapper {
-        position: relative;
-    }
     footer .yellow_dot {
         top: 40%;
         left: 10%;
@@ -58,6 +61,9 @@
 }
 
 @media only screen and (max-width: 600px) {
+    .map_section .img_wrapper .content {
+        width: 95%;
+    }
     .max-md-vstack {
         flex-direction: column;
     }

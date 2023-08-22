@@ -107,4 +107,7 @@
     .vector_section .content {
         transform: translateY(30px);
     }
+    .curve {
+        margin-top: -2px;
+    }
 }
