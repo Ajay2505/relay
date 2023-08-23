@@ -201,6 +201,7 @@ nav, .section_main, .section_2, .mobile_nav {
     color: #FBFAF299;
 }
 
+
 @media only screen and (max-width: 768px) {
     .section_main .absolute_block {
         position: relative;

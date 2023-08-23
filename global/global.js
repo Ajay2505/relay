@@ -121,18 +121,26 @@ const calc = () => {
     function valuesSetter() {
         let rough = 450 / (5 * document.querySelector(".ops_range_3").value);
         first = (15000 + document.querySelector(".ops_range_2").value * document.querySelector(".ops_range_3").value * 100) / 80;
+        const firstMin = (15000 + document.querySelector(".ops_range_2").min * document.querySelector(".ops_range_3").min * 100) / 80;
+        const firstMax = (15000 + document.querySelector(".ops_range_2").max * document.querySelector(".ops_range_3").max * 100) / 80;
+        
         employees_req_value = Math.ceil(
           document.querySelector(".ops_range_2").value / rough
         );
         second = (employees_req_value * 25000) / 80;
         hours = employees_req_value * 8 * 22;
         money = (second / first) * 100;
+
         document.querySelector(".employees_req").innerText = employees_req_value;
         document.getElementById("calc_first_price").innerText = first.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
         document.getElementById("calc_second_price").innerText = second.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
         document.querySelector(".more_money").innerText = +money.toFixed(2);
         document.querySelector(".hours").innerText = hours.toLocaleString("en-US");
+
+        const per = ((first - firstMin) / (firstMax - firstMin)) * 100;
+        document.querySelector(".calc_section .box.first .bottom").style.background = `linear-gradient(to top, #5e3075 0%, #5e3075 ${per}%, transparent ${per}%, transparent 100%)`;
     }
+    valuesSetter();
 }
 
 const salesCalc = () => {
@@ -474,12 +482,16 @@ const setSteps = () => {
             var rect = evt.currentTarget.getBoundingClientRect();
             var parentRect = evt.currentTarget.parentElement.getBoundingClientRect();
 
+            gooey.classList.add("active");
             var relativeTop = rect.top - parentRect.top;
             var relativeLeft = rect.left - parentRect.left;
             gooey.style.width = rect.width + "px";
             gooey.style.height = rect.height + "px";
             gooey.style.top = relativeTop + "px";
             gooey.style.left = relativeLeft + "px";
+            setTimeout(() => {
+                gooey.classList.remove("active");
+            }, 200);
         });
     });
 

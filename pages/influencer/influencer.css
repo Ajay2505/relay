@@ -197,6 +197,18 @@ nav, .mobile_nav {
     background-position: 120% -50%;
 }
 
+@media only screen and (min-width: 1500px) {
+    .section_main .mask_wrapper {
+        width: 80%;
+    }
+    .section_main .main_spacer {
+        padding-block: 170px;
+    }   
+    .section_empower .spacer .pattern_wrapper {
+        right: 110px;
+    }
+}
+
 @media only screen and (max-width: 1024px) {
     .section_main .main_spacer {
         padding-block: 280px;
