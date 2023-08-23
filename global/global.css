@@ -293,6 +293,7 @@ input[type="number"] {
     top: 20px;
     left: 20px;
     max-width: 90px;
+    z-index: 2;
 }
 
 .calendy_modal .close_icon_wrapper {
@@ -1547,8 +1548,16 @@ footer .bubble_wrapper {
     background-color: #EBEBE5;
 }
 
-.section_work .steps .step_1 {
+.section_work .step {
+    z-index: 2;
+}
+
+.section_work .step_gooey {
+    position: absolute;
+    top: 0;
+    left: 0;
     background-color: #EFEFE8;
+    transition: top .2s ease-in-out, left .2s ease-in-out, width .2s ease-in-out, height .2s ease-in-out;
 }
 
 

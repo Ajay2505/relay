@@ -6,6 +6,11 @@ const index = () => {
 const inf = () => {
     mainCalc();   
     map();
+    setSteps();
+}
+
+const adv = () => {
+    setSteps();
 }
 
 
@@ -455,6 +460,34 @@ const map = () => {
     });
 }
 
+const setSteps = () => {
+    const step = document.querySelector(".section_work .step");
+    const gooey = document.querySelector(".section_work .step_gooey");
+    const steps = document.querySelectorAll(".section_work .step");
+    let width = step.clientWidth;
+    let height = step.clientHeight;
+    gooey.style.width = width + 'px';
+    gooey.style.height = height + 'px';
+
+    steps.forEach((step) => {
+        step.addEventListener("click", (evt) => {
+            var rect = evt.currentTarget.getBoundingClientRect();
+            var parentRect = evt.currentTarget.parentElement.getBoundingClientRect();
+
+            var relativeTop = rect.top - parentRect.top;
+            var relativeLeft = rect.left - parentRect.left;
+            gooey.style.width = rect.width + "px";
+            gooey.style.height = rect.height + "px";
+            gooey.style.top = relativeTop + "px";
+            gooey.style.left = relativeLeft + "px";
+        });
+    });
+
+    window.addEventListener("resize", setSteps);
+}
+
+
+
 document.querySelector(".nav_icon_wrapper").addEventListener("click", (evt) => {
     document.querySelector(".mobile_nav").classList.toggle("active");
     document.querySelector(".nav_icon_wrapper").classList.toggle("active");
@@ -487,6 +520,7 @@ const calendlySwiper = new Swiper(".calendlySwiper", {
         nextEl: ".calendly-next",
         prevEl: ".calendly-prev",
     },
+    allowTouchMove: false,
     // pagination: {
     //   el: ".calendly-pagination",
     //   clickable: true,
