@@ -479,12 +479,12 @@ const setSteps = () => {
 
     steps.forEach((step) => {
         step.addEventListener("click", (evt) => {
-            var rect = evt.currentTarget.getBoundingClientRect();
-            var parentRect = evt.currentTarget.parentElement.getBoundingClientRect();
+            let rect = evt.currentTarget.getBoundingClientRect();
+            let parentRect = evt.currentTarget.parentElement.getBoundingClientRect();
 
             gooey.classList.add("active");
-            var relativeTop = rect.top - parentRect.top;
-            var relativeLeft = rect.left - parentRect.left;
+            let relativeTop = rect.top - parentRect.top;
+            let relativeLeft = rect.left - parentRect.left;
             gooey.style.width = rect.width + "px";
             gooey.style.height = rect.height + "px";
             gooey.style.top = relativeTop + "px";
@@ -592,4 +592,12 @@ if (window.innerWidth >= 1200) {
       prevScrollPos2 = currentScrollPos;
     });
 }
+  
+document.querySelector(".calendy_modal").addEventListener("click", () => {
+    document.querySelector(".calendy_modal .close_icon_wrapper").click();
+});
+
+document.querySelector(".calendy_modal .modal_content").addEventListener("click", (evt) => {
+    evt.stopPropagation();
+});
   
