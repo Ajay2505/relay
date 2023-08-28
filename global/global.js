@@ -239,9 +239,10 @@ const salesCalc = () => {
         document.querySelector(".curr_4").innerText = (((curr_1 * 4 * value3) / 100) * value4).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
         document.querySelector(".with_5").innerText = +(30 / ((with_1 * 4 * value3) / 100)).toFixed(2);
         document.querySelector(".curr_5").innerText = +(30 / ((curr_1 * 4 * value3) / 100)).toFixed(2);
-        document.querySelector(".with_6").innerText = (Math.round((75000 + 10000) / ((with_1 * 4 * value3) / 100))).toLocaleString("en-IN");
-        document.querySelector(".curr_6").innerText = (Math.round((75000) / ((curr_1 * 4 * value3) / 100))).toLocaleString("en-IN");
+        document.querySelector(".with_6").innerText = (((85000)/ (+((with_1 * 4 * value3) / 100).toFixed(2)) )/80).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        document.querySelector(".curr_6").innerText = ((75000/ (+((curr_1 * 4 * value3) / 100).toFixed(2)))/80).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
     }
+    valuesSetter();
 }
 
 function inputCalc(element) {
